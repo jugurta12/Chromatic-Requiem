@@ -1,27 +1,17 @@
-[gd_scene load_steps=33 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=21 format=3 uid="uid://b03s6rgm5pwnq"]
 
-[ext_resource type="Texture2D" uid="uid://o6sas14d5ck0" path="res://Assets/arcade.png" id="1_3ufcg"]
+[ext_resource type="Texture2D" uid="uid://br5fs7sngipll" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
-[ext_resource type="Texture2D" uid="uid://dmf0txtwivitr" path="res://Assets/arcade2.png" id="3_i82s6"]
-[ext_resource type="Texture2D" uid="uid://dh1rgkq12xm8c" path="res://Assets/arcadepink.png" id="4_635gl"]
-[ext_resource type="Texture2D" uid="uid://ccd4jijvwdu8k" path="res://Assets/1-removebg-preview.png" id="4_nw1ri"]
-[ext_resource type="Texture2D" uid="uid://j5t3ul8bkcvi" path="res://Assets/2-removebg-preview.png" id="5_8inwh"]
-[ext_resource type="Texture2D" uid="uid://bbu1orrypou7f" path="res://Assets/arcadepink2.png" id="5_pd57b"]
-[ext_resource type="Texture2D" uid="uid://cejoj6jua5mx7" path="res://Assets/3-removebg-preview.png" id="6_0ov7s"]
-[ext_resource type="Texture2D" uid="uid://dfq4n13ml6omw" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
-[ext_resource type="Texture2D" uid="uid://d1e52woaormbs" path="res://Assets/nrmlidleleft.png" id="7_4mld8"]
-[ext_resource type="Script" uid="uid://cl8ynu7jj46pk" path="res://Scripts/persoarcade.gd" id="7_633ur"]
-[ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="7_domho"]
-[ext_resource type="Texture2D" uid="uid://dacgvgtrctb23" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
-[ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="8_633ur"]
-[ext_resource type="Texture2D" uid="uid://dvh20ys4wfmtu" path="res://Assets/nrmlidleright.png" id="8_s0rvt"]
-[ext_resource type="Texture2D" uid="uid://obmv61adm7fc" path="res://Assets/nrmljumpleft.png" id="9_4mld8"]
-[ext_resource type="Texture2D" uid="uid://dokt0er5u4ild" path="res://Assets/nrmljumpright.png" id="10_s0rvt"]
-[ext_resource type="Texture2D" uid="uid://cmetti55na4ve" path="res://Assets/nrmlleft2.png" id="11_4mld8"]
-[ext_resource type="Texture2D" uid="uid://cgr5kky17da5v" path="res://Assets/nrmlleft.png" id="12_s0rvt"]
-[ext_resource type="Texture2D" uid="uid://j13h76wdcb2l" path="res://Assets/nrmlright2.png" id="13_tinc1"]
-[ext_resource type="Texture2D" uid="uid://yjryakd3ggfm" path="res://Assets/nrmlright.png" id="14_mnyfu"]
+[ext_resource type="Texture2D" uid="uid://be06t24tv6ci" path="res://Assets/arcade2.png" id="3_i82s6"]
+[ext_resource type="Texture2D" uid="uid://b715g203h6ufx" path="res://Assets/arcadepink.png" id="4_635gl"]
+[ext_resource type="Texture2D" uid="uid://cw2may4p60fh1" path="res://Assets/1-removebg-preview.png" id="4_nw1ri"]
+[ext_resource type="Texture2D" uid="uid://5kt10k6exs3g" path="res://Assets/2-removebg-preview.png" id="5_8inwh"]
+[ext_resource type="Texture2D" uid="uid://b0en17jk8bdea" path="res://Assets/arcadepink2.png" id="5_pd57b"]
+[ext_resource type="Texture2D" uid="uid://cga4saxv62ohf" path="res://Assets/3-removebg-preview.png" id="6_0ov7s"]
+[ext_resource type="Texture2D" uid="uid://ca1qesdwv7fcj" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
+[ext_resource type="Texture2D" uid="uid://bvbn5g6erlme3" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="18_4mld8"]
+[ext_resource type="PackedScene" uid="uid://dbyjwavhp1aov" path="res://Scenes/ennemis.tscn" id="22_pd57b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3h0sf"]
 animations = [{
@@ -77,82 +67,6 @@ size = Vector2(161, 31)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mld8"]
 size = Vector2(151, 27)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pkp5n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_domho")
-}],
-"loop": true,
-"name": &"atk1_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_633ur")
-}],
-"loop": true,
-"name": &"atk1_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_4mld8")
-}],
-"loop": true,
-"name": &"idle_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_s0rvt")
-}],
-"loop": true,
-"name": &"idle_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_4mld8")
-}],
-"loop": true,
-"name": &"jump_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_s0rvt")
-}],
-"loop": true,
-"name": &"jump_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_4mld8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_s0rvt")
-}],
-"loop": true,
-"name": &"run_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_tinc1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_mnyfu")
-}],
-"loop": true,
-"name": &"run_right",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_domho"]
-size = Vector2(37, 75.5)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_2uunk"]
 animations = [{
 "frames": [{
@@ -178,7 +92,6 @@ process_mode = 3
 texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_3h0sf")
-animation = &"yellow"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -206,27 +119,6 @@ shape = SubResource("RectangleShape2D_633ur")
 position = Vector2(565.5, 197.5)
 shape = SubResource("RectangleShape2D_4mld8")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(116, -127)
-script = ExtResource("7_633ur")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-texture_filter = 1
-position = Vector2(831, -4)
-scale = Vector2(1.63853, 1.60919)
-sprite_frames = SubResource("SpriteFrames_pkp5n")
-animation = &"atk1_right"
-offset = Vector2(-387.769, 192.548)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(193, 307)
-shape = SubResource("RectangleShape2D_domho")
-
-[node name="AttackTimer" type="Timer" parent="CharacterBody2D"]
-wait_time = 0.3
-one_shot = true
-
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 texture_filter = 1
@@ -235,6 +127,7 @@ scale = Vector2(0.558, 0.557)
 sprite_frames = SubResource("SpriteFrames_2uunk")
 frame_progress = 0.162949
 
-[node name="pause" parent="." instance=ExtResource("18_4mld8")]
+[node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
+position = Vector2(64, 304)
 
-[connection signal="timeout" from="CharacterBody2D/AttackTimer" to="CharacterBody2D" method="_on_attack_timer_timeout"]
+[node name="pause" parent="." instance=ExtResource("18_4mld8")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbyjwavhp1aov"]
 
-[ext_resource type="Script" uid="uid://ckne013ivcqbt" path="res://scripts/ennemis.gd" id="1_gsgpr"]
+[ext_resource type="Script" uid="uid://ckne013ivcqbt" path="res://Scripts/ennemis.gd" id="1_gsgpr"]
 [ext_resource type="Texture2D" uid="uid://kywocnjdtm0p" path="res://Assets/ennemi.png" id="1_tvmx5"]
 [ext_resource type="Texture2D" uid="uid://itghaa5tre3v" path="res://Assets/ennemie2.png" id="2_gsgpr"]
 

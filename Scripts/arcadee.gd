@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	$CharacterBody2D.set_physics_process(false)
+	$ennemis.set_physics_process(false)
 	$AnimatedSprite2D2.visible = false
 	$AnimatedSprite2D.play("default")
 	modulate = Color(0, 0, 0, 1)
@@ -16,6 +17,7 @@ func _ready():
 	await get_tree().create_timer(2.7).timeout
 	$AnimatedSprite2D2.visible = false
 	$CharacterBody2D.set_physics_process(true)
+	$ennemis.set_physics_process(true)
 
 
 func _on_attack_timer_timeout() -> void:

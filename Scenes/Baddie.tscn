@@ -86,24 +86,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpk7j"]
-size = Vector2(59, 113)
+size = Vector2(41.5, 89)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(30, -28)
+position = Vector2(161, 221)
 script = ExtResource("1_4y6d6")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1109, -215.813)
-scale = Vector2(2.45023, 2.39583)
+position = Vector2(701.99994, -377.49347)
+scale = Vector2(1.8061773, 1.9236431)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
 animation = &"idle_right"
 offset = Vector2(-387.769, 192.548)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(156.5, 246.5)
+position = Vector2(0.25, -5.5)
 shape = SubResource("RectangleShape2D_wpk7j")
 
 [node name="AttackTimer" type="Timer" parent="."]

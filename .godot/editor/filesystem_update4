@@ -1,1 +1,6 @@
+res://Scenes/arcade.tscn
+res://Scripts/ennemis.gd
+res://Scripts/arcadee.gd
+res://Scenes/Baddie.tscn
 res://Scenes/ennemis.tscn
+res://Scripts/player.gd
