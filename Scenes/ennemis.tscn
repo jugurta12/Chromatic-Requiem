@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbyjwavhp1aov"]
+
+[ext_resource type="Script" uid="uid://ckne013ivcqbt" path="res://scripts/ennemis.gd" id="1_gsgpr"]
+[ext_resource type="Texture2D" uid="uid://kywocnjdtm0p" path="res://Assets/ennemi.png" id="1_tvmx5"]
+[ext_resource type="Texture2D" uid="uid://itghaa5tre3v" path="res://Assets/ennemie2.png" id="2_gsgpr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8iqwm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tvmx5")
+}],
+"loop": true,
+"name": &"atk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gsgpr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvmx5"]
+size = Vector2(22, 42)
+
+[node name="ennemis" type="CharacterBody2D"]
+script = ExtResource("1_gsgpr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_8iqwm")
+animation = &"atk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 1)
+shape = SubResource("RectangleShape2D_tvmx5")
