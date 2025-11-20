@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 var controls_enabled = true
-@export var gravity = 950
+@export var gravity = 700
 @export var speed = 200
 @export var acceleration = 0.2
-@export var jump_force = 400
+@export var jump_force = 430
 @onready var sprite = $AnimatedSprite2D
 var facing_right = true
 var is_attacking = false

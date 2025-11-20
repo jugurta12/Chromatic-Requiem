@@ -8,7 +8,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tvmx5")
+"texture": ExtResource("2_gsgpr")
 }],
 "loop": true,
 "name": &"atk",
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gsgpr")
+"texture": ExtResource("1_tvmx5")
 }],
 "loop": true,
 "name": &"default",
@@ -32,7 +32,6 @@ script = ExtResource("1_gsgpr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_8iqwm")
-animation = &"atk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7, 1)
