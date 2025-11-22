@@ -3,7 +3,7 @@
 area_2d_2.gd::GDScript::8008795463370639633::1762437642::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4388525710219405589::1762437642::1762437642::1::::<><><>0<>0<>ca6041fecbed98864f278100f5c12cfc<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1762437642::0::1::::<><><>0<>0<><>::
-::res://Assets/::1763686578
+::res://Assets/::1763776273
 1-removebg-preview.png::CompressedTexture2D/CompressedTexture2D::6373464036779404020::1762437642::1762437752::1::::<><><>0<>0<>52489664eb2e89b37c080b06914bddd2<>res://.godot/imported/1-removebg-preview.png-9514c5f95b1ae93feb7ab2be26d7b857.ctex::
 1.png::CompressedTexture2D/CompressedTexture2D::8806386418069752157::1762437642::1762437752::1::::<><><>0<>0<>efcd65bcfdfada77337ab720100b62b1<>res://.godot/imported/1.png-ad3a191b001e7705f8fd01c72cc5d665.ctex::
 2-removebg-preview.png::CompressedTexture2D/CompressedTexture2D::2127510470132226398::1762437642::1762437752::1::::<><><>0<>0<>5d7afefb932b6d340570ee1af82b0c67<>res://.godot/imported/2-removebg-preview.png-a748bb430dd9031c403449fadf687597.ctex::
@@ -78,6 +78,7 @@ atk_right3.png::CompressedTexture2D/CompressedTexture2D::7613409819584779677::17
 atk_right33.png::CompressedTexture2D/CompressedTexture2D::3090385250288325475::1762437642::1762437751::1::::<><><>0<>0<>a262e9624b36a1fd39f2ba6d83e14d79<>res://.godot/imported/atk_right33.png-02f2b4364c64e9c745cfcb943ffa425f.ctex::
 atk_right333.png::CompressedTexture2D/CompressedTexture2D::8085939376802559610::1762437642::1762437751::1::::<><><>0<>0<>23d8b55442ea3eed2ba3cfdc3bfa82c8<>res://.godot/imported/atk_right333.png-bf5a1b999afcb8a384373a28e29e8070.ctex::
 blueidleR.png::CompressedTexture2D::1120183663962504842::1763680185::1763680232::1::::<><><>0<>0<>0579383c03ed63b03971c6071e7071b4<>res://.godot/imported/blueidleR.png-784f3b00463be9f248f0e52674eb9973.ctex::
+blueRR1.png::CompressedTexture2D::7865189584496330962::1763776264::1763776275::1::::<><><>0<>0<>58ebd4a9439b4f304bb8e08e4086011f<>res://.godot/imported/blueRR1.png-d72495cc5c285f5994e3067b28d87eec.ctex::
 Capture d’écran 2025-04-21 à 02.22.06.png::CompressedTexture2D/CompressedTexture2D::1286696600626629956::1762437642::1762437642::1::::<><><>0<>0<>2ca8a72b8bb95d104007d994b2980022<>res://.godot/imported/Capture d’écran 2025-04-21 à 02.22.06.png-05475fc664d4a915388d889b89c63d77.ctex::
 carte.png::CompressedTexture2D/CompressedTexture2D::8647552608870178264::1762437642::1762437751::1::::<><><>0<>0<>f176a337e078770ba0bc946c56417c47<>res://.godot/imported/carte.png-f32662a28932c0db8fcccd5d3954fe8a.ctex::
 ChatGPT Image 21 avr. 2025 à 01_32_00.png::CompressedTexture2D/CompressedTexture2D::6901004250231713479::1762437642::1762437642::1::::<><><>0<>0<>537ec1a352fe11311b09d0537039ece3<>res://.godot/imported/ChatGPT Image 21 avr. 2025 à 01_32_00.png-fc8f75b1952a54e1a54aade2a9b900b8.ctex::
