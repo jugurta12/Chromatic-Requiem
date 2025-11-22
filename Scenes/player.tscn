@@ -169,7 +169,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
-size = Vector2(57, 95)
+size = Vector2(53.5, 106.5)
 
 [node name="PlayerScene1" type="Node2D"]
 script = ExtResource("1_l6n3p")
@@ -213,21 +213,21 @@ position = Vector2(323.5, 333)
 shape = SubResource("RectangleShape2D_h4iuc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(54, -15)
+position = Vector2(118, 226)
 script = ExtResource("1_vgqql")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(1109, -215.813)
-scale = Vector2(2.45023, 2.39583)
+position = Vector2(866.04443, -425.51855)
+scale = Vector2(2.2285385, 2.221349)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"run_right"
+animation = &"idle_left"
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(140.5, 249.5)
+position = Vector2(2.25, 1.25)
 shape = SubResource("RectangleShape2D_fkybt")
 metadata/_edit_group_ = true
 
