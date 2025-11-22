@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=32 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://clj8lbfr7p8xd" path="res://Assets/lobby.png" id="1_fs7ks"]
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://scripts/lobby2.gd" id="1_l6n3p"]
@@ -11,9 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://dhop88f8dui6s" path="res://Assets/lobby4.png" id="4_wpjfl"]
 [ext_resource type="Texture2D" uid="uid://6ttrvpp4g25g" path="res://Assets/lobby5.png" id="5_bi64h"]
+[ext_resource type="Texture2D" uid="uid://bwb8px8ml0qxo" path="res://Assets/lobby..png" id="7_bi64h"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="7_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://bj67m8wnitxhu" path="res://Assets/lobby...png" id="8_2ijsl"]
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="8_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://cyfcnrm4sios5" path="res://Assets/nrmljumpleft.png" id="9_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://c0xkg5di27lvh" path="res://Assets/lobby....png" id="9_p1odr"]
 [ext_resource type="Texture2D" uid="uid://ciyosjxh5nsqk" path="res://Assets/nrmljumpright.png" id="10_qqcod"]
 [ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="11_igrcy"]
 [ext_resource type="Texture2D" uid="uid://be4cbcgr136m" path="res://Assets/nrmlleft.png" id="12_fs7ks"]
@@ -66,10 +69,19 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_fs7ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bi64h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ijsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p1odr")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -179,7 +191,7 @@ texture_filter = 1
 position = Vector2(320.734, 184)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"anim2"
+frame_progress = 0.3714883
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
