@@ -1,7 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=35 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://clj8lbfr7p8xd" path="res://Assets/lobby.png" id="1_fs7ks"]
-[ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://scripts/lobby2.gd" id="1_l6n3p"]
+[ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://dbhiv2a61fc25" path="res://Assets/lobby2.png" id="2_l6n3p"]
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
@@ -17,9 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="8_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://cyfcnrm4sios5" path="res://Assets/nrmljumpleft.png" id="9_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://c0xkg5di27lvh" path="res://Assets/lobby....png" id="9_p1odr"]
+[ext_resource type="Texture2D" uid="uid://b7y0mn8tnsi7w" path="res://Assets/lobby5....png" id="10_0gysh"]
 [ext_resource type="Texture2D" uid="uid://ciyosjxh5nsqk" path="res://Assets/nrmljumpright.png" id="10_qqcod"]
 [ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="11_igrcy"]
+[ext_resource type="Texture2D" uid="uid://dpmsw54q1vnp5" path="res://Assets/lobby5...png" id="11_vfarp"]
 [ext_resource type="Texture2D" uid="uid://be4cbcgr136m" path="res://Assets/nrmlleft.png" id="12_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://iba4hen6w4j1" path="res://Assets/lobby5.....png" id="12_y6uwr"]
 [ext_resource type="Texture2D" uid="uid://bymqy7o5cc30m" path="res://Assets/nrmlright2.png" id="13_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="14_olqyp"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
@@ -44,7 +47,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"anim",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -64,7 +67,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"anim2",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -86,10 +89,19 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_bi64h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0gysh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vfarp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_y6uwr")
 }],
 "loop": true,
 "name": &"default2",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
@@ -188,10 +200,11 @@ script = ExtResource("1_l6n3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(320.734, 184)
+position = Vector2(1027, 191)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-frame_progress = 0.3714883
+animation = &"default2"
+frame_progress = 0.9620311
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -225,7 +238,7 @@ position = Vector2(323.5, 333)
 shape = SubResource("RectangleShape2D_h4iuc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(118, 226)
+position = Vector2(146, 226)
 script = ExtResource("1_vgqql")
 metadata/_edit_group_ = true
 
