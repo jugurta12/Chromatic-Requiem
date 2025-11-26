@@ -7,8 +7,6 @@
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
 [ext_resource type="Script" uid="uid://cbbr5680mc0h6" path="res://Scripts/area_2d_2.gd" id="3_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://btbt1iqex68hn" path="res://Assets/lobby3.png" id="3_olqyp"]
-[ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="3_pu2lt"]
-[ext_resource type="Texture2D" uid="uid://cs10i7jkjjwbd" path="res://Assets/Atk_box copie.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://dhop88f8dui6s" path="res://Assets/lobby4.png" id="4_wpjfl"]
 [ext_resource type="Texture2D" uid="uid://6ttrvpp4g25g" path="res://Assets/lobby5.png" id="5_bi64h"]
 [ext_resource type="Texture2D" uid="uid://bwb8px8ml0qxo" path="res://Assets/lobby..png" id="7_bi64h"]
@@ -26,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://bymqy7o5cc30m" path="res://Assets/nrmlright2.png" id="13_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="14_olqyp"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="16_0gysh"]
+[ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="17_vfarp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
 animations = [{
@@ -117,7 +117,7 @@ size = Vector2(61, 372)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_pu2lt")
+"texture": ExtResource("16_0gysh")
 }],
 "loop": true,
 "name": &"atk1_left",
@@ -125,7 +125,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_ukyrk")
+"texture": ExtResource("17_vfarp")
 }],
 "loop": true,
 "name": &"atk1_right",
@@ -198,7 +198,7 @@ position = Vector2(321, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"default2"
-frame_progress = 0.06604873
+frame_progress = 0.2742154
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -241,7 +241,8 @@ texture_filter = 1
 position = Vector2(866.04443, -425.51855)
 scale = Vector2(2.2285385, 2.221349)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"idle_left"
+animation = &"atk1_right"
+frame_progress = 0.21202007
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 
