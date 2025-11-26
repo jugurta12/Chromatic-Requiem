@@ -34,16 +34,13 @@ animations = [{
 "texture": ExtResource("1_fs7ks")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_l6n3p")
+"texture": ExtResource("4_wpjfl")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_olqyp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wpjfl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_bi64h")
+"texture": ExtResource("2_l6n3p")
 }],
 "loop": true,
 "name": &"anim",
@@ -54,16 +51,13 @@ animations = [{
 "texture": ExtResource("5_bi64h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wpjfl")
+"texture": ExtResource("2_l6n3p")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_olqyp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_l6n3p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_fs7ks")
+"texture": ExtResource("4_wpjfl")
 }],
 "loop": true,
 "name": &"anim2",
@@ -105,7 +99,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
-size = Vector2(644, 105)
+size = Vector2(644, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pu2lt"]
 size = Vector2(50, 393)
@@ -200,18 +194,18 @@ script = ExtResource("1_l6n3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1027, 191)
+position = Vector2(321, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"default2"
-frame_progress = 0.9620311
+frame_progress = 0.06604873
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-285, -149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(606, 483.5)
+position = Vector2(606, 491.5)
 shape = SubResource("RectangleShape2D_8erm5")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
