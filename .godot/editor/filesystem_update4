@@ -1,2 +1,4 @@
 res://Scenes/player.tscn
 res://Scripts/player.gd
+res://Scenes/arcade.tscn
+res://Scripts/health.gd

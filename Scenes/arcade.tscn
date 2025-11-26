@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=29 format=3 uid="uid://b03s6rgm5pwnq"]
 
 [ext_resource type="Texture2D" uid="uid://br5fs7sngipll" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
@@ -10,7 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cga4saxv62ohf" path="res://Assets/3-removebg-preview.png" id="6_0ov7s"]
 [ext_resource type="Texture2D" uid="uid://ca1qesdwv7fcj" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
 [ext_resource type="Texture2D" uid="uid://bvbn5g6erlme3" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
+[ext_resource type="Texture2D" uid="uid://d30r8v0b7nk7y" path="res://Assets/healthbar0%.png" id="9_4mld8"]
+[ext_resource type="Texture2D" uid="uid://x8m2vo83d88s" path="res://Assets/healthbar100%.png" id="10_s0rvt"]
 [ext_resource type="PackedScene" uid="uid://c4rf4st16oach" path="res://Scenes/Baddie.tscn" id="11_j2rfc"]
+[ext_resource type="Texture2D" uid="uid://bigccntfy4jro" path="res://Assets/healthbar25%.png" id="11_tinc1"]
+[ext_resource type="Texture2D" uid="uid://dfgcjugkyfl1m" path="res://Assets/healthbar50%.png" id="12_mnyfu"]
+[ext_resource type="Texture2D" uid="uid://c21g05s5glgg1" path="res://Assets/healthbar75%.png" id="13_635gl"]
+[ext_resource type="Script" uid="uid://c4wm0yv3hb0lg" path="res://Scripts/health.gd" id="14_s0rvt"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="18_4mld8"]
 [ext_resource type="PackedScene" uid="uid://dbyjwavhp1aov" path="res://Scenes/ennemis.tscn" id="22_pd57b"]
 
@@ -47,6 +53,49 @@ animations = [{
 }],
 "loop": true,
 "name": &"yellow",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2rfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4mld8")
+}],
+"loop": true,
+"name": &"0%",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_s0rvt")
+}],
+"loop": true,
+"name": &"100%",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_tinc1")
+}],
+"loop": true,
+"name": &"25%",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_mnyfu")
+}],
+"loop": true,
+"name": &"50%",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_635gl")
+}],
+"loop": true,
+"name": &"75%",
 "speed": 5.0
 }]
 
@@ -96,6 +145,17 @@ sprite_frames = SubResource("SpriteFrames_3h0sf")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_j2rfc")]
 position = Vector2(297, 188)
+
+[node name="health" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(529, 32)
+scale = Vector2(0.36132798, 0.3359375)
+sprite_frames = SubResource("SpriteFrames_j2rfc")
+animation = &"100%"
+script = ExtResource("14_s0rvt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../health")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
