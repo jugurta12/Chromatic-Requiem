@@ -198,7 +198,7 @@ position = Vector2(321, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"default2"
-frame_progress = 0.2742154
+frame_progress = 0.22222824
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -241,8 +241,8 @@ texture_filter = 1
 position = Vector2(866.04443, -425.51855)
 scale = Vector2(2.2285385, 2.221349)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"atk1_right"
-frame_progress = 0.21202007
+animation = &"atk1_left"
+frame_progress = 0.3322487
 offset = Vector2(-387.769, 192.548)
 metadata/_edit_group_ = true
 

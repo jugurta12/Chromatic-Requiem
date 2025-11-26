@@ -32,7 +32,7 @@ func attack_sequence():
 	is_attacking = true
 	# Première animation d'attaque selon la direction
 	sprite.play("atk1_right" if facing_right else "atk1_left")
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.5).timeout 
 	is_attacking = false
 
 func update_animation(direction):
