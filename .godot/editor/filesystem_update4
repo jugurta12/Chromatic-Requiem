@@ -6,3 +6,5 @@ res://Scenes/fleche.tscn
 res://Scenes/rock.tscn
 res://Scenes/projectile.tscn
 res://Scenes/baddieyellow.tscn
+res://Scripts/ennemis.gd
+res://Scenes/ennemis.tscn

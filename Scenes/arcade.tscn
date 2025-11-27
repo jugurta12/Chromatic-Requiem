@@ -151,7 +151,7 @@ texture_filter = 1
 position = Vector2(529, 32)
 scale = Vector2(0.36132798, 0.3359375)
 sprite_frames = SubResource("SpriteFrames_j2rfc")
-animation = &"100%"
+animation = &"0%"
 script = ExtResource("14_s0rvt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -197,3 +197,4 @@ position = Vector2(64, 304)
 [node name="pause" parent="." instance=ExtResource("18_4mld8")]
 
 [connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
+[connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]

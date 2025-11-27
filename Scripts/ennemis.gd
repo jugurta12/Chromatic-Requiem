@@ -7,6 +7,8 @@ const SMOOTH = 8.0
 
 var target : Node2D = null
 var attacking = false
+var amount = 25
+signal dmg(amount)
 
 @onready var anim = $AnimatedSprite2D
 
@@ -55,6 +57,7 @@ func is_touching_player() -> bool:
 func play_attack():
 	attacking = true
 	anim.play("atk")
+	emit_signal("dmg", amount)
 	velocity.x = 0  # stop l'ennemi pendant l'attaque
 	await get_tree().create_timer(0.5).timeout
 	anim.play("default")
