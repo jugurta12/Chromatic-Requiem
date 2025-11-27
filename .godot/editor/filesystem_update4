@@ -8,3 +8,5 @@ res://Scenes/projectile.tscn
 res://Scenes/baddieyellow.tscn
 res://Scripts/ennemis.gd
 res://Scenes/ennemis.tscn
+res://Scenes/menu_2.tscn
+res://Scripts/menu_2.gd

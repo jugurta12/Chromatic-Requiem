@@ -126,7 +126,15 @@ func _on_lvl_2_mouse_exited() -> void:
 	$AnimatedSprite2D.play("map")
 	
 func _on_arcade_pressed() -> void:
+	if is_animating:
+		return  # ignore si la transition est déjà en cours
+
+	is_animating = true
+	$AnimatedSprite2D.play("arcadetransi")
+	await get_tree().create_timer(1.99).timeout
+	is_animating = false
 	$AnimatedSprite2D.play("play")
+	
 	$play.visible = true
 	$map.visible = false
 	$arcade.visible = false
