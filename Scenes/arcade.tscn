@@ -195,3 +195,5 @@ frame_progress = 0.162949
 position = Vector2(64, 304)
 
 [node name="pause" parent="." instance=ExtResource("18_4mld8")]
+
+[connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]

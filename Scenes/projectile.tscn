@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://xsu756pb85ts"]
 
 [ext_resource type="Script" uid="uid://bdhlyujkxsdl2" path="res://Scripts/projectile.gd" id="1_yr2qt"]
-[ext_resource type="Texture2D" uid="uid://dkrgw3kd3n3xx" path="res://Assets/projectil.png" id="2_yr2qt"]
-[ext_resource type="Texture2D" uid="uid://cl6br56lgis3y" path="res://Assets/projectil2.png" id="3_tl4hk"]
+[ext_resource type="Texture2D" uid="uid://e0udbk4x5d0c" path="res://Assets/projectil.png" id="2_yr2qt"]
+[ext_resource type="Texture2D" uid="uid://b7ix6jxn80j8u" path="res://Assets/projectil2.png" id="3_tl4hk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d4467"]
 animations = [{
@@ -18,23 +18,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8cdk"]
-size = Vector2(14.5302, 13.1972)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tl4hk"]
+radius = 5.371602
 
 [node name="projectile" type="Area2D"]
+position = Vector2(291, 278)
 rotation = 0.000539736
 script = ExtResource("1_yr2qt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(290.153, 283.843)
+position = Vector2(-3.9983778, 3.0021598)
 scale = Vector2(2.00335, 1.50453)
 sprite_frames = SubResource("SpriteFrames_d4467")
 frame_progress = 0.429068
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(-2.99606, -2.65649)
-scale = Vector2(1.76978, 1.20368)
-shape = SubResource("RectangleShape2D_f8cdk")
+position = Vector2(0.9972439, -2.6593614)
+scale = Vector2(1.7697791, 1.20368)
+shape = SubResource("CircleShape2D_tl4hk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

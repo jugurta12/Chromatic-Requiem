@@ -8,9 +8,9 @@ var controls_enabled = true
 @onready var sprite = $AnimatedSprite2D
 var facing_right = true
 var is_attacking = false
-signal health_changed(new_health)
 var health = 50
-var max_health = 100
+var max_health = 50
+signal health_changed(new_health)
 
 func _physics_process(delta):
 	if !is_on_floor():
@@ -53,5 +53,7 @@ func update_animation(direction):
 
 func _on_attack_timer_timeout():
 	get_tree().root.get_node("Arcade/HealthBar").update_health_bar()
-	emit_signal("health_changed", health)
 	is_attacking = false
+
+func _ready():
+	emit_signal("health_changed", health)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://1yw2wwk40nga"]
 
 [ext_resource type="Script" uid="uid://cdkutwc758j3f" path="res://Scripts/fleche.gd" id="1_kqsui"]
-[ext_resource type="Texture2D" uid="uid://b433d70kmbr1x" path="res://Assets/projectile2.png" id="2_d3yu3"]
-[ext_resource type="Texture2D" uid="uid://dma34ivnchnev" path="res://Assets/projectile.png" id="2_he104"]
+[ext_resource type="Texture2D" uid="uid://dh5xq78t6dq7d" path="res://Assets/projectile2.png" id="2_d3yu3"]
+[ext_resource type="Texture2D" uid="uid://cc2sic6tegdqb" path="res://Assets/projectile.png" id="2_he104"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i8ysl"]
 animations = [{
@@ -19,25 +19,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yu3"]
-size = Vector2(7.30237, 25.4235)
+size = Vector2(9.338881, 21.463062)
 
 [node name="fleche" type="Area2D"]
 texture_filter = 1
+position = Vector2(139, 183)
 rotation = -0.0294614
 script = ExtResource("1_kqsui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(354.002, 283.731)
+position = Vector2(-34.10308, 2.9967227)
 rotation = 0.00626836
 scale = Vector2(2.2511, 1.54236)
 sprite_frames = SubResource("SpriteFrames_i8ysl")
 frame_progress = 0.701273
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(359.857, 281.723)
+position = Vector2(-23.98191, 0.5279083)
 rotation = -1.57702
-scale = Vector2(1.66218, 2.40224)
-skew = 0.00651026
+scale = Vector2(1.6621805, 2.40224)
+skew = 0.0065102577
 shape = SubResource("RectangleShape2D_d3yu3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
