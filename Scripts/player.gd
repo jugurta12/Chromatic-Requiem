@@ -11,6 +11,7 @@ var is_attacking = false
 var health = 100
 var max_health = 100
 signal health_changed(new_health)
+signal atk_punch(dmg)
 
 func _physics_process(delta):
 	if !is_on_floor():
@@ -33,13 +34,13 @@ func _physics_process(delta):
 
 func attack_sequence():
 	is_attacking = true
-	# Première animation d'attaque selon la direction
 	sprite.play("atk1_right" if facing_right else "atk1_left")
+	emit_signal("atk_punch", 1)
 	await get_tree().create_timer(0.5).timeout 
 	is_attacking = false
 
 func update_animation(direction):
-	# Ne pas changer l'animation si on est en train d'attaquer
+	
 	if is_attacking:
 		return
 		
@@ -58,20 +59,17 @@ func _on_attack_timer_timeout():
 func _ready():
 	emit_signal("health_changed", health)
 
-
 func _on_ennemis_dmg(amount: Variant) -> void:
-	# Enlever la vie
-	health -= amount
-	emit_signal("health_changed", health)
+	if !is_attacking :
+		health -= amount
+		emit_signal("health_changed", health)
 
-	# Knockback
-	var knockback = Vector2(-1200, - 200)  # X négatif = reculer vers la gauche, Y négatif = sauter un peu
-	if not facing_right:
-		knockback.x *= -1  # si le perso regarde à gauche, reculer vers la droite
+		var knockback = Vector2(-1200, - 200) 
+		if not facing_right:
+			knockback.x *= -1 
 
-	velocity += knockback
+		velocity += knockback
 
-	# Optionnel : désactiver les contrôles pendant 0,3s pour que le joueur soit projeté correctement
-	controls_enabled = false
-	await get_tree().create_timer(0.3).timeout
-	controls_enabled = true
+		controls_enabled = false
+		await get_tree().create_timer(0.3).timeout
+		controls_enabled = true
