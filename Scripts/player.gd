@@ -1,17 +1,16 @@
 extends CharacterBody2D
-
 var controls_enabled = true
 @export var gravity = 700
 @export var speed = 200
 @export var acceleration = 0.2
 @export var jump_force = 430
 @onready var sprite = $AnimatedSprite2D
+@onready var attack_area = $AttackArea  
 var facing_right = true
 var is_attacking = false
 var health = 100
 var max_health = 100
 signal health_changed(new_health)
-signal atk_punch(dmg)
 
 func _physics_process(delta):
 	if !is_on_floor():
@@ -35,12 +34,21 @@ func _physics_process(delta):
 func attack_sequence():
 	is_attacking = true
 	sprite.play("atk1_right" if facing_right else "atk1_left")
-	emit_signal("atk_punch", 1)
-	await get_tree().create_timer(0.5).timeout 
+	
+	# Attendre un peu avant de détecter les coups (timing de l'animation)
+	await get_tree().create_timer(0.2).timeout
+	
+	# Détecter les ennemis dans la zone d'attaque
+	if attack_area:
+		var enemies = attack_area.get_overlapping_bodies()
+		for enemy in enemies:
+			if enemy.has_method("take_damage"):
+				enemy.take_damage(1)
+	
+	await get_tree().create_timer(0.3).timeout 
 	is_attacking = false
 
 func update_animation(direction):
-	
 	if is_attacking:
 		return
 		
@@ -52,24 +60,18 @@ func update_animation(direction):
 	else:
 		sprite.play("jump_right" if facing_right else "jump_left")
 
-func _on_attack_timer_timeout():
-	get_tree().root.get_node("Arcade/HealthBar").update_health_bar()
-	is_attacking = false
-
 func _ready():
+	sprite.play("idle_right")
 	emit_signal("health_changed", health)
 
 func _on_ennemis_dmg(amount: Variant) -> void:
-	if !is_attacking :
+	if !is_attacking:
 		health -= amount
 		emit_signal("health_changed", health)
-
-		var knockback = Vector2(-1200, - 200) 
+		var knockback = Vector2(-1200, -200) 
 		if not facing_right:
 			knockback.x *= -1 
-
 		velocity += knockback
-
 		controls_enabled = false
 		await get_tree().create_timer(0.3).timeout
 		controls_enabled = true

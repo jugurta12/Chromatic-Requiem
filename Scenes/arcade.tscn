@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=30 format=3 uid="uid://b03s6rgm5pwnq"]
 
 [ext_resource type="Texture2D" uid="uid://br5fs7sngipll" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
@@ -134,6 +134,12 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="Curve2D" id="Curve2D_s0rvt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -56, 0, 0, 0, 0, 0, 568, 0)
+}
+point_count = 2
+
 [node name="Arcade" type="Node2D"]
 script = ExtResource("1_i82s6")
 
@@ -143,15 +149,18 @@ texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_3h0sf")
 
+[node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
+position = Vector2(64, 304)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_j2rfc")]
-position = Vector2(297, 188)
+position = Vector2(281, 183)
 
 [node name="health" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(529, 32)
+position = Vector2(528.00006, 32)
 scale = Vector2(0.36132798, 0.3359375)
 sprite_frames = SubResource("SpriteFrames_j2rfc")
-animation = &"0%"
+animation = &"100%"
 script = ExtResource("14_s0rvt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -185,17 +194,22 @@ shape = SubResource("RectangleShape2D_4mld8")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 process_mode = 3
+visible = false
 texture_filter = 1
 position = Vector2(319, 172)
 scale = Vector2(0.558, 0.557)
 sprite_frames = SubResource("SpriteFrames_2uunk")
 frame_progress = 0.162949
 
-[node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
-position = Vector2(64, 304)
-
 [node name="pause" parent="." instance=ExtResource("18_4mld8")]
+visible = false
 
-[connection signal="atk_punch" from="CharacterBody2D" to="ennemis" method="_on_character_body_2d_atk_punch"]
-[connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
+[node name="mobpath" type="Path2D" parent="."]
+position = Vector2(64, 304)
+curve = SubResource("Curve2D_s0rvt")
+
+[node name="spawn" type="PathFollow2D" parent="mobpath"]
+position = Vector2(-56, 0)
+
 [connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
+[connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]

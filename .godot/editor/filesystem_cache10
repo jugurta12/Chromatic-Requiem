@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764168931
+::res://::1764952174
 area_2d_2.gd::GDScript::8008795463370639633::1762437642::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4388525710219405589::1762437642::1762437642::1::::<><><>0<>0<>ca6041fecbed98864f278100f5c12cfc<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1762437642::0::1::::<><><>0<>0<><>::
-::res://Assets/::1764263958
+::res://Assets/::1764263963
 1-removebg-preview.png::CompressedTexture2D/CompressedTexture2D::6373464036779404020::1762437642::1762437752::1::::<><><>0<>0<>52489664eb2e89b37c080b06914bddd2<>res://.godot/imported/1-removebg-preview.png-9514c5f95b1ae93feb7ab2be26d7b857.ctex::
 1.png::CompressedTexture2D/CompressedTexture2D::8806386418069752157::1762437642::1762437752::1::::<><><>0<>0<>efcd65bcfdfada77337ab720100b62b1<>res://.godot/imported/1.png-ad3a191b001e7705f8fd01c72cc5d665.ctex::
 2-removebg-preview.png::CompressedTexture2D/CompressedTexture2D::2127510470132226398::1762437642::1762437752::1::::<><><>0<>0<>5d7afefb932b6d340570ee1af82b0c67<>res://.godot/imported/2-removebg-preview.png-a748bb430dd9031c403449fadf687597.ctex::
@@ -361,8 +361,8 @@ violet1.png::CompressedTexture2D/CompressedTexture2D::8800773826781217760::17624
 violet2.png::CompressedTexture2D/CompressedTexture2D::7404906504474262995::1762437642::1762437751::1::::<><><>0<>0<>ac1cee6ddb28a7958583de866ca83663<>res://.godot/imported/violet2.png-2440d54c3118a3806a3bdd3a0c35ccfb.ctex::
 violet3.png::CompressedTexture2D/CompressedTexture2D::8920348572206019143::1762437642::1762437751::1::::<><><>0<>0<>190a455b0e059212b10580532aae0892<>res://.godot/imported/violet3.png-50f13fe25ece4a52075b8b29d643158c.ctex::
 yellowExeptJump.png::CompressedTexture2D/CompressedTexture2D::3233379653552146275::1762437642::1762437751::1::::<><><>0<>0<>e2fc4c007eddde053307ba0d2102227a<>res://.godot/imported/yellowExeptJump.png-c414ff2b1cc49cba97825517c044ec1e.ctex::
-::res://Scenes/::1764263608
-arcade.tscn::PackedScene::4200093519990142074::1764262976::0::1::::<><><>0<>0<><>::uid://br5fs7sngipll::::res://Assets/arcade.png<>uid://cado3t4xdwmag::::res://Scripts/arcadee.gd<>uid://be06t24tv6ci::::res://Assets/arcade2.png<>uid://b715g203h6ufx::::res://Assets/arcadepink.png<>uid://cw2may4p60fh1::::res://Assets/1-removebg-preview.png<>uid://5kt10k6exs3g::::res://Assets/2-removebg-preview.png<>uid://b0en17jk8bdea::::res://Assets/arcadepink2.png<>uid://cga4saxv62ohf::::res://Assets/3-removebg-preview.png<>uid://ca1qesdwv7fcj::::res://Assets/arcadeyellow.png<>uid://bvbn5g6erlme3::::res://Assets/arcadeyellow2.png<>uid://d30r8v0b7nk7y::::res://Assets/healthbar0%.png<>uid://x8m2vo83d88s::::res://Assets/healthbar100%.png<>uid://c4rf4st16oach::::res://Scenes/Baddie.tscn<>uid://bigccntfy4jro::::res://Assets/healthbar25%.png<>uid://dfgcjugkyfl1m::::res://Assets/healthbar50%.png<>uid://c21g05s5glgg1::::res://Assets/healthbar75%.png<>uid://c4wm0yv3hb0lg::::res://Scripts/health.gd<>uid://dba7i1cu57day::::res://Scenes/pause.tscn<>uid://dbyjwavhp1aov::::res://Scenes/ennemis.tscn
+::res://Scenes/::1764918430
+arcade.tscn::PackedScene::4200093519990142074::1764918430::0::1::::<><><>0<>0<><>::uid://br5fs7sngipll::::res://Assets/arcade.png<>uid://cado3t4xdwmag::::res://Scripts/arcadee.gd<>uid://be06t24tv6ci::::res://Assets/arcade2.png<>uid://b715g203h6ufx::::res://Assets/arcadepink.png<>uid://cw2may4p60fh1::::res://Assets/1-removebg-preview.png<>uid://5kt10k6exs3g::::res://Assets/2-removebg-preview.png<>uid://b0en17jk8bdea::::res://Assets/arcadepink2.png<>uid://cga4saxv62ohf::::res://Assets/3-removebg-preview.png<>uid://ca1qesdwv7fcj::::res://Assets/arcadeyellow.png<>uid://bvbn5g6erlme3::::res://Assets/arcadeyellow2.png<>uid://d30r8v0b7nk7y::::res://Assets/healthbar0%.png<>uid://x8m2vo83d88s::::res://Assets/healthbar100%.png<>uid://c4rf4st16oach::::res://Scenes/Baddie.tscn<>uid://bigccntfy4jro::::res://Assets/healthbar25%.png<>uid://dfgcjugkyfl1m::::res://Assets/healthbar50%.png<>uid://c21g05s5glgg1::::res://Assets/healthbar75%.png<>uid://c4wm0yv3hb0lg::::res://Scripts/health.gd<>uid://dba7i1cu57day::::res://Scenes/pause.tscn<>uid://dbyjwavhp1aov::::res://Scenes/ennemis.tscn
 area_2d.tscn::PackedScene::4180288692137666566::1762437642::0::1::::<><><>0<>0<><>::uid://sf14baukfjti::::res://Assets/plateforme.png
 Baddie.tscn::PackedScene::6843768603690116011::1763672066::0::1::::<><><>0<>0<><>::uid://dhggmxord85gq::::res://Scripts/player.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://cs10i7jkjjwbd::::res://Assets/Atk_box copie.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://cbmbtn2bsfnvf::::res://Assets/perso_final copie 3.png<>uid://33v312kgomtn::::res://Assets/perso_final copie 2.png<>uid://cw5w3m5yxvgyl::::res://Assets/perso_final.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png
 baddieViolet.tscn::PackedScene::148036207545876772::1762437642::0::1::::<><><>0<>0<><>::uid://bgu1siu503xp7::::res://Scripts/baddie_violet.gd<>uid://dd1bx8j5cmldn::::res://Assets/Atk_box.png<>uid://hwuarpk1pdrq::::res://Assets/atkviolet1.png<>uid://b6s1h6bou2njb::::res://Assets/atkviolet2.png<>uid://b4n37wvhjhguh::::res://Assets/perso_final copie.png<>uid://b1fcf5pofqder::::res://Assets/atkviolet3.png<>uid://22ajb54gixlw::::res://Assets/atkviolet4.png<>uid://d2livqjnctclk::::res://Assets/atkviolet5.png<>uid://u68oan4m2bgu::::res://Assets/atkviolet6.png<>uid://dnpk6at7gk15p::::res://Assets/atkviolet7.png<>uid://2fwvbonmu2vc::::res://Assets/perso_chroma_requiem (55) copie 4.png<>uid://cu17fvv5puhmb::::res://Assets/perso_chroma_requiem (55) copie 5.png<>uid://hwfel6p8hawx::::res://Assets/atkviolet8.png<>uid://bhu6jddiw67rt::::res://Assets/atkviolet9.png<>uid://d2628a2bt4kw0::::res://Assets/perso_chroma_requiem (55) copie 3.png<>uid://cclooh3wrhq5p::::res://Assets/atkviolet10.png<>uid://bhlfqcsjvokem::::res://Assets/perso_chroma_requiem (55) copie 2.png<>uid://d1dy18dptgsea::::res://Assets/atkviolet11.png<>uid://dnbnvx5uhky48::::res://Assets/atkviolet12.png<>uid://darlnxvqrvg7y::::res://Assets/atkviolet13.png<>uid://duwddlabl04l4::::res://Assets/atkviolet14.png<>uid://bd76encw6odh0::::res://Assets/jumpviolet2.png<>uid://k6nmuvyw06cx::::res://Assets/violet1.png<>uid://dl8hx0bkigteb::::res://Assets/jumpviolet3.png<>uid://dauqqltgglq22::::res://Assets/atkviolet15.png<>uid://cnssxbpx070fs::::res://Assets/violet2.png<>uid://culh7nwadd4hk::::res://Assets/violet3.png<>uid://dravck4hld6qy::::res://Assets/jumpviolet1.png<>uid://c0xyuikijaq16::::res://SFX/violet.mp3
@@ -383,7 +383,7 @@ player.tscn::PackedScene::8777611746390617727::1764173271::0::1::::<><><>0<>0<><
 projectile.tscn::PackedScene::1652775312781748040::1764258059::0::1::::<><><>0<>0<><>::uid://bdhlyujkxsdl2::::res://Scripts/projectile.gd<>uid://e0udbk4x5d0c::::res://Assets/projectil.png<>uid://b7ix6jxn80j8u::::res://Assets/projectil2.png
 rock.tscn::PackedScene::1172346734181119279::1764257997::0::1::::<><><>0<>0<><>::uid://lom2hjgrqmca::::res://Scripts/rock.gd<>uid://bhnil7w0bjg0h::::res://Assets/rock.png<>uid://c465yicskvqcq::::res://Assets/rock2.png
 trampo.tscn::PackedScene::7649125071190039203::1762437642::0::1::::<><><>0<>0<><>::uid://c4msvysobkygw::::res://Scripts/trampo.gd<>uid://2qmrd41n0oko::::res://Assets/pad2.png<>uid://bpssnj68ab64w::::res://Assets/pad.png
-::res://Scripts/::1764263547
+::res://Scripts/::1764862156
 animation_player.gd::GDScript::1139283727684679759::1762437642::0::1::::<>AnimationPlayer<><>0<>0<><>::
 arcadee.gd::GDScript::4779935584569332150::1763669529::0::1::::<>Node2D<><>0<>0<><>::
 area_2d.gd::GDScript::8660053959977907219::1762437642::0::1::::<>Area2D<><>0<>0<><>::
@@ -393,8 +393,9 @@ baddieYellow.gd::GDScript::5803250189149972984::1762437642::0::1::::<>CharacterB
 baddie_violet.gd::GDScript::2850452539185195306::1762437642::0::1::::<>CharacterBody2D<><>0<>0<><>::
 collision_shape_2d_2.gd::GDScript::1141200213508286621::1762437642::0::1::::<>CollisionShape2D<><>0<>0<><>::
 drip.gd::GDScript::3434301386050488471::1762437642::0::1::::<>Node2D<><>0<>0<><>::
-ennemis.gd::GDScript::5501855636641262293::1764258793::0::1::::<>CharacterBody2D<><>0<>0<><>::
+ennemis.gd::GDScript::5501855636641262293::1764861853::0::1::::<>CharacterBody2D<><>0<>0<><>::
 fleche.gd::GDScript::5005301105879063369::1762437642::0::1::::<>Area2D<><>0<>0<><>::
+health.gd::GDScript::6854508686522187288::1764265120::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 intro.gd::GDScript::5288278839857763053::1762437642::0::1::::<>Node2D<><>0<>0<><>::
 lobby2.gd::GDScript::5375907704225943995::1763686383::0::1::::<>Node2D<><>0<>0<><>::
 lvl_1.gd::GDScript::797258497008956388::1762437642::0::1::::<>Node2D<><>0<>0<><>::
@@ -402,9 +403,8 @@ menu.gd::GDScript::9052747592183021699::1762437642::0::1::::<>CanvasLayer<><>0<>
 menu_2.gd::GDScript::9110273117777536642::1764263547::0::1::::<>CanvasLayer<><>0<>0<><>::
 pause.gd::GDScript::5534052694799468637::1762437642::0::1::::<>CanvasLayer<><>0<>0<><>::
 persoarcade.gd::GDScript::5614524636758555932::1762437642::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.gd::GDScript::7663357184995404332::1764259889::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::7663357184995404332::1764862156::0::1::::<>CharacterBody2D<><>0<>0<><>::
 projectile.gd::GDScript::2612149669715809181::1762437642::0::1::::<>Area2D<><>0<>0<><>::
-health.gd::GDScript::6854508686522187288::1764257714::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 rock.gd::GDScript::801755770786486660::1762437642::0::1::::<>Area2D<><>0<>0<><>::
 sol.gd::GDScript::5565433363052989634::1762437642::0::1::::<>StaticBody2D<><>0<>0<><>::
 static_body_2d.gd::GDScript::6406127613937478032::1762437642::0::1::::<>StaticBody2D<><>0<>0<><>::
