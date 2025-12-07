@@ -1,14 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4rf4st16oach"]
+[gd_scene load_steps=22 format=3 uid="uid://c4rf4st16oach"]
 
 [ext_resource type="Script" uid="uid://dhggmxord85gq" path="res://Scripts/player.gd" id="1_4y6d6"]
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="2_4y6d6"]
 [ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="3_jjo6a"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="4_8tbd3"]
+[ext_resource type="Texture2D" uid="uid://doayap1ptkt7t" path="res://Assets/nrmldeath1.png" id="4_gt11p"]
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="5_ji2xe"]
+[ext_resource type="Texture2D" uid="uid://dk7bpnfq0i2c3" path="res://Assets/nrmldeath2.png" id="5_sxmsa"]
+[ext_resource type="Texture2D" uid="uid://x651reqr6yap" path="res://Assets/nrmldeath3.png" id="6_5xorg"]
 [ext_resource type="Texture2D" uid="uid://cyfcnrm4sios5" path="res://Assets/nrmljumpleft.png" id="6_y3hc5"]
+[ext_resource type="Texture2D" uid="uid://dp1xondyycn1" path="res://Assets/nrmldeath4.png" id="7_1sg6p"]
 [ext_resource type="Texture2D" uid="uid://ciyosjxh5nsqk" path="res://Assets/nrmljumpright.png" id="7_676oq"]
 [ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="8_gqifm"]
+[ext_resource type="Texture2D" uid="uid://bwljv06uskjdi" path="res://Assets/nrmldeath5.png" id="8_xh4dr"]
 [ext_resource type="Texture2D" uid="uid://be4cbcgr136m" path="res://Assets/nrmlleft.png" id="9_gt11p"]
+[ext_resource type="Texture2D" uid="uid://dkljpndgpmxqm" path="res://Assets/nrmldeath6.png" id="9_wpk7j"]
+[ext_resource type="Texture2D" uid="uid://cn35qc6ydlkyd" path="res://Assets/nrmldeath7.png" id="10_1xs7m"]
 [ext_resource type="Texture2D" uid="uid://bymqy7o5cc30m" path="res://Assets/nrmlright2.png" id="10_sxmsa"]
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="11_5xorg"]
 
@@ -28,6 +35,37 @@ animations = [{
 }],
 "loop": true,
 "name": &"atk1_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gt11p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sxmsa")
+}],
+"loop": true,
+"name": &"death1",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5xorg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1sg6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xh4dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wpk7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1xs7m")
+}],
+"loop": true,
+"name": &"death2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -100,7 +138,8 @@ texture_filter = 1
 position = Vector2(565, -289.00003)
 scale = Vector2(1.4567927, 1.4811941)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_left"
+animation = &"death1"
+frame_progress = 0.36154747
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -71,6 +71,18 @@ func _on_ennemis_dmg(amount: Variant) -> void:
 		var knockback = Vector2(-1200, -200) 
 		if not facing_right:
 			knockback.x *= -1 
+		if health == 0: 
+			set_physics_process(false)
+			set_process(false)
+			set_process_input(false)
+			velocity = Vector2.ZERO
+			sprite.play("death1")
+			await get_tree().create_timer(1.9).timeout
+			sprite.play("death2")
+			await get_tree().create_timer(0.999).timeout
+			queue_free() 
+			await get_tree().create_timer(0.4).timeout
+			return
 		velocity += knockback
 		controls_enabled = false
 		await get_tree().create_timer(0.3).timeout
