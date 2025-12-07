@@ -194,7 +194,6 @@ shape = SubResource("RectangleShape2D_4mld8")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 process_mode = 3
-visible = false
 texture_filter = 1
 position = Vector2(319, 172)
 scale = Vector2(0.558, 0.557)
@@ -202,7 +201,6 @@ sprite_frames = SubResource("SpriteFrames_2uunk")
 frame_progress = 0.162949
 
 [node name="pause" parent="." instance=ExtResource("18_4mld8")]
-visible = false
 
 [node name="mobpath" type="Path2D" parent="."]
 position = Vector2(64, 304)
