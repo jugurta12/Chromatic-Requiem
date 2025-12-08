@@ -4,3 +4,6 @@ res://Scenes/Baddie.tscn
 res://Scripts/player.gd
 res://Scripts/health.gd
 res://Scripts/arcadee.gd
+res://Scenes/menu_2.tscn
+res://Scenes/game_over.tscn
+res://scripts/game_over.gd

@@ -11,6 +11,7 @@ var is_attacking = false
 var health = 100
 var max_health = 100
 signal health_changed(new_health)
+var gameover_scene = preload("res://Scenes/game_over.tscn")
 
 func _physics_process(delta):
 	if !is_on_floor():
@@ -36,7 +37,7 @@ func attack_sequence():
 	sprite.play("atk1_right" if facing_right else "atk1_left")
 	
 	# Attendre un peu avant de détecter les coups (timing de l'animation)
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0).timeout
 	
 	# Détecter les ennemis dans la zone d'attaque
 	if attack_area:
@@ -80,8 +81,12 @@ func _on_ennemis_dmg(amount: Variant) -> void:
 			await get_tree().create_timer(1.9).timeout
 			sprite.play("death2")
 			await get_tree().create_timer(0.999).timeout
-			queue_free() 
-			await get_tree().create_timer(0.4).timeout
+			visible = false
+			await get_tree().create_timer(0.2).timeout
+			get_tree().paused = true
+			var gameover_instance = gameover_scene.instantiate()
+			get_tree().root.add_child(gameover_instance)
+			queue_free()
 			return
 		velocity += knockback
 		controls_enabled = false

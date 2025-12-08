@@ -142,6 +142,7 @@ point_count = 2
 
 [node name="Arcade" type="Node2D"]
 script = ExtResource("1_i82s6")
+enemy_scene = ExtResource("22_pd57b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
@@ -149,11 +150,11 @@ texture_filter = 1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_3h0sf")
 
-[node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
-position = Vector2(64, 304)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_j2rfc")]
 position = Vector2(281, 183)
+
+[node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
+position = Vector2(64, 304)
 
 [node name="health" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -162,9 +163,6 @@ scale = Vector2(0.36132798, 0.3359375)
 sprite_frames = SubResource("SpriteFrames_j2rfc")
 animation = &"100%"
 script = ExtResource("14_s0rvt")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../health")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -209,5 +207,5 @@ curve = SubResource("Curve2D_s0rvt")
 [node name="spawn" type="PathFollow2D" parent="mobpath"]
 position = Vector2(-56, 0)
 
-[connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
 [connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
+[connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
