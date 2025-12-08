@@ -45,6 +45,12 @@ func _on_quitter_mouse_exited() -> void:
 		$AnimatedSprite2D.play("default") 
 
 func _on_map_pressed() -> void:
+	if is_animating:
+		return  # ignore si la transition est déjà en cours
+
+	is_animating = true
+	$AnimatedSprite2D.play("adventuretransition")
+	await get_tree().create_timer(2.16).timeout
 	$AnimatedSprite2D.play("map") 
 	$map.visible = false
 	$arcade.visible = false
