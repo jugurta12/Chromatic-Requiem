@@ -1,7 +1,7 @@
 extends Area2D
 
 # Force du rebond (ajuste selon tes besoins)
-@export var bounce_force: float = -800.0
+@export var bounce_force: float = -80000.0
 # Multiplicateur horizontal pour garder le mouvement latéral
 @export var horizontal_multiplier: float = 0.3
 

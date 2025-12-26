@@ -1,2 +1,4 @@
-res://Scenes/menu_2.tscn
-res://Scripts/menu_2.gd
+res://begin.tscn
+res://Scenes/lvl1.tscn
+res://Scenes/trampo.tscn
+res://Scripts/trampo.gd

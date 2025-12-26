@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvp0s4ws1q4ul"]
+
+[ext_resource type="Texture2D" uid="uid://bi8ehcl7idc1l" path="res://Assets/laboo.png" id="1_ewa42"]
+[ext_resource type="Texture2D" uid="uid://b5l1evp8ju4pd" path="res://Assets/city.png" id="2_os6o7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_os6o7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ewa42")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_os6o7")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(322.5, 182.00002)
+scale = Vector2(0.62658846, 0.47291946)
+sprite_frames = SubResource("SpriteFrames_os6o7")

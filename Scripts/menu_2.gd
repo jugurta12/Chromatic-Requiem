@@ -25,7 +25,7 @@ func _on_quitter_pressed() -> void:
 	get_tree().paused = false
 
 func _on_quitter_mouse_entered() -> void:
-	if is_animating:  # Bloquer si animation en cours
+	if is_animating:  
 		return
 	if $play.visible:
 		$AnimatedSprite2D.play("holdquitt") 
@@ -51,6 +51,7 @@ func _on_map_pressed() -> void:
 	is_animating = true
 	$AnimatedSprite2D.play("adventuretransition")
 	await get_tree().create_timer(2.16).timeout
+	is_animating = false
 	$AnimatedSprite2D.play("map") 
 	$map.visible = false
 	$arcade.visible = false

@@ -1,23 +1,23 @@
 [gd_scene load_steps=15 format=3 uid="uid://gxmrwxxp2xch"]
 
 [ext_resource type="Script" uid="uid://lmgy383uht77" path="res://Scripts/lvl_1.gd" id="1_4bcgh"]
-[ext_resource type="Texture2D" uid="uid://cbe8ipr8co47j" path="res://Assets/lvl1.png" id="1_k1kij"]
 [ext_resource type="PackedScene" uid="uid://dc2uygkwfcu8w" path="res://Scenes/baddieyellow.tscn" id="2_ilbed"]
+[ext_resource type="Texture2D" uid="uid://b5l1evp8ju4pd" path="res://Assets/city.png" id="2_j56ed"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="3_k1kij"]
 [ext_resource type="PackedScene" uid="uid://b0s70kcvun8us" path="res://Scenes/area_2d.tscn" id="4_oxj74"]
 [ext_resource type="PackedScene" uid="uid://dg8j8ccc3fnnn" path="res://Scenes/trampo.tscn" id="5_gw65t"]
-[ext_resource type="Texture2D" uid="uid://c2s14aa0f4s8k" path="res://Assets/microship1.png" id="6_4bcgh"]
+[ext_resource type="Texture2D" uid="uid://bh3j7sqdt2whs" path="res://Assets/microship1.png" id="6_4bcgh"]
 [ext_resource type="Script" uid="uid://b2ypw3xahafx2" path="res://Scripts/area_2d_3.gd" id="7_4bcgh"]
-[ext_resource type="Texture2D" uid="uid://dybv0cq6iu2h7" path="res://Assets/microship2.png" id="7_4g8w4"]
+[ext_resource type="Texture2D" uid="uid://bbm1j7qnrl7jk" path="res://Assets/microship2.png" id="7_4g8w4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gw65t"]
-size = Vector2(1533.5, 285)
+size = Vector2(1987.75, 298.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1kij"]
 size = Vector2(31, 982)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxj74"]
-size = Vector2(608, 61)
+size = Vector2(786, 51.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4g8w4"]
 animations = [{
@@ -44,23 +44,24 @@ script = ExtResource("1_4bcgh")
 position = Vector2(319, 281)
 
 [node name="TextureRect" type="TextureRect" parent="Area2D2"]
+texture_filter = 1
 offset_left = -322.0
 offset_top = -346.0
-offset_right = 1214.0
-offset_bottom = 680.0
-texture = ExtResource("1_k1kij")
+offset_right = 1238.0
+offset_bottom = 225.0
+texture = ExtResource("2_j56ed")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(447.25, 785)
+position = Vector2(472, 347)
 shape = SubResource("RectangleShape2D_gw65t")
 
 [node name="trampo" parent="Area2D2" instance=ExtResource("5_gw65t")]
-position = Vector2(46, -333)
+position = Vector2(-390, 286)
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1550, 435)
+position = Vector2(1288, 389)
 shape = SubResource("RectangleShape2D_k1kij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -68,18 +69,18 @@ position = Vector2(-17.5, 426)
 shape = SubResource("RectangleShape2D_k1kij")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(402, 337)
+position = Vector2(459, 224.25)
 shape = SubResource("RectangleShape2D_oxj74")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ilbed")]
-position = Vector2(184, -85)
+position = Vector2(904, 185)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(168, 190)
+position = Vector2(171, 245)
 limit_left = 0
-limit_top = 0
-limit_right = 1500
-limit_bottom = 1015
+limit_top = 4
+limit_right = 1260
+limit_bottom = 568
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.6
@@ -96,13 +97,13 @@ offset_bottom = -2.0
 text = "press N to start transform  "
 
 [node name="Area2D4" parent="." instance=ExtResource("4_oxj74")]
-position = Vector2(102, -1)
+position = Vector2(-2, 588)
 
 [node name="pause" parent="." instance=ExtResource("3_k1kij")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(987.5, 881)
+position = Vector2(1602, 814)
 scale = Vector2(0.828122, 0.75)
 sprite_frames = SubResource("SpriteFrames_4g8w4")
 frame_progress = 0.289025
@@ -113,7 +114,7 @@ scale = Vector2(0.192771, 0.0906516)
 script = ExtResource("7_4bcgh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D3"]
-position = Vector2(10.9243, -190.323)
+position = Vector2(7.7927246, -179.29175)
 scale = Vector2(2.04938, 4.67549)
 shape = SubResource("RectangleShape2D_j56ed")
 

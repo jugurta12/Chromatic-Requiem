@@ -1,17 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo6bultqrus7v"]
+[gd_scene load_steps=8 format=3 uid="uid://bo6bultqrus7v"]
 
-[ext_resource type="Script" uid="uid://xl43qsbfloha" path="res://scripts/game_over.gd" id="1_8fo1c"]
-[ext_resource type="Texture2D" uid="uid://cdibn3fd8r7me" path="res://Assets/gameover.png" id="1_ojehl"]
+[ext_resource type="Script" uid="uid://xl43qsbfloha" path="res://Scripts/game_over.gd" id="1_8fo1c"]
+[ext_resource type="Texture2D" uid="uid://c4tcwpq7070a2" path="res://Assets/Gameover1.png" id="3_14u15"]
+[ext_resource type="Texture2D" uid="uid://basitusjntuc5" path="res://Assets/gameover4.png" id="3_j3ryr"]
+[ext_resource type="Texture2D" uid="uid://ds426at6j8o4m" path="res://Assets/gameover5.png" id="3_rjluv"]
+[ext_resource type="Texture2D" uid="uid://cwl2mrd6jf4wh" path="res://Assets/gameover2.png" id="4_j3ryr"]
+[ext_resource type="Texture2D" uid="uid://b56v3ro044kd1" path="res://Assets/gameover3.png" id="5_rjluv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i2yjh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ojehl")
+"texture": ExtResource("5_rjluv")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rjluv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rjluv")
+}],
+"loop": true,
+"name": &"quit",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j3ryr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rjluv")
+}],
+"loop": true,
+"name": &"retry",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_14u15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j3ryr")
+}],
+"loop": true,
+"name": &"transi",
+"speed": 1.0
 }]
 
 [node name="GameOver" type="CanvasLayer"]
@@ -31,31 +68,35 @@ grow_vertical = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(318.5, 173)
-scale = Vector2(7.265625, 5.3124995)
+position = Vector2(320.3751, 178.93753)
+scale = Vector2(1.001953, 1.0114582)
 sprite_frames = SubResource("SpriteFrames_i2yjh")
+frame_progress = 0.8078179
 
 [node name="retry" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.98600006
-offset_left = 174.0
-offset_top = 173.0
-offset_right = -222.0
-offset_bottom = -139.96002
+offset_left = 58.0
+offset_top = 277.0
+offset_right = -520.0
+offset_bottom = -47.960022
 
 [node name="quit" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
-anchor_left = 0.27800003
-anchor_top = 0.67800003
-anchor_right = 0.65500003
-anchor_bottom = 0.758
-offset_left = 0.07998657
-offset_top = -5.080017
-offset_right = -0.2000122
-offset_bottom = 0.11999512
+anchor_left = 0.795
+anchor_top = 0.77500004
+anchor_right = 0.873
+anchor_bottom = 0.827
+offset_left = 8.199982
+offset_right = 0.27996826
+offset_bottom = 6.279999
 
+[connection signal="mouse_entered" from="retry" to="." method="_on_retry_mouse_entered"]
+[connection signal="mouse_exited" from="retry" to="." method="_on_retry_mouse_exited"]
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
+[connection signal="mouse_entered" from="quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
