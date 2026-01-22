@@ -1,17 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://badg5q58ve8sm"]
+[gd_scene load_steps=8 format=3 uid="uid://badg5q58ve8sm"]
 
 [ext_resource type="Texture2D" uid="uid://4bhovri0m1re" path="res://Assets/balise1.png" id="1_yaw5v"]
 [ext_resource type="Texture2D" uid="uid://du38ctpltla62" path="res://Assets/balise2.png" id="2_pkit5"]
 [ext_resource type="Texture2D" uid="uid://bx4swy6lc5wrv" path="res://Assets/balise3.png" id="3_4ih4i"]
 [ext_resource type="Texture2D" uid="uid://fduu5iksfslj" path="res://Assets/balise4.png" id="4_ypiay"]
+[ext_resource type="Texture2D" uid="uid://bmb1rrr1n1f5a" path="res://Assets/balise5.png" id="5_4ih4i"]
+[ext_resource type="Texture2D" uid="uid://dqwyvklwk6bka" path="res://Assets/balise6.png" id="6_ypiay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34u63"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"begin",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_yaw5v")
@@ -26,6 +23,17 @@ animations = [{
 "texture": ExtResource("4_ypiay")
 }],
 "loop": true,
+"name": &"begin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4ih4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ypiay")
+}],
+"loop": true,
 "name": &"default",
 "speed": 7.0
 }]
@@ -35,4 +43,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_34u63")
-frame_progress = 0.46749875
+animation = &"begin"
