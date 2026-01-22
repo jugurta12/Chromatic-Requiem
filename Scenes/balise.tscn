@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://badg5q58ve8sm"]
+
+[node name="balise" type="CharacterBody2D"]
