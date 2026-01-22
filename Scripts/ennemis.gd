@@ -11,6 +11,7 @@ var life = 2
 signal dmg(amount)
 signal kill
 @onready var anim = $AnimatedSprite2D
+
 func _physics_process(delta):
 	# Trouver baadie si pas encore trouvé
 	if target == null:
@@ -36,25 +37,37 @@ func _physics_process(delta):
 	move_and_slide()
 	# Jouer l'animation par défaut si pas en attaque
 	if not attacking:
-		$AnimatedSprite2D.play("default")
+		if facing_right:
+			anim.play("default2")
+		else:
+			anim.play("default")
 	# Vérifier collision avec baadie pour attaquer
 	if not attacking and is_touching_player():
 		play_attack()
+
 func is_touching_player() -> bool:
 	for i in range(get_slide_collision_count()):
 		var col = get_slide_collision(i)
 		if col.get_collider() == target:
 			return true
 	return false
+
 func play_attack():
-	attacking = true
-	anim.play("atk")
 	emit_signal("dmg", amount)
+	attacking = true
+	if facing_right:
+		anim.play("atk2")
+	else:
+		anim.play("atk")
 	velocity.x = 0
 	await get_tree().create_timer(0.5).timeout
-	anim.play("default")
+	if facing_right:
+		anim.play("default2")
+	else:
+		anim.play("default")
 	await get_tree().create_timer(1).timeout
 	attacking = false
+
 # Nouvelle fonction pour recevoir les dégâts
 func take_damage(dmg: int) -> void:
 	life -= dmg

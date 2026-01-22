@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbyjwavhp1aov"]
+[gd_scene load_steps=10 format=3 uid="uid://dbyjwavhp1aov"]
 
 [ext_resource type="Script" uid="uid://ckne013ivcqbt" path="res://Scripts/ennemis.gd" id="1_gsgpr"]
 [ext_resource type="Texture2D" uid="uid://i6hbuq412v7r" path="res://Assets/ennemiatkR.png" id="2_8iqwm"]
-[ext_resource type="Texture2D" uid="uid://bx1in5c56riky" path="res://Assets/ennemiidle1.png" id="3_ea58o"]
-[ext_resource type="Texture2D" uid="uid://cfqlj2mrbmn4b" path="res://Assets/ennemiidle2.png" id="4_ntfai"]
+[ext_resource type="Texture2D" uid="uid://tldpdvccqilv" path="res://Assets/ennemiatkL.png" id="3_sh1mq"]
+[ext_resource type="Texture2D" uid="uid://cuqdd0t2jrmbq" path="res://Assets/ennemiidleL.png" id="4_sh1mq"]
+[ext_resource type="Texture2D" uid="uid://vv2g0spgxxax" path="res://Assets/ennemiidleR.png" id="6_ge6vj"]
+[ext_resource type="Texture2D" uid="uid://b5ub56xc5lrt" path="res://Assets/ennemiidleL2.png" id="7_hhkb1"]
+[ext_resource type="Texture2D" uid="uid://bqeh3utwg5p6o" path="res://Assets/ennemiidleR2.png" id="7_q17at"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8iqwm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8iqwm")
+"texture": ExtResource("3_sh1mq")
 }],
 "loop": true,
 "name": &"atk",
@@ -17,18 +20,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ea58o")
+"texture": ExtResource("2_8iqwm")
+}],
+"loop": true,
+"name": &"atk2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sh1mq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ntfai")
+"texture": ExtResource("7_hhkb1")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ge6vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q17at")
+}],
+"loop": true,
+"name": &"default2",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvmx5"]
-size = Vector2(39, 74.5)
+size = Vector2(46, 74.5)
 
 [node name="ennemis" type="CharacterBody2D"]
 script = ExtResource("1_gsgpr")
@@ -38,8 +60,7 @@ texture_filter = 1
 position = Vector2(3.4999952, -24.5)
 scale = Vector2(1.703125, 1.765625)
 sprite_frames = SubResource("SpriteFrames_8iqwm")
-frame_progress = 0.6311851
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6.5, -22.75)
+position = Vector2(-7, -23)
 shape = SubResource("RectangleShape2D_tvmx5")
