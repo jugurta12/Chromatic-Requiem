@@ -35,12 +35,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 1.0
 }]
 
 [node name="balise" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_34u63")
-animation = &"begin"
+frame_progress = 0.51223004
