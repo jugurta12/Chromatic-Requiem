@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=32 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://djida5j74gqf2" path="res://Assets/atkviolet5.png" id="7_3m65n"]
 [ext_resource type="Texture2D" uid="uid://5mw2oh0wg3eg" path="res://Assets/atkviolet6.png" id="8_smshv"]
 [ext_resource type="Texture2D" uid="uid://dgxr1cduxeu1h" path="res://Assets/atkviolet7.png" id="9_3m65n"]
-[ext_resource type="Texture2D" uid="uid://2fwvbonmu2vc" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="9_smshv"]
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_3m65n"]
 [ext_resource type="Texture2D" uid="uid://dwbpg8txbcnps" path="res://Assets/atkviolet8.png" id="10_74vap"]
 [ext_resource type="Texture2D" uid="uid://smndfb2cdge1" path="res://Assets/atkviolet9.png" id="11_3m65n"]
@@ -171,9 +170,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_smshv")
-}, {
-"duration": 1.0,
 "texture": ExtResource("10_3m65n")
 }],
 "loop": true,
@@ -201,7 +197,7 @@ texture_filter = 1
 position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"run_right"
+animation = &"run_left"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
