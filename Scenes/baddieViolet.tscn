@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=33 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
@@ -13,9 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_3m65n"]
 [ext_resource type="Texture2D" uid="uid://dwbpg8txbcnps" path="res://Assets/atkviolet8.png" id="10_74vap"]
 [ext_resource type="Texture2D" uid="uid://smndfb2cdge1" path="res://Assets/atkviolet9.png" id="11_3m65n"]
-[ext_resource type="Texture2D" uid="uid://d2628a2bt4kw0" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="11_74vap"]
 [ext_resource type="Texture2D" uid="uid://coyl2grlsbd0w" path="res://Assets/atkviolet10.png" id="12_c05tr"]
-[ext_resource type="Texture2D" uid="uid://bhlfqcsjvokem" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="12_uijnq"]
 [ext_resource type="Texture2D" uid="uid://b7x3uhxk3o1ak" path="res://Assets/atkviolet11.png" id="13_2erx3"]
 [ext_resource type="Texture2D" uid="uid://cg4o3gc4xxtdp" path="res://Assets/atkviolet12.png" id="14_b80hv"]
 [ext_resource type="Texture2D" uid="uid://y61qyuuvodyx" path="res://Assets/atkviolet13.png" id="15_rb8yo"]
@@ -31,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dw3bn2br14j5c" path="res://Assets/violetL3.png" id="20_hgx7o"]
 [ext_resource type="Texture2D" uid="uid://dtcb60c5kje30" path="res://Assets/jumpviolet1.png" id="20_srjvs"]
 [ext_resource type="AudioStream" uid="uid://cglm0lleqi0e" path="res://SFX/violet.mp3" id="22_74vap"]
+[ext_resource type="Texture2D" uid="uid://bm54uojhc5paw" path="res://Assets/RRviolet.png" id="29_2erx3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -183,10 +182,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_74vap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_uijnq")
+"texture": ExtResource("29_2erx3")
 }],
 "loop": true,
 "name": &"run_right",
@@ -205,7 +201,7 @@ texture_filter = 1
 position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"idle_right"
+animation = &"run_right"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
