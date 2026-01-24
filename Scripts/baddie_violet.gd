@@ -71,9 +71,9 @@ func _physics_process(delta):
 			sprite.play("jump")
 		else:  # Au sol
 			if facing_right:
-				sprite.play("idle_right")
+				sprite.play("run_right")
 			else:
-				sprite.play("idle_left")
+				sprite.play("run_left")
 	
 	move_and_slide()
 	
