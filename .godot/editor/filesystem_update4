@@ -2,3 +2,4 @@ res://Scenes/ennemis.tscn
 res://Scripts/ennemis.gd
 res://Scripts/player.gd
 res://Scenes/balise.tscn
+res://Scenes/baddieViolet.tscn
