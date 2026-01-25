@@ -58,7 +58,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"atk1_left",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -84,7 +84,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"atk1_right",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -104,9 +104,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_6y8ve")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_hrld3")
 }],
 "loop": true,
 "name": &"atk_demode",
@@ -223,8 +220,8 @@ texture_filter = 1
 position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"atk1_left"
-frame_progress = 0.28384072
+animation = &"atk_demode"
+frame_progress = 0.78002024
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -232,7 +229,7 @@ position = Vector2(-6, -42)
 shape = SubResource("RectangleShape2D_wpk7j")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 2.33
+wait_time = 1.75
 one_shot = true
 
 [node name="ModeTimer" type="Timer" parent="."]
@@ -240,7 +237,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="DemodeTimer" type="Timer" parent="."]
-wait_time = 2.32
+wait_time = 1.9989999999999999
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
