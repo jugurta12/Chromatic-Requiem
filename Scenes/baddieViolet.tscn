@@ -1,7 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=34 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
-[ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
+[ext_resource type="Texture2D" uid="uid://bhwp4prjjm6vp" path="res://Assets/atkviolet1L.png" id="2_b80hv"]
 [ext_resource type="Texture2D" uid="uid://mtkocsye11" path="res://Assets/atkviolet1.png" id="3_hrld3"]
 [ext_resource type="Texture2D" uid="uid://cdbuaun1apy66" path="res://Assets/atkviolet2.png" id="4_6y8ve"]
 [ext_resource type="Texture2D" uid="uid://cn8cnoa3w23q3" path="res://Assets/atkviolet3.png" id="5_oaorr"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://djida5j74gqf2" path="res://Assets/atkviolet5.png" id="7_3m65n"]
 [ext_resource type="Texture2D" uid="uid://5mw2oh0wg3eg" path="res://Assets/atkviolet6.png" id="8_smshv"]
 [ext_resource type="Texture2D" uid="uid://dgxr1cduxeu1h" path="res://Assets/atkviolet7.png" id="9_3m65n"]
-[ext_resource type="Texture2D" uid="uid://cu17fvv5puhmb" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="10_3m65n"]
 [ext_resource type="Texture2D" uid="uid://dwbpg8txbcnps" path="res://Assets/atkviolet8.png" id="10_74vap"]
 [ext_resource type="Texture2D" uid="uid://smndfb2cdge1" path="res://Assets/atkviolet9.png" id="11_3m65n"]
 [ext_resource type="Texture2D" uid="uid://coyl2grlsbd0w" path="res://Assets/atkviolet10.png" id="12_c05tr"]
@@ -28,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://dw3bn2br14j5c" path="res://Assets/violetL3.png" id="20_hgx7o"]
 [ext_resource type="Texture2D" uid="uid://dtcb60c5kje30" path="res://Assets/jumpviolet1.png" id="20_srjvs"]
 [ext_resource type="AudioStream" uid="uid://cglm0lleqi0e" path="res://SFX/violet.mp3" id="22_74vap"]
+[ext_resource type="Texture2D" uid="uid://dlq7jb2vytvrs" path="res://Assets/violetRL.png" id="27_b80hv"]
+[ext_resource type="Texture2D" uid="uid://cgmemfayaal1d" path="res://Assets/violetRL2.png" id="28_rb8yo"]
 [ext_resource type="Texture2D" uid="uid://bm54uojhc5paw" path="res://Assets/RRviolet.png" id="29_2erx3"]
 [ext_resource type="Texture2D" uid="uid://c1ga6fxgdlolf" path="res://Assets/violetRR2.png" id="29_b80hv"]
 
@@ -35,7 +36,25 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tdr17")
+"texture": ExtResource("2_b80hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6y8ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oaorr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_smshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3m65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_smshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3m65n")
 }],
 "loop": true,
 "name": &"atk1_left",
@@ -171,11 +190,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_3m65n")
+"texture": ExtResource("27_b80hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rb8yo")
 }],
 "loop": true,
 "name": &"run_left",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -201,8 +223,8 @@ texture_filter = 1
 position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"run_right"
-frame_progress = 0.09125493
+animation = &"atk1_left"
+frame_progress = 0.28384072
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

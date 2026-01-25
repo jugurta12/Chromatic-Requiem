@@ -66,14 +66,22 @@ func _physics_process(delta):
 		velocity.y = clamp(velocity.y + gravity * delta, -500, 500)
 	
 	# Gestion des animations (seulement si pas en prejump ou en attaque)
+	# Gestion des animations (seulement si pas en prejump ou en attaque)
 	if not is_attacking and not is_prejumping:
 		if not is_on_floor():  # En l'air
 			sprite.play("jump")
 		else:  # Au sol
-			if facing_right:
-				sprite.play("run_right")
-			else:
-				sprite.play("run_left")
+		# Vérifier si le personnage bouge
+			if abs(velocity.x) > 10:  # Si vitesse significative
+				if facing_right:
+					sprite.play("run_right")
+				else:
+					sprite.play("run_left")
+			else:  # Immobile
+				if facing_right:
+					sprite.play("idle_right")
+				else:
+					sprite.play("idle_left")
 	
 	move_and_slide()
 	
