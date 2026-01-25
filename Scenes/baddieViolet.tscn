@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cdyetyvyljpk"]
+[gd_scene load_steps=33 format=3 uid="uid://cdyetyvyljpk"]
 
 [ext_resource type="Script" uid="uid://bgu1siu503xp7" path="res://Scripts/baddie_violet.gd" id="1_tdr17"]
 [ext_resource type="Texture2D" uid="uid://dd1bx8j5cmldn" path="res://Assets/Atk_box.png" id="2_tdr17"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dtcb60c5kje30" path="res://Assets/jumpviolet1.png" id="20_srjvs"]
 [ext_resource type="AudioStream" uid="uid://cglm0lleqi0e" path="res://SFX/violet.mp3" id="22_74vap"]
 [ext_resource type="Texture2D" uid="uid://bm54uojhc5paw" path="res://Assets/RRviolet.png" id="29_2erx3"]
+[ext_resource type="Texture2D" uid="uid://c1ga6fxgdlolf" path="res://Assets/violetRR2.png" id="29_b80hv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xh4dr"]
 animations = [{
@@ -179,6 +180,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("29_2erx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_b80hv")
 }],
 "loop": true,
 "name": &"run_right",
@@ -197,7 +201,8 @@ texture_filter = 1
 position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
-animation = &"run_left"
+animation = &"run_right"
+frame_progress = 0.14687997
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
