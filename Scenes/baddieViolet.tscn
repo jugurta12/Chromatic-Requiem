@@ -186,7 +186,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_right",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpk7j"]
@@ -202,7 +202,7 @@ position = Vector2(938, -516)
 scale = Vector2(2.45023, 2.39583)
 sprite_frames = SubResource("SpriteFrames_xh4dr")
 animation = &"run_right"
-frame_progress = 0.14687997
+frame_progress = 0.09125493
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
