@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://badg5q58ve8sm"]
+[gd_scene load_steps=10 format=3 uid="uid://badg5q58ve8sm"]
 
 [ext_resource type="Texture2D" uid="uid://4bhovri0m1re" path="res://Assets/balise1.png" id="1_yaw5v"]
 [ext_resource type="Texture2D" uid="uid://du38ctpltla62" path="res://Assets/balise2.png" id="2_pkit5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fduu5iksfslj" path="res://Assets/balise4.png" id="4_ypiay"]
 [ext_resource type="Texture2D" uid="uid://bmb1rrr1n1f5a" path="res://Assets/balise5.png" id="5_4ih4i"]
 [ext_resource type="Texture2D" uid="uid://dqwyvklwk6bka" path="res://Assets/balise6.png" id="6_ypiay"]
+[ext_resource type="Script" uid="uid://c4pbps4aiu3b8" path="res://scripts/balide.gd" id="7_ypiay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34u63"]
 animations = [{
@@ -35,13 +36,21 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 1.5
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ih4i"]
+size = Vector2(52, 43)
 
 [node name="balise" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(2, 0)
+position = Vector2(37, 29)
 sprite_frames = SubResource("SpriteFrames_34u63")
-frame_progress = 0.51223004
+frame_progress = 0.29669127
+script = ExtResource("7_ypiay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(37, 31.5)
+shape = SubResource("RectangleShape2D_4ih4i")
