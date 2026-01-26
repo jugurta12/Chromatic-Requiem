@@ -1,15 +1,88 @@
-[gd_scene load_steps=10 format=3 uid="uid://badg5q58ve8sm"]
+[gd_scene load_steps=27 format=3 uid="uid://badg5q58ve8sm"]
 
+[ext_resource type="Texture2D" uid="uid://bip0nqdvaomo8" path="res://Assets/balise7.png" id="1_3nsqw"]
 [ext_resource type="Texture2D" uid="uid://4bhovri0m1re" path="res://Assets/balise1.png" id="1_yaw5v"]
+[ext_resource type="Texture2D" uid="uid://bsb81ksobylhc" path="res://Assets/balise8.png" id="2_c2xnn"]
 [ext_resource type="Texture2D" uid="uid://du38ctpltla62" path="res://Assets/balise2.png" id="2_pkit5"]
 [ext_resource type="Texture2D" uid="uid://bx4swy6lc5wrv" path="res://Assets/balise3.png" id="3_4ih4i"]
+[ext_resource type="Texture2D" uid="uid://shq5p7im5aun" path="res://Assets/balise9.png" id="3_vgmf5"]
+[ext_resource type="Texture2D" uid="uid://b08vd8exyyvku" path="res://Assets/balise10.png" id="4_cokwc"]
 [ext_resource type="Texture2D" uid="uid://fduu5iksfslj" path="res://Assets/balise4.png" id="4_ypiay"]
 [ext_resource type="Texture2D" uid="uid://bmb1rrr1n1f5a" path="res://Assets/balise5.png" id="5_4ih4i"]
+[ext_resource type="Texture2D" uid="uid://bieyfbaqf7jad" path="res://Assets/balise11.png" id="5_otkac"]
+[ext_resource type="Texture2D" uid="uid://de52bcfgdv0ow" path="res://Assets/balise12.png" id="6_v6ryn"]
 [ext_resource type="Texture2D" uid="uid://dqwyvklwk6bka" path="res://Assets/balise6.png" id="6_ypiay"]
+[ext_resource type="Texture2D" uid="uid://bbxu3u0ykmjgg" path="res://Assets/balise13.png" id="7_m4cq3"]
 [ext_resource type="Script" uid="uid://c4pbps4aiu3b8" path="res://scripts/balide.gd" id="7_ypiay"]
+[ext_resource type="Texture2D" uid="uid://biosi7p2x6tcn" path="res://Assets/balise14.png" id="8_ukdeu"]
+[ext_resource type="Texture2D" uid="uid://f2px35dwl3x6" path="res://Assets/balise15.png" id="9_dvmkf"]
+[ext_resource type="Texture2D" uid="uid://jkntllaoi6ju" path="res://Assets/balise16.png" id="10_t8uvc"]
+[ext_resource type="Texture2D" uid="uid://c6hx6avujmg8e" path="res://Assets/balise17.png" id="11_gemds"]
+[ext_resource type="Texture2D" uid="uid://dsgxefrlrnpnc" path="res://Assets/balise18.png" id="12_fbw41"]
+[ext_resource type="Texture2D" uid="uid://h8bysv7xou57" path="res://Assets/balise19.png" id="13_84cv5"]
+[ext_resource type="Texture2D" uid="uid://byyu7llgkkygp" path="res://Assets/balise20.png" id="14_80nth"]
+[ext_resource type="Texture2D" uid="uid://cptfi4l306qjn" path="res://Assets/balise21.png" id="15_83m2a"]
+[ext_resource type="Texture2D" uid="uid://bphofktn2d16a" path="res://Assets/balise22.png" id="16_r7kkf"]
+[ext_resource type="Texture2D" uid="uid://dhyq5yrep438a" path="res://Assets/balise23.png" id="17_j420s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34u63"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3nsqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c2xnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vgmf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cokwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_otkac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v6ryn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m4cq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ukdeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dvmkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t8uvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gemds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fbw41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_84cv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_80nth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_83m2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r7kkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j420s")
+}],
+"loop": true,
+"name": &"atk",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_yaw5v")
@@ -48,7 +121,8 @@ size = Vector2(52, 43)
 texture_filter = 1
 position = Vector2(37, 29)
 sprite_frames = SubResource("SpriteFrames_34u63")
-frame_progress = 0.16199651
+animation = &"atk"
+frame_progress = 0.5673946
 script = ExtResource("7_ypiay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
