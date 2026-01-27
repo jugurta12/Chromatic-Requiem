@@ -6,3 +6,8 @@ res://Scripts/player.gd
 res://Scenes/Baddie.tscn
 res://Scenes/arcade.tscn
 res://Scenes/ennemis.tscn
+res://Scenes/persomenu.tscn
+res://scripts/persomenu.gd
+res://Scenes/player.tscn
+res://Scripts/area_2d_2.gd
+res://Scripts/area_2d.gd

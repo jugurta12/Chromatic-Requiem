@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://c55lffsmex0n1"]
+
+[ext_resource type="Script" uid="uid://bbyhj26sb2oar" path="res://scripts/persomenu.gd" id="1_lfqtv"]
+[ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="10_f3wr5"]
+[ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="11_bw1f4"]
+[ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="14_su42s"]
+[ext_resource type="Texture2D" uid="uid://be4cbcgr136m" path="res://Assets/nrmlleft.png" id="15_44v17"]
+[ext_resource type="Texture2D" uid="uid://bymqy7o5cc30m" path="res://Assets/nrmlright2.png" id="16_ke1s7"]
+[ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="17_5jknd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fhdd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_f3wr5")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bw1f4")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_su42s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_44v17")
+}],
+"loop": true,
+"name": &"run_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ke1s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5jknd")
+}],
+"loop": true,
+"name": &"run_right",
+"speed": 3.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfqtv"]
+size = Vector2(58, 103.25)
+
+[node name="persomenu" type="CharacterBody2D"]
+position = Vector2(304, 198)
+script = ExtResource("1_lfqtv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(796.3246, -415.773)
+scale = Vector2(2.0725143, 2.162123)
+sprite_frames = SubResource("SpriteFrames_5fhdd")
+animation = &"run_left"
+offset = Vector2(-387.769, 192.548)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 0.625)
+shape = SubResource("RectangleShape2D_lfqtv")
