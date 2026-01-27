@@ -92,3 +92,32 @@ func _on_ennemis_dmg(amount: Variant) -> void:
 		controls_enabled = false
 		await get_tree().create_timer(0.3).timeout
 		controls_enabled = true
+
+
+func _on_balise_dmg(amount: Variant) -> void:
+	if !is_attacking:
+		health -= amount
+		emit_signal("health_changed", health)
+		var knockback = Vector2(-1200, -200) 
+		if not facing_right:
+			knockback.x *= -1 
+		if health == 0: 
+			set_physics_process(false)
+			set_process(false)
+			set_process_input(false)
+			velocity = Vector2.ZERO
+			sprite.play("death1")
+			await get_tree().create_timer(1.9).timeout
+			sprite.play("death2")
+			await get_tree().create_timer(0.999).timeout
+			visible = false
+			await get_tree().create_timer(0.2).timeout
+			get_tree().paused = true
+			var gameover_instance = gameover_scene.instantiate()
+			get_tree().root.add_child(gameover_instance)
+			queue_free()
+			return
+		velocity += knockback
+		controls_enabled = false
+		await get_tree().create_timer(0.3).timeout
+		controls_enabled = true

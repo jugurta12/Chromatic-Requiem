@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://hicwcywsfkdo"]
+
+[ext_resource type="PackedScene" uid="uid://badg5q58ve8sm" path="res://Scenes/balise.tscn" id="1_4nw2a"]
+[ext_resource type="PackedScene" uid="uid://c4rf4st16oach" path="res://Scenes/Baddie.tscn" id="2_muj5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndpgd"]
+size = Vector2(189, 707.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nw2a"]
+size = Vector2(691, 61)
+
+[node name="testbalise" type="Node2D"]
+
+[node name="a" type="StaticBody2D" parent="."]
+
+[node name="a5" type="CollisionShape2D" parent="a"]
+position = Vector2(717.5, 298.375)
+shape = SubResource("RectangleShape2D_ndpgd")
+
+[node name="a4" type="CollisionShape2D" parent="a"]
+position = Vector2(-92, 309)
+shape = SubResource("RectangleShape2D_ndpgd")
+
+[node name="a3" type="CollisionShape2D" parent="a"]
+position = Vector2(323, 373)
+shape = SubResource("RectangleShape2D_4nw2a")
+
+[node name="a2" type="CollisionShape2D" parent="a"]
+position = Vector2(824, 208)
+shape = SubResource("RectangleShape2D_4nw2a")
+
+[node name="a" type="CollisionShape2D" parent="a"]
+position = Vector2(690, 297)
+shape = SubResource("RectangleShape2D_4nw2a")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_muj5j")]
+position = Vector2(230, 312)
+
+[node name="balise" parent="." instance=ExtResource("1_4nw2a")]
+position = Vector2(128, 303)
+
+[connection signal="dmg" from="balise" to="CharacterBody2D" method="_on_balise_dmg"]

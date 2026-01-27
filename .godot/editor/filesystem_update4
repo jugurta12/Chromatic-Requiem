@@ -1,2 +1,6 @@
 res://Scenes/balise.tscn
 res://scripts/balide.gd
+res://Scenes/testbalise.tscn
+res://scripts/balisecoli.gd
+res://Scripts/player.gd
+res://Scenes/Baddie.tscn
