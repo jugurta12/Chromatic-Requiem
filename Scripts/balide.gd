@@ -24,12 +24,13 @@ func _ready() -> void:
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() > 0:
 		player_ref = players[0]
+	anim.play("default")
 	await get_tree().create_timer(15).timeout
 	anim_collision.disabled = false 
 	anim.play("begin")
 	anim.visible = true 
 	anime.visible = false  
-	await get_tree().create_timer(0.70).timeout
+	await get_tree().create_timer(0.799).timeout
 	anim.play("default")
 	
 	while true:
