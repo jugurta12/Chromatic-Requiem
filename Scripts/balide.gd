@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var anim = $CollisionShape2D/AnimatedSprite2D
+@onready var anim_collision = $CollisionShape2D
 @onready var anime = $Area2D/atk
 @onready var area_collision = $Area2D/CollisionShape2D2
 @onready var attack_area = $Area2D
@@ -11,6 +12,10 @@ var lockedY = false
 signal dmg(amount)
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	anim_collision.disabled = true 
+	anim.visible = false  
+	anime.visible = false 
 	attack_area.body_entered.connect(_on_area_entered)
 	attack_area.body_exited.connect(_on_area_exited)
 	area_collision.disabled = true
@@ -19,10 +24,12 @@ func _ready() -> void:
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() > 0:
 		player_ref = players[0]
-	
+	await get_tree().create_timer(15).timeout
+	anim_collision.disabled = false 
 	anim.play("begin")
+	anim.visible = true 
 	anime.visible = false  
-	await get_tree().create_timer(0.59).timeout
+	await get_tree().create_timer(0.70).timeout
 	anim.play("default")
 	
 	while true:
@@ -53,6 +60,7 @@ func _ready() -> void:
 		
 		area_collision.disabled = true
 		anime.visible = false
+		await get_tree().create_timer(6).timeout
 
 func _process(delta: float) -> void:
 	if following_player and player_ref:

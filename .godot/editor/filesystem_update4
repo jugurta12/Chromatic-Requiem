@@ -4,3 +4,5 @@ res://Scenes/testbalise.tscn
 res://scripts/balisecoli.gd
 res://Scripts/player.gd
 res://Scenes/Baddie.tscn
+res://Scenes/arcade.tscn
+res://Scenes/ennemis.tscn

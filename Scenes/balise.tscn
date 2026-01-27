@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://utnuqp7ihddm" path="res://Assets/baliseatk10.png" id="32_cg34l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cokwc"]
-size = Vector2(39.849052, 157.53845)
+size = Vector2(39.849052, 208.73845)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgmf5"]
 animations = [{
@@ -162,7 +162,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"begin",
-"speed": 6.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -182,12 +182,12 @@ script = ExtResource("7_ypiay")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-1.5258789e-05, 0)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(211.00002, -80)
+position = Vector2(211.00002, -41)
 scale = Vector2(1.6562501, 1.5234375)
 shape = SubResource("RectangleShape2D_cokwc")
-metadata/_edit_group_ = true
 
 [node name="atk" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
@@ -208,4 +208,5 @@ texture_filter = 1
 position = Vector2(0, -2.9999924)
 scale = Vector2(1.6562501, 1.5234375)
 sprite_frames = SubResource("SpriteFrames_34u63")
-frame_progress = 0.3673731
+animation = &"begin"
+frame_progress = 0.7681018

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=34 format=3 uid="uid://b03s6rgm5pwnq"]
 
 [ext_resource type="Texture2D" uid="uid://br5fs7sngipll" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="18_4mld8"]
 [ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="20_tinc1"]
 [ext_resource type="Script" uid="uid://lk0b4qudm0gj" path="res://Scripts/score_label.gd" id="21_mnyfu"]
+[ext_resource type="PackedScene" uid="uid://badg5q58ve8sm" path="res://Scenes/balise.tscn" id="22_635gl"]
 [ext_resource type="PackedScene" uid="uid://dbyjwavhp1aov" path="res://Scenes/ennemis.tscn" id="22_pd57b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3h0sf"]
@@ -162,6 +163,9 @@ position = Vector2(281, 183)
 [node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
 position = Vector2(63, 304)
 
+[node name="balise" parent="." instance=ExtResource("22_635gl")]
+position = Vector2(112, 88)
+
 [node name="health" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(528.00006, 32)
@@ -234,3 +238,4 @@ position = Vector2(-56, 0)
 [connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
 [connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
 [connection signal="kill" from="ennemis" to="Control/ScoreLabel" method="_on_ennemis_kill"]
+[connection signal="dmg" from="balise" to="CharacterBody2D" method="_on_balise_dmg"]
