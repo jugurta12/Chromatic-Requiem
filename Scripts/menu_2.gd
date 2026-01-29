@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 var is_animating = false
+@onready var buttonsound = $button
+@onready var adventure = $adventure
+@onready var arcade = $arcade2
 
 func _ready():
 	$ColorRect.modulate = Color(1, 1, 1, 0.3)
@@ -15,6 +18,9 @@ func _ready():
 	get_tree().paused = true
 
 func _on_quitter_pressed() -> void:
+	buttonsound.play()
+	adventure.stop()
+	arcade.stop()
 	$AnimatedSprite2D.play("default") 
 	$map.visible = true
 	$Quitter.visible = true
@@ -47,7 +53,8 @@ func _on_quitter_mouse_exited() -> void:
 func _on_map_pressed() -> void:
 	if is_animating:
 		return  # ignore si la transition est déjà en cours
-
+	buttonsound.play()
+	adventure.play()
 	is_animating = true
 	$AnimatedSprite2D.play("adventuretransition")
 	await get_tree().create_timer(2.16).timeout
@@ -70,7 +77,7 @@ func _on_map_mouse_exited() -> void:
 
 func _on_lvl_1_pressed() -> void:
 	is_animating = true
-	
+	buttonsound.play()
 	$AnimatedSprite2D.play("lvl1down") 
 	await get_tree().create_timer(0.39).timeout
 	$AnimatedSprite2D.play("lvl1up") 
@@ -85,7 +92,7 @@ func _on_lvl_1_pressed() -> void:
 	tween2.tween_property($ColorRect, "modulate", Color(0, 0, 0, 1), 1.0)
 	
 	await get_tree().create_timer(1.0).timeout
-	
+	adventure.stop()
 	self.visible = false
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/lvl1.tscn")
@@ -102,7 +109,7 @@ func _on_lvl_1_mouse_exited() -> void:
 	
 func _on_lvl_2_pressed() -> void:
 	is_animating = true
-	
+	buttonsound.play()
 	$AnimatedSprite2D.play("lvl2down") 
 	await get_tree().create_timer(0.39).timeout
 	$AnimatedSprite2D.play("lvl2up") 
@@ -117,7 +124,7 @@ func _on_lvl_2_pressed() -> void:
 	tween2.tween_property($ColorRect, "modulate", Color(0, 0, 0, 1), 1.0)
 	
 	await get_tree().create_timer(1.0).timeout
-	
+	adventure.stop()
 	self.visible = false
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/lvl2.tscn")
@@ -135,7 +142,8 @@ func _on_lvl_2_mouse_exited() -> void:
 func _on_arcade_pressed() -> void:
 	if is_animating:
 		return  # ignore si la transition est déjà en cours
-
+	buttonsound.play()
+	arcade.play()
 	is_animating = true
 	$AnimatedSprite2D.play("arcadetransi")
 	await get_tree().create_timer(1.99).timeout
@@ -158,6 +166,8 @@ func _on_arcade_mouse_exited() -> void:
 
 
 func _on_play_pressed() -> void:
+	buttonsound.play()
+	arcade.stop()
 	get_tree().paused = false
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	var next_scene = load("res://Scenes/arcade.tscn")

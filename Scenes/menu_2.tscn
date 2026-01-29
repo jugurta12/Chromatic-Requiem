@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://b4vwelxgqjxuj"]
+[gd_scene load_steps=63 format=3 uid="uid://b4vwelxgqjxuj"]
 
 [ext_resource type="Script" uid="uid://d22c4qrkj8mus" path="res://Scripts/menu_2.gd" id="1_tswe5"]
 [ext_resource type="Texture2D" uid="uid://d262qnt35tnot" path="res://Assets/arcadetransi2.png" id="2_bshng"]
@@ -59,6 +59,8 @@
 [ext_resource type="Texture2D" uid="uid://dcdlfnylncs07" path="res://Assets/menuplay.png" id="29_jh4p8"]
 [ext_resource type="Texture2D" uid="uid://cqkwuhdyv8rv6" path="res://Assets/holdquit.2.png" id="37_k8xwn"]
 [ext_resource type="AudioStream" uid="uid://hw5daec2xiit" path="res://SFX/menu-button-89141.mp3" id="59_oe6um"]
+[ext_resource type="AudioStream" uid="uid://v88pfp08ki4n" path="res://SFX/adventure.mp3" id="60_nyjjj"]
+[ext_resource type="AudioStream" uid="uid://bxy1gumddc0hx" path="res://SFX/arcade.mp3" id="61_5d5tm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmtf3"]
 animations = [{
@@ -470,6 +472,13 @@ offset_bottom = 212.0
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("59_oe6um")
+
+[node name="adventure" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("60_nyjjj")
+parameters/looping = true
+
+[node name="arcade2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("61_5d5tm")
 
 [connection signal="mouse_entered" from="Quitter" to="." method="_on_quitter_mouse_entered"]
 [connection signal="mouse_exited" from="Quitter" to="." method="_on_quitter_mouse_exited"]

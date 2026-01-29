@@ -88,6 +88,7 @@ func _on_ennemis_dmg(amount: Variant) -> void:
 			velocity = Vector2.ZERO
 			emit_signal ("game_over")
 			sprite.play("death1")
+			death.play()
 			await get_tree().create_timer(1.9).timeout
 			sprite.play("death2")
 			await get_tree().create_timer(0.999).timeout
