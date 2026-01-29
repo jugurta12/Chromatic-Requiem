@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbyjwavhp1aov"]
+[gd_scene load_steps=11 format=3 uid="uid://dbyjwavhp1aov"]
 
 [ext_resource type="Script" uid="uid://ckne013ivcqbt" path="res://Scripts/ennemis.gd" id="1_gsgpr"]
 [ext_resource type="Texture2D" uid="uid://i6hbuq412v7r" path="res://Assets/ennemiatkR.png" id="2_8iqwm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://vv2g0spgxxax" path="res://Assets/ennemiidleR.png" id="6_ge6vj"]
 [ext_resource type="Texture2D" uid="uid://b5ub56xc5lrt" path="res://Assets/ennemiidleL2.png" id="7_hhkb1"]
 [ext_resource type="Texture2D" uid="uid://bqeh3utwg5p6o" path="res://Assets/ennemiidleR2.png" id="7_q17at"]
+[ext_resource type="AudioStream" uid="uid://b8dx15jeoau60" path="res://SFX/attack-release-384909.mp3" id="8_ge6vj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8iqwm"]
 animations = [{
@@ -64,3 +65,6 @@ sprite_frames = SubResource("SpriteFrames_8iqwm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7, -21.375)
 shape = SubResource("RectangleShape2D_tvmx5")
+
+[node name="atksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ge6vj")

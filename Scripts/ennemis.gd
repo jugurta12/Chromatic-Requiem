@@ -11,6 +11,7 @@ var life = 2
 signal dmg(amount)
 signal kill
 @onready var anim = $AnimatedSprite2D
+@onready var atksound = $atksound
 
 func _physics_process(delta):
 	# Trouver baadie si pas encore trouvé
@@ -54,6 +55,7 @@ func is_touching_player() -> bool:
 
 func play_attack():
 	emit_signal("dmg", amount)
+	atksound.play()
 	attacking = true
 	if facing_right:
 		anim.play("atk2")
