@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=36 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://clj8lbfr7p8xd" path="res://Assets/lobby.png" id="1_fs7ks"]
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dnhgbdrhk1att" path="res://Assets/pet.png" id="19_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://cn3qnr8wpeqtv" path="res://Assets/catpet2.png" id="19_wpjfl"]
 [ext_resource type="AudioStream" uid="uid://c3kn4vmspj5rg" path="res://SFX/milopurr.mp3" id="22_wpjfl"]
+[ext_resource type="AudioStream" uid="uid://b7vy8rpomv3ly" path="res://SFX/menusooundboard.mp3" id="23_bi64h"]
 [ext_resource type="PackedScene" uid="uid://c55lffsmex0n1" path="res://Scenes/persomenu.tscn" id="27_vfarp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
@@ -233,11 +234,17 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.30179343
+frame_progress = 0.010881794
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
 
+[node name="menusound" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("23_bi64h")
+parameters/looping = true
+
 [connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Area2D2" to="StaticBody2D/Area2D2" method="_on_body_entered"]
+[connection signal="musique_stop" from="StaticBody2D/Area2D2" to="." method="_on_area_2d_2_musique_stop"]
 [connection signal="pet" from="cat" to="persomenu" method="_on_cat_pet"]

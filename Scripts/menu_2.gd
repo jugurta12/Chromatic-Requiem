@@ -16,6 +16,9 @@ func _ready():
 	$lvl2.visible = false
 	$play.visible = false
 	get_tree().paused = true
+	var main_music = get_tree().current_scene.find_child("menusound")
+	if main_music:
+		main_music.stream_paused = true
 
 func _on_quitter_pressed() -> void:
 	buttonsound.play()
@@ -29,6 +32,9 @@ func _on_quitter_pressed() -> void:
 	$lvl2.visible = false
 	self.visible = false
 	get_tree().paused = false
+	var main_music = get_tree().current_scene.find_child("menusound")
+	if main_music:
+		main_music.stream_paused = false
 
 func _on_quitter_mouse_entered() -> void:
 	if is_animating:  

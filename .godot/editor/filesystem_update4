@@ -18,3 +18,4 @@ res://Scripts/pause.gd
 res://Scripts/ennemis.gd
 res://Scenes/menu_2.tscn
 res://Scripts/menu_2.gd
+res://Scripts/lobby2.gd
