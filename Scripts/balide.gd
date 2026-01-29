@@ -4,6 +4,9 @@ extends CharacterBody2D
 @onready var anime = $Area2D/atk
 @onready var area_collision = $Area2D/CollisionShape2D2
 @onready var attack_area = $Area2D
+@onready var balise_release = $baliserelease
+@onready var balise_blast= $baliseblast
+@onready var balise_grow= $balisegrow
 var amount = 25
 var player_in_attack_zone = false
 var player_ref = null
@@ -20,24 +23,29 @@ func _ready() -> void:
 	attack_area.body_exited.connect(_on_area_exited)
 	area_collision.disabled = true
 	
-	# Trouve le joueur au démarrage
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() > 0:
 		player_ref = players[0]
 	anim.play("default")
-	await get_tree().create_timer(15).timeout
+	await get_tree().create_timer(1).timeout
 	anim_collision.disabled = false 
+	balise_grow.play()
 	anim.play("begin")
 	anim.visible = true 
 	anime.visible = false  
 	await get_tree().create_timer(0.799).timeout
 	anim.play("default")
+	await get_tree().create_timer(0.33).timeout
+	balise_grow.stop()
 	
 	while true:
 		following_player = true
 		await get_tree().create_timer(3).timeout
 		anim.play("atk")
-		await get_tree().create_timer(2.449).timeout
+		await get_tree().create_timer(1.449).timeout
+		balise_release.play()
+		
+		await get_tree().create_timer(1).timeout
 		lockedY = true
 		await get_tree().create_timer(0.001).timeout
 		lockedY = false
@@ -53,6 +61,8 @@ func _ready() -> void:
 		await get_tree().create_timer(3).timeout
 		following_player = false
 		anime.play("atk")
+		balise_blast.play()
+		
 		await get_tree().create_timer(0.37).timeout
 		if player_in_attack_zone:
 			dmg.emit(amount)

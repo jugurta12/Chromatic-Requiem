@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite = $petsprite
 @onready var collision_sprite = $CollisionShape2D
+@onready var milo_purr = $milopurr
 var player_nearby = false
 signal pet
 
@@ -33,8 +34,11 @@ func interact():
 	animated_sprite.visible = false
 	await get_tree().create_timer(1).timeout
 	animated_sprite.visible = true
+	milo_purr.play()
 	animated_sprite.play("heart") 
 	await get_tree().create_timer(3).timeout
 	collision_sprite.disabled = true
-	await get_tree().create_timer(10).timeout
+	await get_tree().create_timer(3.3).timeout
+	milo_purr.stop()
+	await get_tree().create_timer(8).timeout
 	collision_sprite.disabled = false

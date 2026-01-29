@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://badg5q58ve8sm"]
+[gd_scene load_steps=42 format=3 uid="uid://badg5q58ve8sm"]
 
 [ext_resource type="Texture2D" uid="uid://bip0nqdvaomo8" path="res://Assets/balise7.png" id="1_3nsqw"]
 [ext_resource type="Texture2D" uid="uid://4bhovri0m1re" path="res://Assets/balise1.png" id="1_yaw5v"]
@@ -34,6 +34,9 @@
 [ext_resource type="Texture2D" uid="uid://dedxmb8my72oe" path="res://Assets/baliseatk8.png" id="30_r7kkf"]
 [ext_resource type="Texture2D" uid="uid://crp3wm2g75063" path="res://Assets/baliseatk9.png" id="31_j420s"]
 [ext_resource type="Texture2D" uid="uid://utnuqp7ihddm" path="res://Assets/baliseatk10.png" id="32_cg34l"]
+[ext_resource type="AudioStream" uid="uid://b4wltcubxy306" path="res://SFX/baliseblast.mp3" id="35_84cv5"]
+[ext_resource type="AudioStream" uid="uid://c8gkx4qgy4sjl" path="res://SFX/baliserelease.mp3" id="36_80nth"]
+[ext_resource type="AudioStream" uid="uid://cijyipvfn5pay" path="res://SFX/balisegrow.mp3" id="37_80nth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cokwc"]
 size = Vector2(39.849052, 208.73845)
@@ -208,9 +211,14 @@ texture_filter = 1
 position = Vector2(0, -2.9999924)
 scale = Vector2(1.6562501, 1.5234375)
 sprite_frames = SubResource("SpriteFrames_34u63")
-animation = &"begin"
-frame_progress = 0.5045997
+animation = &"atk"
+frame_progress = 0.33017293
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="baliseblast" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_84cv5")
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+[node name="baliserelease" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("36_80nth")
+
+[node name="balisegrow" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_80nth")
