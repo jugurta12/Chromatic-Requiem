@@ -50,7 +50,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvmx5"]
-size = Vector2(46, 64.25)
+size = Vector2(46, 71.25)
 
 [node name="ennemis" type="CharacterBody2D"]
 script = ExtResource("1_gsgpr")
@@ -62,5 +62,5 @@ scale = Vector2(1.703125, 1.765625)
 sprite_frames = SubResource("SpriteFrames_8iqwm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -17.875)
+position = Vector2(-7, -21.375)
 shape = SubResource("RectangleShape2D_tvmx5")

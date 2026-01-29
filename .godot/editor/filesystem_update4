@@ -11,3 +11,7 @@ res://scripts/persomenu.gd
 res://Scenes/player.tscn
 res://Scripts/area_2d_2.gd
 res://Scripts/area_2d.gd
+res://scripts/cat.gd
+res://Scripts/collision_shape_2d_2.gd
+res://Scripts/arcadee.gd
+res://Scripts/pause.gd

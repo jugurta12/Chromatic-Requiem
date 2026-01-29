@@ -1,7 +1,7 @@
 extends Node2D
 # Variables pour le spawneur
 @export var enemy_scene: PackedScene
-@export var spawn_interval: float = 3.0
+@export var spawn_interval: float = 10.0
 @export var max_enemies: int = 10
 var current_enemies: int = 0
 var spawn_timer: Timer
@@ -32,6 +32,18 @@ func _ready():
 	$CharacterBody2D.set_physics_process(true)
 	$ennemis.set_physics_process(true)
 	spawn_timer.start()
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
+	await get_tree().create_timer(10).timeout
+	spawn_interval =- 1.0
 func _on_spawn_timer_timeout() -> void:
 	# Vérifie que le joueur existe avant de spawner
 	if is_instance_valid($CharacterBody2D) and current_enemies < max_enemies:

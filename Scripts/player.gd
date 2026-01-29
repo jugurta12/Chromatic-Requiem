@@ -6,11 +6,14 @@ var controls_enabled = true
 @export var jump_force = 430
 @onready var sprite = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
+@onready var punchsound = $AudioStreamPlayer2D
 var facing_right = true     
 var is_attacking = false
+var atk_relo = false
 var health = 100
 var max_health = 100
 signal health_changed(new_health)
+signal game_over
 var gameover_scene = preload("res://Scenes/game_over.tscn")
 
 func _physics_process(delta):
@@ -33,21 +36,26 @@ func _physics_process(delta):
 	move_and_slide()
 
 func attack_sequence():
+	if is_attacking or atk_relo:
+		return
+
 	is_attacking = true
+	atk_relo = true
+	
 	sprite.play("atk1_right" if facing_right else "atk1_left")
-	
-	# Attendre un peu avant de détecter les coups (timing de l'animation)
-	await get_tree().create_timer(0).timeout
-	
-	# Détecter les ennemis dans la zone d'attaque
+	punchsound.play()
+
 	if attack_area:
 		var enemies = attack_area.get_overlapping_bodies()
 		for enemy in enemies:
 			if enemy.has_method("take_damage"):
 				enemy.take_damage(1)
-	
-	await get_tree().create_timer(0.3).timeout 
+
+	await get_tree().create_timer(0.3).timeout
 	is_attacking = false
+	
+	await get_tree().create_timer(0.2).timeout
+	atk_relo = false
 
 func update_animation(direction):
 	if is_attacking:
@@ -77,6 +85,7 @@ func _on_ennemis_dmg(amount: Variant) -> void:
 			set_process(false)
 			set_process_input(false)
 			velocity = Vector2.ZERO
+			emit_signal ("game_over")
 			sprite.play("death1")
 			await get_tree().create_timer(1.9).timeout
 			sprite.play("death2")
@@ -106,6 +115,7 @@ func _on_balise_dmg(amount: Variant) -> void:
 			set_process(false)
 			set_process_input(false)
 			velocity = Vector2.ZERO
+			emit_signal ("game_over")
 			sprite.play("death1")
 			await get_tree().create_timer(1.9).timeout
 			sprite.play("death2")

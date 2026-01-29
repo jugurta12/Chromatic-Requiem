@@ -1,6 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c55lffsmex0n1"]
+[gd_scene load_steps=15 format=3 uid="uid://c55lffsmex0n1"]
 
 [ext_resource type="Script" uid="uid://bbyhj26sb2oar" path="res://scripts/persomenu.gd" id="1_lfqtv"]
+[ext_resource type="Texture2D" uid="uid://d4yp4bkgtuax" path="res://Assets/nrmldown.png" id="2_84ed4"]
+[ext_resource type="Texture2D" uid="uid://87hmm1gmpy2r" path="res://Assets/nrmlcat.png" id="2_mukjq"]
+[ext_resource type="Texture2D" uid="uid://doarhwd2tcjsj" path="res://Assets/nrmldown2.png" id="3_mukjq"]
+[ext_resource type="Texture2D" uid="uid://d1ws6yjvbwn41" path="res://Assets/nrmlup.png" id="8_1awjn"]
+[ext_resource type="Texture2D" uid="uid://dlypbwgb5776u" path="res://Assets/nrmlup2.png" id="9_s72hl"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="10_f3wr5"]
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="11_bw1f4"]
 [ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="14_su42s"]
@@ -10,10 +15,24 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5fhdd"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mukjq")
+}],
+"loop": true,
+"name": &"cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84ed4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mukjq")
+}],
 "loop": true,
 "name": &"down",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -53,10 +72,16 @@ animations = [{
 "name": &"run_right",
 "speed": 3.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1awjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s72hl")
+}],
 "loop": true,
 "name": &"up",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfqtv"]
@@ -71,7 +96,7 @@ texture_filter = 1
 position = Vector2(796.3246, -415.773)
 scale = Vector2(2.0725143, 2.162123)
 sprite_frames = SubResource("SpriteFrames_5fhdd")
-animation = &"run_left"
+animation = &"cat"
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

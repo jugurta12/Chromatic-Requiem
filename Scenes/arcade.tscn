@@ -202,7 +202,6 @@ shape = SubResource("RectangleShape2D_4mld8")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 process_mode = 3
-visible = false
 texture_filter = 1
 position = Vector2(319, 172)
 scale = Vector2(0.558, 0.557)
@@ -210,7 +209,6 @@ sprite_frames = SubResource("SpriteFrames_2uunk")
 frame_progress = 0.162949
 
 [node name="pause" parent="." instance=ExtResource("18_4mld8")]
-visible = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -237,6 +235,7 @@ curve = SubResource("Curve2D_s0rvt")
 [node name="spawn" type="PathFollow2D" parent="mobpath"]
 position = Vector2(-56, 0)
 
+[connection signal="game_over" from="CharacterBody2D" to="pause" method="_on_character_body_2d_game_over"]
 [connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
 [connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
 [connection signal="kill" from="ennemis" to="Control/ScoreLabel" method="_on_ennemis_kill"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=34 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Texture2D" uid="uid://clj8lbfr7p8xd" path="res://Assets/lobby.png" id="1_fs7ks"]
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
@@ -15,6 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://dpmsw54q1vnp5" path="res://Assets/lobby5...png" id="11_vfarp"]
 [ext_resource type="Texture2D" uid="uid://iba4hen6w4j1" path="res://Assets/lobby5.....png" id="12_y6uwr"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
+[ext_resource type="Script" uid="uid://damv5hoi8qye3" path="res://scripts/cat.gd" id="17_qqcod"]
+[ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="18_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://dwe6wuivvjucy" path="res://Assets/catpet.png" id="18_olqyp"]
+[ext_resource type="Texture2D" uid="uid://dnhgbdrhk1att" path="res://Assets/pet.png" id="19_l6n3p"]
+[ext_resource type="Texture2D" uid="uid://cn3qnr8wpeqtv" path="res://Assets/catpet2.png" id="19_wpjfl"]
 [ext_resource type="PackedScene" uid="uid://c55lffsmex0n1" path="res://Scenes/persomenu.tscn" id="27_vfarp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
@@ -115,12 +120,39 @@ size = Vector2(28, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs7ks"]
 size = Vector2(32, 37)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6n3p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olqyp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_olqyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wpjfl")
+}],
+"loop": true,
+"name": &"heart",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fs7ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l6n3p")
+}],
+"loop": true,
+"name": &"pet",
+"speed": 1.0
+}]
+
 [node name="PlayerScene1" type="Node2D"]
 script = ExtResource("1_l6n3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(321, 183)
+position = Vector2(319, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"default2"
@@ -183,10 +215,25 @@ position = Vector2(850, 289)
 shape = SubResource("RectangleShape2D_fs7ks")
 
 [node name="pause" parent="." instance=ExtResource("15_h4iuc")]
-visible = false
 
 [node name="persomenu" parent="." instance=ExtResource("27_vfarp")]
-position = Vector2(156, 190)
+position = Vector2(152, 255)
+
+[node name="cat" type="Area2D" parent="."]
+script = ExtResource("17_qqcod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat"]
+position = Vector2(112, 133)
+shape = SubResource("RectangleShape2D_l6n3p")
+
+[node name="petsprite" type="AnimatedSprite2D" parent="cat"]
+texture_filter = 1
+position = Vector2(86, 202.00002)
+scale = Vector2(0.36749998, 0.34765655)
+sprite_frames = SubResource("SpriteFrames_olqyp")
+animation = &"heart"
+frame_progress = 0.34290186
 
 [connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Area2D2" to="StaticBody2D/Area2D2" method="_on_body_entered"]
+[connection signal="pet" from="cat" to="persomenu" method="_on_cat_pet"]
