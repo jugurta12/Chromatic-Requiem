@@ -16,3 +16,4 @@ res://Scripts/collision_shape_2d_2.gd
 res://Scripts/arcadee.gd
 res://Scripts/pause.gd
 res://Scripts/ennemis.gd
+res://Scenes/menu_2.tscn

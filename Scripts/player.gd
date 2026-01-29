@@ -7,6 +7,7 @@ var controls_enabled = true
 @onready var sprite = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
 @onready var punchsound = $AudioStreamPlayer2D
+@onready var death = $death
 var facing_right = true     
 var is_attacking = false
 var atk_relo = false
@@ -117,6 +118,7 @@ func _on_balise_dmg(amount: Variant) -> void:
 			velocity = Vector2.ZERO
 			emit_signal ("game_over")
 			sprite.play("death1")
+			death.play()
 			await get_tree().create_timer(1.9).timeout
 			sprite.play("death2")
 			await get_tree().create_timer(0.999).timeout
