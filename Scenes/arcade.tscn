@@ -236,6 +236,7 @@ curve = SubResource("Curve2D_s0rvt")
 position = Vector2(-56, 0)
 
 [connection signal="game_over" from="CharacterBody2D" to="pause" method="_on_character_body_2d_game_over"]
+[connection signal="game_over" from="CharacterBody2D" to="Control/ScoreLabel" method="_on_character_body_2d_game_over"]
 [connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
 [connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
 [connection signal="kill" from="ennemis" to="Control/ScoreLabel" method="_on_ennemis_kill"]

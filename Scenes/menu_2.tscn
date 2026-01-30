@@ -413,8 +413,7 @@ texture_filter = 1
 position = Vector2(334, 180)
 scale = Vector2(0.997656, 1.00139)
 sprite_frames = SubResource("SpriteFrames_tmtf3")
-animation = &"map"
-frame_progress = 0.36974955
+animation = &"holdplay"
 
 [node name="Quitter" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -479,6 +478,14 @@ parameters/looping = true
 
 [node name="arcade2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("61_5d5tm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 415.0
+offset_top = 237.0
+offset_right = 477.0
+offset_bottom = 277.0
+theme_override_constants/line_spacing = -6
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Quitter" to="." method="_on_quitter_mouse_entered"]
 [connection signal="mouse_exited" from="Quitter" to="." method="_on_quitter_mouse_exited"]

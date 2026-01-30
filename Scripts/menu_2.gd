@@ -4,8 +4,12 @@ var is_animating = false
 @onready var buttonsound = $button
 @onready var adventure = $adventure
 @onready var arcade = $arcade2
+var highscore = 0
+@onready var high = $Label
+var save_path = "user://highscore.save"
 
 func _ready():
+	load_highscore()
 	$ColorRect.modulate = Color(1, 1, 1, 0.3)
 	$AnimatedSprite2D.play("default") 
 	$map.visible = true
@@ -159,6 +163,7 @@ func _on_arcade_pressed() -> void:
 	$play.visible = true
 	$map.visible = false
 	$arcade.visible = false
+	high.text = "Best:\n%s" % [highscore]
 
 func _on_arcade_mouse_entered() -> void:
 	if not $arcade.visible or is_animating:  # Ajouter is_animating
@@ -177,7 +182,7 @@ func _on_play_pressed() -> void:
 	get_tree().paused = false
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	var next_scene = load("res://Scenes/arcade.tscn")
-	
+	high.text = ""
 	var tween1 = create_tween()
 	var tween2 = create_tween()
 	
@@ -200,3 +205,11 @@ func _on_play_mouse_exited() -> void:
 	$AnimatedSprite2D.play("holdplay2")
 	await get_tree().create_timer(0.49).timeout
 	$AnimatedSprite2D.play("play") 
+
+func load_highscore():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		highscore = file.get_var()
+		file.close()
+	else:
+		highscore = 0
