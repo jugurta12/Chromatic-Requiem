@@ -1,19 +1,19 @@
 [gd_scene load_steps=36 format=3 uid="uid://dxb68onk8b6df"]
 
-[ext_resource type="Texture2D" uid="uid://clj8lbfr7p8xd" path="res://Assets/lobby.png" id="1_fs7ks"]
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
-[ext_resource type="Texture2D" uid="uid://dbhiv2a61fc25" path="res://Assets/lobby2.png" id="2_l6n3p"]
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
 [ext_resource type="Script" uid="uid://cbbr5680mc0h6" path="res://Scripts/area_2d_2.gd" id="3_7dp3o"]
-[ext_resource type="Texture2D" uid="uid://btbt1iqex68hn" path="res://Assets/lobby3.png" id="3_olqyp"]
-[ext_resource type="Texture2D" uid="uid://dhop88f8dui6s" path="res://Assets/lobby4.png" id="4_wpjfl"]
-[ext_resource type="Texture2D" uid="uid://6ttrvpp4g25g" path="res://Assets/lobby5.png" id="5_bi64h"]
-[ext_resource type="Texture2D" uid="uid://bwb8px8ml0qxo" path="res://Assets/lobby..png" id="7_bi64h"]
-[ext_resource type="Texture2D" uid="uid://bj67m8wnitxhu" path="res://Assets/lobby...png" id="8_2ijsl"]
-[ext_resource type="Texture2D" uid="uid://c0xkg5di27lvh" path="res://Assets/lobby....png" id="9_p1odr"]
-[ext_resource type="Texture2D" uid="uid://b7y0mn8tnsi7w" path="res://Assets/lobby5....png" id="10_0gysh"]
-[ext_resource type="Texture2D" uid="uid://dpmsw54q1vnp5" path="res://Assets/lobby5...png" id="11_vfarp"]
-[ext_resource type="Texture2D" uid="uid://iba4hen6w4j1" path="res://Assets/lobby5.....png" id="12_y6uwr"]
+[ext_resource type="Texture2D" uid="uid://b22fqc87nq1y4" path="res://Assets/home7.png" id="3_vfarp"]
+[ext_resource type="Texture2D" uid="uid://c8fb27uwutyeg" path="res://Assets/home6.png" id="4_y6uwr"]
+[ext_resource type="Texture2D" uid="uid://x2vvrj6bhu5r" path="res://Assets/home5.png" id="5_83xs0"]
+[ext_resource type="Texture2D" uid="uid://cm4un5ewmomwo" path="res://Assets/home1.png" id="7_p1odr"]
+[ext_resource type="Texture2D" uid="uid://kmwdqd8q3ui" path="res://Assets/home2.png" id="8_0gysh"]
+[ext_resource type="Texture2D" uid="uid://bh3b02xjx4hxd" path="res://Assets/home3.png" id="9_vfarp"]
+[ext_resource type="Texture2D" uid="uid://bu0v0eoj05mv5" path="res://Assets/home4.png" id="10_y6uwr"]
+[ext_resource type="Texture2D" uid="uid://cix4o1gcnkfih" path="res://Assets/home11.png" id="11_83xs0"]
+[ext_resource type="Texture2D" uid="uid://c55xft81ynj8y" path="res://Assets/home10.png" id="12_ypfnu"]
+[ext_resource type="Texture2D" uid="uid://cnk1qeooodku6" path="res://Assets/home9.png" id="13_xuaoq"]
+[ext_resource type="Texture2D" uid="uid://jyephk240hjr" path="res://Assets/home8.png" id="14_wohnl"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
 [ext_resource type="Script" uid="uid://damv5hoi8qye3" path="res://scripts/cat.gd" id="17_qqcod"]
 [ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="18_fs7ks"]
@@ -28,16 +28,16 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_fs7ks")
+"texture": ExtResource("3_vfarp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wpjfl")
+"texture": ExtResource("4_y6uwr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_olqyp")
+"texture": ExtResource("5_83xs0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_l6n3p")
+"texture": ExtResource("14_wohnl")
 }],
 "loop": true,
 "name": &"anim",
@@ -45,33 +45,43 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_bi64h")
+"texture": ExtResource("14_wohnl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_l6n3p")
+"texture": ExtResource("5_83xs0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_olqyp")
+"texture": ExtResource("4_y6uwr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wpjfl")
+"texture": ExtResource("3_vfarp")
 }],
 "loop": true,
 "name": &"anim2",
 "speed": 4.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"anim2night",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"animnight",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_fs7ks")
+"texture": ExtResource("7_p1odr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_bi64h")
+"texture": ExtResource("8_0gysh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_2ijsl")
+"texture": ExtResource("9_vfarp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_p1odr")
+"texture": ExtResource("10_y6uwr")
 }],
 "loop": true,
 "name": &"default",
@@ -79,20 +89,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_bi64h")
+"texture": ExtResource("11_83xs0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_0gysh")
+"texture": ExtResource("12_ypfnu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_vfarp")
+"texture": ExtResource("13_xuaoq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_y6uwr")
+"texture": ExtResource("14_wohnl")
 }],
 "loop": true,
 "name": &"default2",
 "speed": 2.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default2night",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"defaultnight",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
@@ -154,11 +174,11 @@ script = ExtResource("1_l6n3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(319, 183)
+position = Vector2(320, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"default2"
-frame_progress = 0.22222824
+animation = &"anim2"
+frame_progress = 0.42812172
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -217,6 +237,7 @@ position = Vector2(850, 289)
 shape = SubResource("RectangleShape2D_fs7ks")
 
 [node name="pause" parent="." instance=ExtResource("15_h4iuc")]
+visible = false
 
 [node name="persomenu" parent="." instance=ExtResource("27_vfarp")]
 position = Vector2(152, 255)
@@ -234,7 +255,7 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.010881794
+frame_progress = 0.9024141
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
