@@ -152,10 +152,10 @@ animations = [{
 "texture": ExtResource("18_nv4vc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_xuaoq")
+"texture": ExtResource("19_8gxox")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_8gxox")
+"texture": ExtResource("6_xuaoq")
 }],
 "loop": true,
 "name": &"default2night",
@@ -270,7 +270,6 @@ position = Vector2(320, 183.5)
 scale = Vector2(1.0008304, 1.025)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"animnight"
-frame_progress = 0.14553984
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -278,8 +277,6 @@ texture_filter = 1
 position = Vector2(320, 183.5)
 scale = Vector2(1.001, 1.025)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"animnight"
-frame_progress = 0.9747918
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -356,7 +353,7 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.21226597
+frame_progress = 0.91111326
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
