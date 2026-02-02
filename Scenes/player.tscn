@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=50 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://c3kn4vmspj5rg" path="res://SFX/milopurr.mp3" id="22_wpjfl"]
 [ext_resource type="AudioStream" uid="uid://b7vy8rpomv3ly" path="res://SFX/menusooundboard.mp3" id="23_bi64h"]
 [ext_resource type="PackedScene" uid="uid://c55lffsmex0n1" path="res://Scenes/persomenu.tscn" id="27_vfarp"]
+[ext_resource type="Script" uid="uid://cbc8yp1h7a8tv" path="res://scripts/wait.gd" id="35_nv4vc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
 animations = [{
@@ -228,16 +229,42 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh6i2"]
+size = Vector2(149, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yh6i2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_l6n3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fs7ks")
+}],
+"loop": true,
+"name": &"wait",
+"speed": 1.0
+}]
+
 [node name="PlayerScene1" type="Node2D"]
 script = ExtResource("1_l6n3p")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(320, 183.5)
+scale = Vector2(1.0008304, 1.025)
+sprite_frames = SubResource("SpriteFrames_tx1dd")
+animation = &"animnight"
+frame_progress = 0.14553984
+metadata/_edit_group_ = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(320, 183)
-scale = Vector2(1.00083, 1.02313)
+position = Vector2(320, 183.5)
+scale = Vector2(1.001, 1.025)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"default2night"
-frame_progress = 0.55976266
+animation = &"animnight"
+frame_progress = 0.06427729
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -314,7 +341,7 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.16509841
+frame_progress = 0.2238095
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
@@ -324,7 +351,23 @@ process_mode = 3
 stream = ExtResource("23_bi64h")
 parameters/looping = true
 
+[node name="wait" type="Area2D" parent="."]
+script = ExtResource("35_nv4vc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wait"]
+position = Vector2(257.5, 121.5)
+shape = SubResource("RectangleShape2D_yh6i2")
+
+[node name="waitsprite" type="AnimatedSprite2D" parent="wait"]
+texture_filter = 1
+position = Vector2(239, 10.000003)
+scale = Vector2(0.46, 0.515625)
+sprite_frames = SubResource("SpriteFrames_yh6i2")
+animation = &"wait"
+frame_progress = 0.08889249
+
 [connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Area2D2" to="StaticBody2D/Area2D2" method="_on_body_entered"]
 [connection signal="musique_stop" from="StaticBody2D/Area2D2" to="." method="_on_area_2d_2_musique_stop"]
 [connection signal="pet" from="cat" to="persomenu" method="_on_cat_pet"]
+[connection signal="day" from="wait" to="." method="_on_wait_day"]

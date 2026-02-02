@@ -21,3 +21,4 @@ res://Scripts/menu_2.gd
 res://Scripts/lobby2.gd
 res://Scripts/score_label.gd
 res://default_bus_layout.tres
+res://scripts/wait.gd
