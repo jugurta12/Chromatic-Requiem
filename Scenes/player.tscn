@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=54 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
@@ -35,6 +35,10 @@
 [ext_resource type="AudioStream" uid="uid://b7vy8rpomv3ly" path="res://SFX/menusooundboard.mp3" id="23_bi64h"]
 [ext_resource type="PackedScene" uid="uid://c55lffsmex0n1" path="res://Scenes/persomenu.tscn" id="27_vfarp"]
 [ext_resource type="Script" uid="uid://cbc8yp1h7a8tv" path="res://scripts/wait.gd" id="35_nv4vc"]
+[ext_resource type="Texture2D" uid="uid://b3f0wogd0c5np" path="res://Assets/wait1.png" id="36_sbwqj"]
+[ext_resource type="Texture2D" uid="uid://ctsk5bwhudeaf" path="res://Assets/wait2.png" id="37_xwi16"]
+[ext_resource type="Texture2D" uid="uid://clisa4dnay11j" path="res://Assets/wait3.png" id="38_sweqm"]
+[ext_resource type="Texture2D" uid="uid://c4xnl002mxfm8" path="res://Assets/wait4.png" id="39_ph33w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
 animations = [{
@@ -236,13 +240,24 @@ size = Vector2(149, 29)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_l6n3p")
+"texture": ExtResource("36_sbwqj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_fs7ks")
+"texture": ExtResource("37_xwi16")
 }],
 "loop": true,
-"name": &"wait",
+"name": &"day",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_sweqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ph33w")
+}],
+"loop": true,
+"name": &"night",
 "speed": 1.0
 }]
 
@@ -264,7 +279,7 @@ position = Vector2(320, 183.5)
 scale = Vector2(1.001, 1.025)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"animnight"
-frame_progress = 0.06427729
+frame_progress = 0.9747918
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -341,7 +356,7 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.2238095
+frame_progress = 0.21226597
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
@@ -360,11 +375,10 @@ shape = SubResource("RectangleShape2D_yh6i2")
 
 [node name="waitsprite" type="AnimatedSprite2D" parent="wait"]
 texture_filter = 1
-position = Vector2(239, 10.000003)
-scale = Vector2(0.46, 0.515625)
+position = Vector2(243.00002, 30)
+scale = Vector2(0.6871428, 0.6640624)
 sprite_frames = SubResource("SpriteFrames_yh6i2")
-animation = &"wait"
-frame_progress = 0.08889249
+animation = &"night"
 
 [connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Area2D2" to="StaticBody2D/Area2D2" method="_on_body_entered"]

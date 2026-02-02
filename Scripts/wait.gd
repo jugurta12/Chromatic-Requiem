@@ -4,6 +4,8 @@ extends Area2D
 @onready var collision_sprite = $CollisionShape2D
 var player_nearby = false
 signal day
+var save_path = "user://savegame.cfg"
+var dayy = true
 
 func _ready():
 	animated_sprite.visible = false
@@ -12,10 +14,18 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "persomenu":
-		await get_tree().create_timer(0.3).timeout
-		player_nearby = true
-		animated_sprite.visible = true
-		animated_sprite.play("wait")  # Joue l'animation
+		load_day_state()
+		if dayy == true :
+			await get_tree().create_timer(0.3).timeout
+			player_nearby = true
+			animated_sprite.visible = true
+			animated_sprite.play("night") 
+		else : 
+			await get_tree().create_timer(0.3).timeout
+			player_nearby = true
+			animated_sprite.visible = true
+			animated_sprite.play("day") 
+			
 
 func _on_body_exited(body):
 	if body.name == "persomenu":
@@ -34,3 +44,8 @@ func interact():
 	collision_sprite.disabled = true
 	await get_tree().create_timer(8).timeout
 	collision_sprite.disabled = false
+	
+func load_day_state():
+	var config = ConfigFile.new()
+	if config.load(save_path) == OK:
+		dayy = config.get_value("settings", "is_day", true)
