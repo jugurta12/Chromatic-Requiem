@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dxb68onk8b6df"]
+[gd_scene load_steps=44 format=3 uid="uid://dxb68onk8b6df"]
 
 [ext_resource type="Script" uid="uid://ciueodd5a1d76" path="res://Scripts/lobby2.gd" id="1_l6n3p"]
 [ext_resource type="Script" uid="uid://dvm8286ydnq1h" path="res://Scripts/area_2d.gd" id="2_ukyrk"]
@@ -6,20 +6,28 @@
 [ext_resource type="Texture2D" uid="uid://b22fqc87nq1y4" path="res://Assets/home7.png" id="3_vfarp"]
 [ext_resource type="Texture2D" uid="uid://c8fb27uwutyeg" path="res://Assets/home6.png" id="4_y6uwr"]
 [ext_resource type="Texture2D" uid="uid://x2vvrj6bhu5r" path="res://Assets/home5.png" id="5_83xs0"]
+[ext_resource type="Texture2D" uid="uid://n56gyrugjhxo" path="res://Assets/home8night.png" id="6_xuaoq"]
 [ext_resource type="Texture2D" uid="uid://cm4un5ewmomwo" path="res://Assets/home1.png" id="7_p1odr"]
+[ext_resource type="Texture2D" uid="uid://b67ja2h35d36l" path="res://Assets/home5night.png" id="7_wohnl"]
 [ext_resource type="Texture2D" uid="uid://kmwdqd8q3ui" path="res://Assets/home2.png" id="8_0gysh"]
+[ext_resource type="Texture2D" uid="uid://dbxvigxxutjen" path="res://Assets/home6night.png" id="8_36dho"]
 [ext_resource type="Texture2D" uid="uid://bh3b02xjx4hxd" path="res://Assets/home3.png" id="9_vfarp"]
+[ext_resource type="Texture2D" uid="uid://c20mbiywfn2bt" path="res://Assets/home7night.png" id="9_yh6i2"]
 [ext_resource type="Texture2D" uid="uid://bu0v0eoj05mv5" path="res://Assets/home4.png" id="10_y6uwr"]
 [ext_resource type="Texture2D" uid="uid://cix4o1gcnkfih" path="res://Assets/home11.png" id="11_83xs0"]
 [ext_resource type="Texture2D" uid="uid://c55xft81ynj8y" path="res://Assets/home10.png" id="12_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://cnk1qeooodku6" path="res://Assets/home9.png" id="13_xuaoq"]
 [ext_resource type="Texture2D" uid="uid://jyephk240hjr" path="res://Assets/home8.png" id="14_wohnl"]
 [ext_resource type="PackedScene" uid="uid://dba7i1cu57day" path="res://Scenes/pause.tscn" id="15_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://p1b56ktsjfbs" path="res://Assets/home1night.png" id="17_nv4vc"]
 [ext_resource type="Script" uid="uid://damv5hoi8qye3" path="res://scripts/cat.gd" id="17_qqcod"]
+[ext_resource type="Texture2D" uid="uid://b58mjubj5qcr5" path="res://Assets/home2night.png" id="18_8gxox"]
 [ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="18_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://dwe6wuivvjucy" path="res://Assets/catpet.png" id="18_olqyp"]
+[ext_resource type="Texture2D" uid="uid://15pl4d70rskf" path="res://Assets/home3night.png" id="19_11gg7"]
 [ext_resource type="Texture2D" uid="uid://dnhgbdrhk1att" path="res://Assets/pet.png" id="19_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://cn3qnr8wpeqtv" path="res://Assets/catpet2.png" id="19_wpjfl"]
+[ext_resource type="Texture2D" uid="uid://c2x7ey2m1ljkf" path="res://Assets/home4night.png" id="20_qpa8y"]
 [ext_resource type="AudioStream" uid="uid://c3kn4vmspj5rg" path="res://SFX/milopurr.mp3" id="22_wpjfl"]
 [ext_resource type="AudioStream" uid="uid://b7vy8rpomv3ly" path="res://SFX/menusooundboard.mp3" id="23_bi64h"]
 [ext_resource type="PackedScene" uid="uid://c55lffsmex0n1" path="res://Scenes/persomenu.tscn" id="27_vfarp"]
@@ -60,15 +68,39 @@ animations = [{
 "name": &"anim2",
 "speed": 4.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xuaoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wohnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_36dho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yh6i2")
+}],
 "loop": true,
 "name": &"anim2night",
-"speed": 5.0
+"speed": 4.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_yh6i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_36dho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wohnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xuaoq")
+}],
 "loop": true,
 "name": &"animnight",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -109,7 +141,19 @@ animations = [{
 "name": &"default2night",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_nv4vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8gxox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_11gg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qpa8y")
+}],
 "loop": true,
 "name": &"defaultnight",
 "speed": 5.0
@@ -177,8 +221,7 @@ texture_filter = 1
 position = Vector2(320, 183)
 scale = Vector2(1.00083, 1.02313)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"anim2"
-frame_progress = 0.42812172
+animation = &"defaultnight"
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -255,7 +298,7 @@ position = Vector2(86, 202.00002)
 scale = Vector2(0.36749998, 0.34765655)
 sprite_frames = SubResource("SpriteFrames_olqyp")
 animation = &"heart"
-frame_progress = 0.9024141
+frame_progress = 0.59731233
 
 [node name="milopurr" type="AudioStreamPlayer2D" parent="cat"]
 stream = ExtResource("22_wpjfl")
