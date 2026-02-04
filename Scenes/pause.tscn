@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dba7i1cu57day"]
+[gd_scene load_steps=8 format=3 uid="uid://dba7i1cu57day"]
 
 [ext_resource type="Script" uid="uid://ck30blqsk7sun" path="res://Scripts/pause.gd" id="1_l2mpd"]
-[ext_resource type="Texture2D" uid="uid://bxkjt6l2lvdts" path="res://Assets/pause.png" id="2_5a6ek"]
-[ext_resource type="Texture2D" uid="uid://cxk3tghq1fwdc" path="res://Assets/menu1.png" id="3_5a6ek"]
+[ext_resource type="Texture2D" uid="uid://b2tdqglniluw" path="res://Assets/pause.png" id="2_5a6ek"]
+[ext_resource type="Texture2D" uid="uid://bc00jgq3ori82" path="res://Assets/menupause1.png" id="3_e0jm0"]
+[ext_resource type="Texture2D" uid="uid://cjohtapf8tlgi" path="res://Assets/menupause2.png" id="4_3fojq"]
+[ext_resource type="Texture2D" uid="uid://cdkid2rn77nsk" path="res://Assets/buttonsmenu.png" id="5_3fojq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q85f0"]
 animations = [{
@@ -13,6 +15,20 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsogc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e0jm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3fojq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
 }]
 
 [node name="pause" type="CanvasLayer"]
@@ -37,28 +53,74 @@ offset_bottom = -308.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 147.0
-offset_top = 85.0
-offset_right = -112.0
-offset_bottom = -62.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_5a6ek")
+position = Vector2(312, 151.00002)
+scale = Vector2(15.582031, 15.908205)
+sprite_frames = SubResource("SpriteFrames_nsogc")
+frame_progress = 0.51254576
 
-[node name="Button" type="Button" parent="TextureRect"]
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(9.626473, 6.286064)
+scale = Vector2(0.03156285, 0.02677427)
+texture = ExtResource("5_3fojq")
+region_enabled = true
+region_rect = Rect2(8.587769, 8.183716, 114.95685, 126.456116)
+
+[node name="Sprite2D2" type="Sprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(0.5134123, -0.37716475)
+scale = Vector2(0.04010602, 0.036771186)
+texture = ExtResource("5_3fojq")
+region_enabled = true
+region_rect = Rect2(137.74634, 4.3299866, 247.36914, 131.35492)
+
+[node name="Sprite2D3" type="Sprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(0.32088268, 5.4688745)
+scale = Vector2(0.04005004, 0.03660243)
+texture = ExtResource("5_3fojq")
+region_enabled = true
+region_rect = Rect2(396.62103, 11.04155, 228.19324, 121.76698)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="reset" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 46.0
-offset_top = 142.0
-offset_right = -43.0
-offset_bottom = -33.0
+offset_left = 262.0
+offset_top = 127.0
+offset_right = 336.0
+offset_bottom = 131.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 262.0
+offset_top = 220.0
+offset_right = 336.0
+offset_bottom = 222.0
+
+[node name="quit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 442.0
+offset_top = 234.0
+offset_right = 441.0
+offset_bottom = 228.0
 
 [connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
-[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
