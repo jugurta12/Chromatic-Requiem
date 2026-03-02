@@ -368,7 +368,7 @@ size = Vector2(54.5, 24)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(319, 179)
+position = Vector2(321, 181)
 sprite_frames = SubResource("SpriteFrames_yax54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -412,7 +412,7 @@ position = Vector2(324, 344)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(119.75, 189)
+position = Vector2(118, 182)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
@@ -420,7 +420,7 @@ position = Vector2(978, 272)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(157, 128)
+position = Vector2(135, 121)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
@@ -430,7 +430,7 @@ position = Vector2(463.3507, -227.91309)
 scale = Vector2(1.2044629, 1.1906137)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.7419456
+frame_progress = 0.4570516
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -455,7 +455,7 @@ stream = ExtResource("21_wtqk5")
 
 [node name="Camera2D2" type="Camera2D" parent="tutobaadie"]
 position = Vector2(0, -4)
-offset = Vector2(0, -33)
+offset = Vector2(0, -26)
 zoom = Vector2(2, 2)
 limit_left = 1
 limit_top = 0
@@ -464,7 +464,7 @@ limit_bottom = 360
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.64
-drag_top_margin = 0.0
+drag_top_margin = 1.0
 drag_right_margin = 0.6
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
