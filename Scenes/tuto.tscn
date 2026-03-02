@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=8 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
@@ -8,6 +8,12 @@
 
 [sub_resource type="Theme" id="Theme_1d100"]
 default_font = ExtResource("2_hsyn8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsyn8"]
+size = Vector2(189, 707.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d100"]
+size = Vector2(691, 61)
 
 [node name="tuto" type="Node2D"]
 
@@ -39,5 +45,27 @@ text = "
 "
 horizontal_alignment = 1
 visible_characters = 0
+
+[node name="a" type="StaticBody2D" parent="."]
+
+[node name="a5" type="CollisionShape2D" parent="a"]
+position = Vector2(717.5, 298.375)
+shape = SubResource("RectangleShape2D_hsyn8")
+
+[node name="a4" type="CollisionShape2D" parent="a"]
+position = Vector2(-92, 309)
+shape = SubResource("RectangleShape2D_hsyn8")
+
+[node name="a3" type="CollisionShape2D" parent="a"]
+position = Vector2(323, 373)
+shape = SubResource("RectangleShape2D_1d100")
+
+[node name="a2" type="CollisionShape2D" parent="a"]
+position = Vector2(824, 208)
+shape = SubResource("RectangleShape2D_1d100")
+
+[node name="a" type="CollisionShape2D" parent="a"]
+position = Vector2(690, 297)
+shape = SubResource("RectangleShape2D_1d100")
 
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]

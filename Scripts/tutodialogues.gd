@@ -12,21 +12,21 @@ var dialogue_index = 0
 var is_typing = false
 
 func _ready():
-	timer.wait_time = 0.07 # Vitesse d'écriture
+	timer.wait_time = 0.07 
 	start_dialogue()
 
 func _input(event):
-	if event.is_action_pressed("interact"): # "ui_accept" est la touche Entrée par défaut
+	if event.is_action_pressed("interact"): 
 		if is_typing:
-			# Si on est en train d'écrire, on affiche tout d'un coup
+			
 			finish_typing()
 		else:
-			# Sinon, on passe au dialogue suivant
+			
 			dialogue_index += 1
 			if dialogue_index < dialogues.size():
 				start_dialogue()
 			else:
-				queue_free() # Plus de dialogues ? On ferme la boîte.
+				queue_free() 
 
 func start_dialogue():
 	label.text = dialogues[dialogue_index]
