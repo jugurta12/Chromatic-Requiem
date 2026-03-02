@@ -349,10 +349,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lecsq"]
-size = Vector2(32, 68)
+size = Vector2(32, 69)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq3rk"]
-size = Vector2(49, 20)
+size = Vector2(54.5, 24)
 
 [node name="tuto" type="Node2D"]
 
@@ -400,7 +400,7 @@ position = Vector2(323, 373)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(824, 208)
+position = Vector2(36, 191)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
@@ -408,21 +408,21 @@ position = Vector2(690, 297)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(519, 145)
+position = Vector2(36, 130)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tutobaadie"]
 texture_filter = 1
-position = Vector2(566, -289.00003)
+position = Vector2(567, -292.00003)
 scale = Vector2(1.4567927, 1.4811941)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.84443384
+frame_progress = 0.40615007
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
-position = Vector2(0, -2)
+position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_lecsq")
 
 [node name="AttackTimer" type="Timer" parent="tutobaadie"]
@@ -430,13 +430,32 @@ wait_time = 0.3
 one_shot = true
 
 [node name="AttackArea" type="Area2D" parent="tutobaadie"]
+position = Vector2(1, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie/AttackArea"]
-position = Vector2(1.5, -3)
+position = Vector2(-0.25, 3)
 shape = SubResource("RectangleShape2D_cq3rk")
+metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="tutobaadie"]
+position = Vector2(0, -3)
 stream = ExtResource("21_wtqk5")
+
+[node name="Camera2D2" type="Camera2D" parent="tutobaadie"]
+position = Vector2(0, -4)
+offset = Vector2(0, -40)
+zoom = Vector2(2, 2)
+limit_left = 1
+limit_top = 0
+limit_right = 641
+limit_bottom = 360
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.64
+drag_top_margin = 0.7
+drag_right_margin = 0.6
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]

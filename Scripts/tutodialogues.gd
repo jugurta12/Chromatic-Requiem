@@ -49,3 +49,7 @@ func finish_typing():
 	label.visible_characters = label.text.length()
 	is_typing = false
 	timer.stop()
+
+
+func _on_tutobaadie_dial_1() -> void:
+	pass # Replace with function body.
