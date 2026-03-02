@@ -1,7 +1,8 @@
-[gd_scene load_steps=50 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=51 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
+[ext_resource type="Texture2D" uid="uid://c5jr3fso4mofh" path="res://Assets/tutobackgroundbeta.png" id="1_ukplb"]
 [ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="2_hsyn8"]
 [ext_resource type="Script" uid="uid://binamvc1287yp" path="res://scripts/tutobaadie.gd" id="4_eoyr7"]
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="4_f3amd"]
@@ -18,6 +19,15 @@
 [ext_resource type="AudioStream" uid="uid://ce5lu5wqg2cwx" path="res://SFX/punch_nrmlatk.mp3" id="21_wtqk5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yax54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ukplb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_1d100"]
 default_font = ExtResource("2_hsyn8")
@@ -26,7 +36,7 @@ default_font = ExtResource("2_hsyn8")
 size = Vector2(189, 707.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d100"]
-size = Vector2(691, 61)
+size = Vector2(774.5, 61)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoyr7"]
 atlas = ExtResource("8_xe7e8")
@@ -349,7 +359,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lecsq"]
-size = Vector2(32, 69)
+size = Vector2(26, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq3rk"]
 size = Vector2(54.5, 24)
@@ -357,6 +367,8 @@ size = Vector2(54.5, 24)
 [node name="tuto" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(319, 179)
 sprite_frames = SubResource("SpriteFrames_yax54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -396,33 +408,33 @@ position = Vector2(-92, 309)
 shape = SubResource("RectangleShape2D_hsyn8")
 
 [node name="a3" type="CollisionShape2D" parent="a"]
-position = Vector2(323, 373)
+position = Vector2(324, 344)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(36, 191)
+position = Vector2(119.75, 189)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
-position = Vector2(690, 297)
+position = Vector2(978, 272)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(36, 130)
+position = Vector2(157, 128)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tutobaadie"]
 texture_filter = 1
-position = Vector2(567, -292.00003)
-scale = Vector2(1.4567927, 1.4811941)
+position = Vector2(463.3507, -227.91309)
+scale = Vector2(1.2044629, 1.1906137)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.5742125
+frame_progress = 0.7419456
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
-position = Vector2(0, -5.5)
+position = Vector2(-5, 1.5)
 shape = SubResource("RectangleShape2D_lecsq")
 
 [node name="AttackTimer" type="Timer" parent="tutobaadie"]
@@ -443,7 +455,7 @@ stream = ExtResource("21_wtqk5")
 
 [node name="Camera2D2" type="Camera2D" parent="tutobaadie"]
 position = Vector2(0, -4)
-offset = Vector2(0, -40)
+offset = Vector2(0, -33)
 zoom = Vector2(2, 2)
 limit_left = 1
 limit_top = 0
@@ -452,7 +464,7 @@ limit_bottom = 360
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.64
-drag_top_margin = 0.7
+drag_top_margin = 0.0
 drag_right_margin = 0.6
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
