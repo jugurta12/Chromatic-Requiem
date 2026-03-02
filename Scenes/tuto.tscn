@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=6 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
+[ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
+[ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="2_hsyn8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yax54"]
+
+[sub_resource type="Theme" id="Theme_1d100"]
+default_font = ExtResource("2_hsyn8")
 
 [node name="tuto" type="Node2D"]
 
@@ -10,19 +15,26 @@
 sprite_frames = SubResource("SpriteFrames_yax54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_ikthk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 98.0
+offset_right = 605.0
+offset_bottom = 234.0
+theme = SubResource("Theme_1d100")
+bbcode_enabled = true
+text = "
+"
+visible_characters = 0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = -8.0
+offset_right = 640.0
+offset_bottom = 352.0
 texture = ExtResource("1_1sx44")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 35.0
-offset_top = 263.0
-offset_right = 605.0
-offset_bottom = 329.0
-bbcode_enabled = true
-visible_characters = 0
-
 [node name="Timer" type="Timer" parent="CanvasLayer"]
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
