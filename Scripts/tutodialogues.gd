@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var label = $RichTextLabel
 @onready var timer = $Timer
+signal end()
 
 var dialogues = ["Unknown voice: Come, come ...",
  "..." ,
@@ -12,11 +13,14 @@ var dialogue_index = 0
 var is_typing = false
 
 func _ready():
-	timer.wait_time = 0.07 
+	visible = false
+	await get_tree().create_timer(3.0).timeout
+	visible = true
+	timer.wait_time = 0.07
 	start_dialogue()
 
 func _input(event):
-	if event.is_action_pressed("interact"): 
+	if event.is_action_pressed("interact"):
 		if is_typing:
 			
 			finish_typing()
@@ -26,6 +30,7 @@ func _input(event):
 			if dialogue_index < dialogues.size():
 				start_dialogue()
 			else:
+				end.emit()
 				queue_free() 
 
 func start_dialogue():

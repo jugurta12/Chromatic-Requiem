@@ -1,8 +1,9 @@
-[gd_scene load_steps=49 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=50 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
 [ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="2_hsyn8"]
+[ext_resource type="Script" uid="uid://binamvc1287yp" path="res://scripts/tutobaadie.gd" id="4_eoyr7"]
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="4_f3amd"]
 [ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="5_wtqk5"]
 [ext_resource type="Texture2D" uid="uid://f27xacs5o3y6" path="res://Assets/tutotransfo.png" id="8_xe7e8"]
@@ -400,34 +401,36 @@ shape = SubResource("RectangleShape2D_1d100")
 position = Vector2(690, 297)
 shape = SubResource("RectangleShape2D_1d100")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="tutobaadie" type="CharacterBody2D" parent="."]
 position = Vector2(519, 145)
+script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tutobaadie"]
 texture_filter = 1
 position = Vector2(566, -289.00003)
 scale = Vector2(1.4567927, 1.4811941)
 sprite_frames = SubResource("SpriteFrames_12llu")
-animation = &"virusrest"
-frame_progress = 0.30774835
+animation = &"jump_right"
+frame_progress = 0.23823673
 offset = Vector2(-387.769, 192.548)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_lecsq")
 
-[node name="AttackTimer" type="Timer" parent="CharacterBody2D"]
+[node name="AttackTimer" type="Timer" parent="tutobaadie"]
 wait_time = 0.3
 one_shot = true
 
-[node name="AttackArea" type="Area2D" parent="CharacterBody2D"]
+[node name="AttackArea" type="Area2D" parent="tutobaadie"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/AttackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie/AttackArea"]
 position = Vector2(1.5, -3)
 shape = SubResource("RectangleShape2D_cq3rk")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="tutobaadie"]
 stream = ExtResource("21_wtqk5")
 
+[connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
