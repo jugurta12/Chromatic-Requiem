@@ -3,12 +3,16 @@ extends CanvasLayer
 @onready var label = $RichTextLabel
 @onready var timer = $Timer
 
-var dialogues = ["Bonjour l'ami !", "C'est moi qui ai dessiné ce fond, pas mal non ?", "Allez, bon vent !"]
+var dialogues = ["Unknown voice: Come, come ...",
+ "..." ,
+"Unknown voice: Come, and see how the world has changed, and how your faith writes your steps from now on, towards greatness.", 
+"Baadie : Ugh... ",
+"Baadie : My head... Who's talking?"]
 var dialogue_index = 0
 var is_typing = false
 
 func _ready():
-	timer.wait_time = 0.05 # Vitesse d'écriture
+	timer.wait_time = 0.07 # Vitesse d'écriture
 	start_dialogue()
 
 func _input(event):

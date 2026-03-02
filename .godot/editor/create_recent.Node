@@ -1,3 +1,4 @@
+Label
 Timer
 RichTextLabel
 TextureRect
@@ -8,8 +9,6 @@ Sprite2D
 ColorRect
 CollisionShape2D
 Area2D
-Label
 AudioStreamPlayer2D
 CharacterBody2D
 Button
-PathFollow2D
