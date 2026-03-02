@@ -1,3 +1,4 @@
+CharacterBody2D
 Label
 Timer
 RichTextLabel
@@ -10,5 +11,4 @@ ColorRect
 CollisionShape2D
 Area2D
 AudioStreamPlayer2D
-CharacterBody2D
 Button
