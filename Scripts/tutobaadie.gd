@@ -28,7 +28,12 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	anime.play("idle_rightA")
 
-
 func _on_canvas_layer_end() -> void:
 	await get_tree().create_timer(3.0).timeout
 	anime.play("virus")
+	await get_tree().create_timer(1.8).timeout
+	anime.play("virustransfo")
+	await get_tree().create_timer(0.9999).timeout
+	anime.play("virusrest")
+	await get_tree().create_timer(1.9999).timeout
+	anime.play("idle_right")
