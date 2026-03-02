@@ -52,11 +52,15 @@ func _on_canvas_layer_end() -> void:
 	await get_tree().create_timer(1.0).timeout
 	
 	anime.play("virusrest")
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.9).timeout
 	
 	# Retour à la normale
 	anime.play("idle_right")
 	dial1.emit()
 	
 	# ENFIN, on redonne le contrôle au joueur
+
+
+func _on_canvas_layer_end_2() -> void:
+	await get_tree().create_timer(1.9).timeout
 	can_move = true

@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var label = $RichTextLabel
 @onready var timer = $Timer
 signal end()
+signal end2()
+var un = 1
 
 var dialogues = ["Unknown voice: Come, come ...",
  "..." ,
@@ -20,7 +22,7 @@ func _ready():
 	start_dialogue()
 
 func _input(event):
-	if event.is_action_pressed("interact"):
+	if visible and event.is_action_pressed("interact"):
 		if is_typing:
 			
 			finish_typing()
@@ -29,9 +31,13 @@ func _input(event):
 			dialogue_index += 1
 			if dialogue_index < dialogues.size():
 				start_dialogue()
-			else:
-				end.emit()
-				queue_free() 
+			else :
+				visible = false
+				un -= 1
+				if un == 0 :
+					end.emit()
+				if un == -1 :
+					end2.emit()
 
 func start_dialogue():
 	label.text = dialogues[dialogue_index]
@@ -52,4 +58,13 @@ func finish_typing():
 
 
 func _on_tutobaadie_dial_1() -> void:
-	pass # Replace with function body.
+	dialogues = ["Unknown voice: Here, I give you my blessing.",
+ 	"Unknown voice: The world you once knew has withered into a shadow of its former self." ,
+	"Unknown voice: Take heed, for the line between a gift and a burden is thin; what you embrace as a blessing,", 
+	"Unknown voice:  your heart may yet find to be a curse.",
+	"Unknown voice:  Now go, follow the path to seek the truth that has become blurred.",]
+	dialogue_index = 0
+	await get_tree().create_timer(3.0).timeout
+	visible = true
+	start_dialogue()
+	

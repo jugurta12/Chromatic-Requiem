@@ -418,7 +418,7 @@ position = Vector2(567, -292.00003)
 scale = Vector2(1.4567927, 1.4811941)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.40615007
+frame_progress = 0.5742125
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -458,4 +458,6 @@ drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
+[connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="dial1" from="tutobaadie" to="CanvasLayer" method="_on_tutobaadie_dial_1"]
