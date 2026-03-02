@@ -23,5 +23,6 @@ offset_top = 263.0
 offset_right = 605.0
 offset_bottom = 329.0
 bbcode_enabled = true
+visible_characters = 0
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
