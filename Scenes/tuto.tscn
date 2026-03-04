@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=55 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="2_hsyn8"]
 [ext_resource type="Script" uid="uid://binamvc1287yp" path="res://scripts/tutobaadie.gd" id="4_eoyr7"]
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="4_f3amd"]
+[ext_resource type="Texture2D" uid="uid://brgihj4ff7g1d" path="res://Assets/tutoelevator1.png" id="5_lecsq"]
 [ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="5_wtqk5"]
 [ext_resource type="Texture2D" uid="uid://f27xacs5o3y6" path="res://Assets/tutotransfo.png" id="8_xe7e8"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="13_6vkgx"]
@@ -362,7 +363,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lecsq"]
-size = Vector2(26, 57)
+size = Vector2(18, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq3rk"]
 size = Vector2(54.5, 24)
@@ -416,29 +417,44 @@ position = Vector2(324, 344)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(270, 182)
+position = Vector2(185, 182)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
 position = Vector2(978, 272)
 shape = SubResource("RectangleShape2D_1d100")
 
+[node name="AnimatableBody2D2" type="AnimatableBody2D" parent="."]
+position = Vector2(321, 181.00002)
+scale = Vector2(0.99999994, 0.9999999)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2"]
+texture_filter = 1
+position = Vector2(-1.0967255e-05, -206.50005)
+scale = Vector2(1, 1.1916668)
+texture = ExtResource("5_lecsq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(322, 181)
+texture = ExtResource("20_f3amd")
+
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(135, 121)
+position = Vector2(160, -70)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tutobaadie"]
 texture_filter = 1
-position = Vector2(463.3507, -227.91309)
-scale = Vector2(1.2044629, 1.1906137)
+position = Vector2(372.90933, -172.77625)
+scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.09261535
+frame_progress = 0.6356926
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
-position = Vector2(-5, 1.5)
+position = Vector2(-1, 8.5)
 shape = SubResource("RectangleShape2D_lecsq")
 
 [node name="AttackTimer" type="Timer" parent="tutobaadie"]
@@ -488,11 +504,6 @@ texture_filter = 1
 position = Vector2(-1.0967255e-05, -206.50005)
 scale = Vector2(1, 1.1916668)
 texture = ExtResource("19_j4vb3")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(322, 181)
-texture = ExtResource("20_f3amd")
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]
