@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=54 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
@@ -13,9 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://cyfcnrm4sios5" path="res://Assets/nrmljumpleft.png" id="15_ex5qg"]
 [ext_resource type="Texture2D" uid="uid://ciyosjxh5nsqk" path="res://Assets/nrmljumpright.png" id="16_6hg1d"]
 [ext_resource type="Texture2D" uid="uid://sq1a1fu7nkyi" path="res://Assets/nrmlleft2.png" id="17_j43k4"]
+[ext_resource type="Texture2D" uid="uid://b0oxwt5oj1ora" path="res://Assets/tutobackgroundtemplate2beta.png" id="18_lvcv8"]
 [ext_resource type="Texture2D" uid="uid://be4cbcgr136m" path="res://Assets/nrmlleft.png" id="18_oeo0c"]
 [ext_resource type="Texture2D" uid="uid://bymqy7o5cc30m" path="res://Assets/nrmlright2.png" id="19_0u3d5"]
+[ext_resource type="Texture2D" uid="uid://pm7m6hma2fpq" path="res://Assets/tutoelevator2.png" id="19_j4vb3"]
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="20_7exro"]
+[ext_resource type="Texture2D" uid="uid://bilm1q0ehsf1e" path="res://Assets/tutoplanche.png" id="20_f3amd"]
 [ext_resource type="AudioStream" uid="uid://ce5lu5wqg2cwx" path="res://SFX/punch_nrmlatk.mp3" id="21_wtqk5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yax54"]
@@ -376,9 +379,10 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 1.0
-offset_right = 641.0
-offset_bottom = 360.0
+offset_left = -175.0
+offset_top = 406.0
+offset_right = 465.0
+offset_bottom = 766.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -400,7 +404,7 @@ visible_characters = 0
 [node name="a" type="StaticBody2D" parent="."]
 
 [node name="a5" type="CollisionShape2D" parent="a"]
-position = Vector2(717.5, 298.375)
+position = Vector2(734, 298)
 shape = SubResource("RectangleShape2D_hsyn8")
 
 [node name="a4" type="CollisionShape2D" parent="a"]
@@ -412,7 +416,7 @@ position = Vector2(324, 344)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(118, 182)
+position = Vector2(270, 182)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
@@ -430,7 +434,7 @@ position = Vector2(463.3507, -227.91309)
 scale = Vector2(1.2044629, 1.1906137)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.4570516
+frame_progress = 0.09261535
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -468,6 +472,27 @@ drag_top_margin = 1.0
 drag_right_margin = 0.6
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(321, 181.00002)
+scale = Vector2(0.99999994, 0.9999999)
+texture = ExtResource("18_lvcv8")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(321, 181.00002)
+scale = Vector2(0.99999994, 0.9999999)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+texture_filter = 1
+position = Vector2(-1.0967255e-05, -206.50005)
+scale = Vector2(1, 1.1916668)
+texture = ExtResource("19_j4vb3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(322, 181)
+texture = ExtResource("20_f3amd")
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]

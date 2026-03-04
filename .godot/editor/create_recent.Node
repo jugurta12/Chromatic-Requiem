@@ -1,3 +1,5 @@
+Sprite2D
+AnimatableBody2D
 CharacterBody2D
 Label
 Timer
@@ -6,9 +8,7 @@ TextureRect
 CanvasLayer
 AnimatedSprite2D
 Control
-Sprite2D
 ColorRect
 CollisionShape2D
 Area2D
 AudioStreamPlayer2D
-Button
