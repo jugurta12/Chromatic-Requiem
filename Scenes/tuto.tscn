@@ -52,7 +52,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.13333334, 3),
+"times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(321, 181.00002), Vector2(321, 352)]
@@ -64,7 +64,7 @@ tracks/1/path = NodePath("../AnimatableBody2D3:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.1, 3),
+"times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(321, 181), Vector2(321, 352)]
@@ -483,7 +483,7 @@ position = Vector2(-92, 309)
 shape = SubResource("RectangleShape2D_hsyn8")
 
 [node name="a3" type="CollisionShape2D" parent="a"]
-position = Vector2(324, 344)
+position = Vector2(325, 353)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
@@ -491,7 +491,7 @@ position = Vector2(185, 182)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
-position = Vector2(978, 272)
+position = Vector2(1263, 292)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="AnimatableBody2D2" type="AnimatableBody2D" parent="."]
@@ -515,7 +515,7 @@ position = Vector2(322, 181)
 texture = ExtResource("20_f3amd")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(160, -70)
+position = Vector2(225, 291)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
@@ -525,7 +525,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.10588948
+frame_progress = 0.3454996
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -555,7 +555,7 @@ zoom = Vector2(2, 2)
 limit_left = 1
 limit_top = 0
 limit_right = 641
-limit_bottom = 360
+limit_bottom = 380
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.64
