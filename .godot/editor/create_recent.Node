@@ -1,3 +1,5 @@
+CollisionShape2D
+AnimationPlayer
 Sprite2D
 AnimatableBody2D
 CharacterBody2D
@@ -9,6 +11,4 @@ CanvasLayer
 AnimatedSprite2D
 Control
 ColorRect
-CollisionShape2D
 Area2D
-AudioStreamPlayer2D
