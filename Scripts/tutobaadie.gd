@@ -58,7 +58,6 @@ func _on_canvas_layer_end() -> void:
 	anime.play("idle_right")
 	dial1.emit()
 	
-	# ENFIN, on redonne le contrôle au joueur
 
 
 func _on_canvas_layer_end_2() -> void:

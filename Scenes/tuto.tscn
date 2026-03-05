@@ -1,6 +1,7 @@
-[gd_scene load_steps=66 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=67 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
+[ext_resource type="Script" uid="uid://dqn4p25t22i43" path="res://scripts/tuto.gd" id="1_hisyk"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
 [ext_resource type="Texture2D" uid="uid://c5jr3fso4mofh" path="res://Assets/tutobackgroundbeta.png" id="1_ukplb"]
 [ext_resource type="FontFile" uid="uid://botpy0q2pr21n" path="res://font/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="2_hsyn8"]
@@ -459,6 +460,7 @@ size = Vector2(27, 76)
 size = Vector2(80, 20)
 
 [node name="tuto" type="Node2D"]
+script = ExtResource("1_hisyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -542,7 +544,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.61088926
+frame_progress = 0.66373557
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -560,7 +562,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.5158399
+frame_progress = 0.78208655
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -635,4 +637,5 @@ shape = SubResource("RectangleShape2D_hisyk")
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="down" from="AnimatableBody2D2/Area2D" to="." method="_on_area_2d_down"]
 [connection signal="dial1" from="tutobaadie" to="CanvasLayer" method="_on_tutobaadie_dial_1"]
