@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_down() -> void:
 	elevatoranim1.play("down")
+
+
+func _on_area_2d_up() -> void:
+	elevatoranim1.play("up")

@@ -4,7 +4,9 @@ extends Area2D
 @onready var collision_sprite = $CollisionShape2D
 var player_nearby = false
 signal down
-var up = false
+signal up
+var upp = false
+var animating = false
 
 func _ready():
 	animated_sprite.visible = false
@@ -30,13 +32,19 @@ func _process(_delta):
 		interact()
 
 func interact():
-	if up == false:
+	if upp == false and animating == false:
 		emit_signal("down")
+		animating = true
 		animated_sprite.visible = false
-		up = true
-	if up == true:
+		upp = true
+		await get_tree().create_timer(5).timeout
+		animating = false
+	elif upp == true and animating == false:
 		emit_signal("up")
+		animating = true
 		animated_sprite.visible = false
-		up = true
+		upp = false
+		await get_tree().create_timer(5).timeout
+		animating = false
 	else:
 		pass
