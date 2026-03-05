@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=66 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://c0xsbjsqk3tbe" path="res://scripts/tutodialogues.gd" id="1_ikthk"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="4_f3amd"]
 [ext_resource type="Texture2D" uid="uid://brgihj4ff7g1d" path="res://Assets/tutoelevator1.png" id="5_lecsq"]
 [ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="5_wtqk5"]
+[ext_resource type="Texture2D" uid="uid://dnhgbdrhk1att" path="res://Assets/pet.png" id="6_cq3rk"]
+[ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="7_bcll0"]
+[ext_resource type="Script" uid="uid://t0dr38tp0s0c" path="res://scripts/ascenseur.gd" id="8_bcll0"]
 [ext_resource type="Texture2D" uid="uid://f27xacs5o3y6" path="res://Assets/tutotransfo.png" id="8_xe7e8"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="13_6vkgx"]
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="14_kqm8x"]
@@ -40,7 +43,7 @@ default_font = ExtResource("2_hsyn8")
 size = Vector2(189, 707.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d100"]
-size = Vector2(774.5, 61)
+size = Vector2(775.25, 27.25)
 
 [sub_resource type="Animation" id="Animation_wtqk5"]
 resource_name = "down"
@@ -55,7 +58,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 181.00002), Vector2(321, 352)]
+"values": [Vector2(321, 181.00002), Vector2(321, 355)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -67,7 +70,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 181), Vector2(321, 352)]
+"values": [Vector2(321, 181), Vector2(321, 355)]
 }
 
 [sub_resource type="Animation" id="Animation_lecsq"]
@@ -102,6 +105,23 @@ _data = {
 &"RESET": SubResource("Animation_lecsq"),
 &"down": SubResource("Animation_wtqk5")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rr37k"]
+size = Vector2(20.000038, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hisyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cq3rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bcll0")
+}],
+"loop": true,
+"name": &"down",
+"speed": 1.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoyr7"]
 atlas = ExtResource("8_xe7e8")
@@ -483,11 +503,11 @@ position = Vector2(-92, 309)
 shape = SubResource("RectangleShape2D_hsyn8")
 
 [node name="a3" type="CollisionShape2D" parent="a"]
-position = Vector2(325, 353)
+position = Vector2(325, 339)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a2" type="CollisionShape2D" parent="a"]
-position = Vector2(185, 182)
+position = Vector2(185.375, 164.625)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="a" type="CollisionShape2D" parent="a"]
@@ -509,13 +529,28 @@ libraries = {
 &"": SubResource("AnimationLibrary_cq3rk")
 }
 
+[node name="Area2D" type="Area2D" parent="AnimatableBody2D2"]
+script = ExtResource("8_bcll0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D2/Area2D"]
+position = Vector2(312.00006, -55.000015)
+shape = SubResource("RectangleShape2D_rr37k")
+
+[node name="elevatorinteract" type="AnimatedSprite2D" parent="AnimatableBody2D2/Area2D"]
+texture_filter = 1
+position = Vector2(277.00003, -109.00003)
+scale = Vector2(0.37, 0.32812488)
+sprite_frames = SubResource("SpriteFrames_hisyk")
+animation = &"down"
+frame_progress = 0.61088926
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(322, 181)
 texture = ExtResource("20_f3amd")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(225, 291)
+position = Vector2(521, 111)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
@@ -525,7 +560,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.3454996
+frame_progress = 0.5158399
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]

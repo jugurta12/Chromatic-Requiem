@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	# Si le mouvement est autorisé
 	if can_move:
 		# Saut
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 
 		# Déplacement gauche/droite

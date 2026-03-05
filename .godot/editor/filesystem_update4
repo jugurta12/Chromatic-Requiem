@@ -1,3 +1,4 @@
 res://Scenes/tuto.tscn
 res://scripts/tutodialogues.gd
 res://scripts/tutobaadie.gd
+res://scripts/ascenseur.gd

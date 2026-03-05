@@ -1,4 +1,6 @@
 CollisionShape2D
+Area2D
+AnimatedSprite2D
 AnimationPlayer
 Sprite2D
 AnimatableBody2D
@@ -8,7 +10,5 @@ Timer
 RichTextLabel
 TextureRect
 CanvasLayer
-AnimatedSprite2D
 Control
 ColorRect
-Area2D
