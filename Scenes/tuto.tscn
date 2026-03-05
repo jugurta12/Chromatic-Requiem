@@ -572,7 +572,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.9898807
+frame_progress = 0.94219166
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -590,7 +590,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.4264085
+frame_progress = 0.18801114
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -661,5 +661,7 @@ shape = SubResource("RectangleShape2D_hisyk")
 [connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
 [connection signal="down" from="AnimatableBody2D2/Area2D" to="." method="_on_area_2d_down"]
+[connection signal="down" from="AnimatableBody2D2/Area2D" to="tutobaadie" method="_on_area_2d_down"]
 [connection signal="up" from="AnimatableBody2D2/Area2D" to="." method="_on_area_2d_up"]
+[connection signal="up" from="AnimatableBody2D2/Area2D" to="tutobaadie" method="_on_area_2d_up"]
 [connection signal="dial1" from="tutobaadie" to="CanvasLayer" method="_on_tutobaadie_dial_1"]

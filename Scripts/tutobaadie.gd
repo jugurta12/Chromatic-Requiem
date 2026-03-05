@@ -63,3 +63,15 @@ func _on_canvas_layer_end() -> void:
 func _on_canvas_layer_end_2() -> void:
 	await get_tree().create_timer(1.9).timeout
 	can_move = true
+
+
+func _on_area_2d_down() -> void:
+	can_move = false
+	await get_tree().create_timer(4).timeout
+	can_move = true
+
+
+func _on_area_2d_up() -> void:
+	can_move = false
+	await get_tree().create_timer(4).timeout
+	can_move = true
