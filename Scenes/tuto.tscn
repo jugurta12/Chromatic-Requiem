@@ -496,7 +496,7 @@ script = ExtResource("1_hisyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(321, 181)
+position = Vector2(320, 361)
 sprite_frames = SubResource("SpriteFrames_yax54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -572,7 +572,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.94219166
+frame_progress = 0.109791204
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -590,7 +590,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.18801114
+frame_progress = 0.025378244
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]

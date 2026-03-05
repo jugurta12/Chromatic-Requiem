@@ -15,14 +15,14 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "tutobaadie":
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.1).timeout
 		player_nearby = true
 		animated_sprite.visible = true
 		animated_sprite.play("down")  # Joue l'animation
 
 func _on_body_exited(body):
 	if body.name == "tutobaadie":
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.1).timeout
 		player_nearby = false
 		animated_sprite.stop()
 		animated_sprite.visible = false
