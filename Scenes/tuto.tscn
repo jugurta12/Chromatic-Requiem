@@ -496,7 +496,8 @@ script = ExtResource("1_hisyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(320, 361)
+position = Vector2(320.5, 180)
+scale = Vector2(1.0015625, 1)
 sprite_frames = SubResource("SpriteFrames_yax54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -550,8 +551,8 @@ scale = Vector2(0.99999994, 0.9999999)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2"]
 texture_filter = 1
-position = Vector2(-1.0967255e-05, -188.00006)
-scale = Vector2(1, 1.0888889)
+position = Vector2(-1.0967255e-05, -187.50006)
+scale = Vector2(1, 1.0861111)
 texture = ExtResource("5_lecsq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D2"]
@@ -572,15 +573,15 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.6584775
+frame_progress = 0.6835154
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(322, 181)
+position = Vector2(322, 180)
 texture = ExtResource("20_f3amd")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(520, 119)
+position = Vector2(506, 119)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
@@ -590,7 +591,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.76427114
+frame_progress = 0.8898932
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -616,23 +617,23 @@ stream = ExtResource("21_wtqk5")
 [node name="Camera2D2" type="Camera2D" parent="tutobaadie"]
 position = Vector2(0, -4)
 offset = Vector2(0, -26)
-zoom = Vector2(2, 2)
+zoom = Vector2(2.03, 2.03)
 limit_left = 1
 limit_top = 0
 limit_right = 641
 limit_bottom = 380
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.64
-drag_top_margin = 1.0
+drag_left_margin = 0.6
+drag_top_margin = 0.35
 drag_right_margin = 0.6
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(320, 181)
-scale = Vector2(0.99999994, 0.9999999)
+position = Vector2(320, 180.49998)
+scale = Vector2(0.99999994, 1.0027777)
 texture = ExtResource("18_lvcv8")
 
 [node name="AnimatableBody2D3" type="AnimatableBody2D" parent="."]
