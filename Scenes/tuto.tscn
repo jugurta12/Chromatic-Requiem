@@ -572,7 +572,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.109791204
+frame_progress = 0.6584775
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -590,7 +590,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virusrest"
-frame_progress = 0.025378244
+frame_progress = 0.76427114
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -631,7 +631,7 @@ editor_draw_drag_margin = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(321, 181.00002)
+position = Vector2(320, 181)
 scale = Vector2(0.99999994, 0.9999999)
 texture = ExtResource("18_lvcv8")
 
