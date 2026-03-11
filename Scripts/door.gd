@@ -1,12 +1,9 @@
 extends Area2D
 
-@onready var animated_sprite = $elevatorinteract
+@onready var animated_sprite = $doorinteract
 @onready var collision_sprite = $CollisionShape2D
 var player_nearby = false
-signal down
-signal up
-var upp = false
-var animating = false
+signal next
 
 
 func _ready():
@@ -19,7 +16,7 @@ func _on_body_entered(body):
 		await get_tree().create_timer(0.1).timeout
 		player_nearby = true
 		animated_sprite.visible = true
-		animated_sprite.play("down")  # Joue l'animation
+		animated_sprite.play("default") 
 
 func _on_body_exited(body):
 	if body.name == "tutobaadie":
@@ -33,19 +30,5 @@ func _process(_delta):
 		interact()
 
 func interact():
-	if upp == false and animating == false:
-		emit_signal("down")
-		animating = true
-		animated_sprite.visible = false
-		upp = true
-		await get_tree().create_timer(5).timeout
-		animating = false
-	elif upp == true and animating == false:
-		emit_signal("up")
-		animating = true
-		animated_sprite.visible = false
-		upp = false
-		await get_tree().create_timer(5).timeout
-		animating = false
-	else:
-		pass
+		next.emit()
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=73 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://dqn4p25t22i43" path="res://scripts/tuto.gd" id="1_hisyk"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="20_7exro"]
 [ext_resource type="Texture2D" uid="uid://bilm1q0ehsf1e" path="res://Assets/tutoplanche.png" id="20_f3amd"]
 [ext_resource type="AudioStream" uid="uid://ce5lu5wqg2cwx" path="res://SFX/punch_nrmlatk.mp3" id="21_wtqk5"]
+[ext_resource type="Script" uid="uid://22g6rd2giwbj" path="res://scripts/door.gd" id="26_rr37k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yax54"]
 animations = [{
@@ -49,6 +50,12 @@ size = Vector2(633.6245, 27.625)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8pwo"]
 size = Vector2(602, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4ic1"]
+size = Vector2(8, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hisyk"]
+size = Vector2(80, 97.00001)
+
 [sub_resource type="Animation" id="Animation_wtqk5"]
 resource_name = "down"
 length = 3.0
@@ -62,7 +69,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 181.00002), Vector2(321, 355)]
+"values": [Vector2(321, 173), Vector2(321, 355)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -74,7 +81,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 181), Vector2(321, 355)]
+"values": [Vector2(321, 173), Vector2(321, 355)]
 }
 
 [sub_resource type="Animation" id="Animation_lecsq"]
@@ -89,7 +96,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(321, 181.00002)]
+"values": [Vector2(321, 173)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -101,7 +108,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(321, 181)]
+"values": [Vector2(321, 173)]
 }
 
 [sub_resource type="Animation" id="Animation_hisyk"]
@@ -117,7 +124,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 355), Vector2(321, 181)]
+"values": [Vector2(321, 355), Vector2(321, 173)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -129,7 +136,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(321, 355), Vector2(321, 181)]
+"values": [Vector2(321, 355), Vector2(321, 173)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cq3rk"]
@@ -327,7 +334,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_left",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -483,13 +490,27 @@ size = Vector2(18, 45)
 size = Vector2(54.5, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtqk5"]
-size = Vector2(81, 27)
+size = Vector2(81, 26.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcll0"]
 size = Vector2(27, 76)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hisyk"]
-size = Vector2(80, 97.00001)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vkgx"]
+size = Vector2(46, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqm8x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bcll0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cq3rk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="tuto" type="Node2D"]
 script = ExtResource("1_hisyk")
@@ -505,10 +526,10 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = -175.0
-offset_top = 406.0
-offset_right = 465.0
-offset_bottom = 766.0
+offset_left = 19.0
+offset_top = 384.0
+offset_right = 659.0
+offset_bottom = 744.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -538,15 +559,28 @@ position = Vector2(-92, 309)
 shape = SubResource("RectangleShape2D_hsyn8")
 
 [node name="a3" type="CollisionShape2D" parent="a"]
-position = Vector2(254.18774, 338.3)
+position = Vector2(255, 346.3)
 shape = SubResource("RectangleShape2D_1d100")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="a"]
-position = Vector2(271, 162)
+position = Vector2(270, 162)
 shape = SubResource("RectangleShape2D_n8pwo")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="a"]
+position = Vector2(86, 332)
+shape = SubResource("RectangleShape2D_r4ic1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="a"]
+position = Vector2(81, 252)
+shape = SubResource("RectangleShape2D_r4ic1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="a"]
+position = Vector2(71, 102)
+scale = Vector2(0.99999994, 0.9999999)
+shape = SubResource("RectangleShape2D_hisyk")
+
 [node name="AnimatableBody2D2" type="AnimatableBody2D" parent="."]
-position = Vector2(321, 181.00002)
+position = Vector2(321, 173)
 scale = Vector2(0.99999994, 0.9999999)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2"]
@@ -573,7 +607,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.37594217
+frame_progress = 0.16267776
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -581,7 +615,7 @@ position = Vector2(322, 180)
 texture = ExtResource("20_f3amd")
 
 [node name="tutobaadie" type="CharacterBody2D" parent="."]
-position = Vector2(506, 119)
+position = Vector2(158, 119)
 script = ExtResource("4_eoyr7")
 metadata/_edit_group_ = true
 
@@ -590,8 +624,8 @@ texture_filter = 1
 position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
-animation = &"virusrest"
-frame_progress = 0.35179222
+animation = &"run_left"
+frame_progress = 0.12434092
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -632,12 +666,12 @@ editor_draw_drag_margin = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(320, 180.49998)
-scale = Vector2(0.99999994, 1.0027777)
+position = Vector2(320.5, 180)
+scale = Vector2(1.0015625, 1)
 texture = ExtResource("18_lvcv8")
 
 [node name="AnimatableBody2D3" type="AnimatableBody2D" parent="."]
-position = Vector2(321, 181)
+position = Vector2(321, 173)
 scale = Vector2(0.99999994, 0.9999999)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D3"]
@@ -647,7 +681,7 @@ scale = Vector2(1, 1.088889)
 texture = ExtResource("19_j4vb3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D3"]
-position = Vector2(291.00006, -17)
+position = Vector2(291, -9.2)
 shape = SubResource("RectangleShape2D_wtqk5")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatableBody2D3"]
@@ -658,6 +692,19 @@ shape = SubResource("RectangleShape2D_bcll0")
 position = Vector2(282.00003, -145.50002)
 shape = SubResource("RectangleShape2D_hisyk")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(40, 277)
+script = ExtResource("26_rr37k")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-13, 9)
+shape = SubResource("RectangleShape2D_6vkgx")
+
+[node name="doorinteract" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_kqm8x")
+frame_progress = 0.7474176
+
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end_2"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
@@ -666,3 +713,4 @@ shape = SubResource("RectangleShape2D_hisyk")
 [connection signal="up" from="AnimatableBody2D2/Area2D" to="." method="_on_area_2d_up"]
 [connection signal="up" from="AnimatableBody2D2/Area2D" to="tutobaadie" method="_on_area_2d_up"]
 [connection signal="dial1" from="tutobaadie" to="CanvasLayer" method="_on_tutobaadie_dial_1"]
+[connection signal="next" from="Area2D" to="." method="_on_area_2d_next"]

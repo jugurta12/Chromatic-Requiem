@@ -3,3 +3,6 @@ res://scripts/tutodialogues.gd
 res://scripts/tutobaadie.gd
 res://scripts/ascenseur.gd
 res://scripts/tuto.gd
+res://Scenes/Baddie.tscn
+res://Scripts/player.gd
+res://scripts/door.gd
