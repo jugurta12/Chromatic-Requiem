@@ -6,6 +6,7 @@ signal dial1()
 
 @onready var anime = $AnimatedSprite2D
 var can_move = false 
+var done = false
 
 var facing_right = true # Par défaut, il regarde à droite
 
@@ -24,20 +25,20 @@ func _physics_process(delta: float) -> void:
 		
 		if direction != 0:
 			velocity.x = direction * SPEED
-			# Mise à jour de la direction du regard
+			
 			facing_right = direction > 0 
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 
-		# 3. GESTION DES ANIMATIONS
-		if not is_on_floor():
-			# --- EN L'AIR ---
+		
+		if not is_on_floor( ) and can_move==true:
+			
 			if facing_right:
 				anime.play("jump_right")
 			else:
 				anime.play("jump_left")
 				
-		elif direction != 0:
+		elif direction != 0 and can_move==true:
 			# --- AU SOL ET MARCHE ---
 			if facing_right:
 				anime.play("run_right")
@@ -45,16 +46,15 @@ func _physics_process(delta: float) -> void:
 				anime.play("run_left")
 				
 		else:
-			# --- AU SOL ET ARRÊTÉ (IDLE) ---
+			
 			if facing_right:
 				anime.play("idle_right")
 			else:
-				anime.play("idle_left") # Enfin ton perso regarde à gauche !
+				anime.play("idle_left") 
 
-	else:
-		# Si can_move est faux (dialogue, etc.)
+	elif done == true:
+		
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		# On joue l'Idle selon la dernière direction enregistrée
 		if facing_right:
 			anime.play("idle_right")
 		else:
@@ -93,3 +93,7 @@ func _on_area_2d_up() -> void:
 	can_move = false
 	await get_tree().create_timer(4).timeout
 	can_move = true
+
+
+func _on_dial_1() -> void:
+	done = true
