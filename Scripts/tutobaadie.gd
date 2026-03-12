@@ -5,6 +5,8 @@ const JUMP_VELOCITY = -200.0
 signal dial1()
 
 @onready var anime = $AnimatedSprite2D
+@onready var signall = get_node("../AudioStreamPlayer2D")
+@onready var transfo = get_node("../AudioStreamPlayer2D2")
 var can_move = false 
 var done = false
 
@@ -67,8 +69,10 @@ func _ready() -> void:
 	can_move = false
 func _on_canvas_layer_end() -> void:
 	await get_tree().create_timer(3.0).timeout
+	signall.play()
 	anime.play("virus")
 	await get_tree().create_timer(1.8).timeout
+	transfo.play()
 	anime.play("virustransfo")
 	await get_tree().create_timer(1.0).timeout
 	anime.play("virusrest")

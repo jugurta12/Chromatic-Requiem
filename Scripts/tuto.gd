@@ -2,6 +2,8 @@ extends Node2D
 var menu_scene = preload("res://Scenes/player.tscn")
 @onready var elevatoranim1 = $AnimatableBody2D2/AnimationPlayer
 @onready var fleche = $AnimatedSprite2D2
+@onready var signall = $AudioStreamPlayer2D
+@onready var transfo = $AudioStreamPlayer2D2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
