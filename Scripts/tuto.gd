@@ -57,3 +57,7 @@ func _on_area_2d_next() -> void:
 func _on_canvas_layer_end_2() -> void:
 	await get_tree().create_timer(1.0).timeout
 	fleche.visible=true
+	fleche.play("default")
+	await get_tree().create_timer(1.5).timeout
+	fleche.play("stay")
+	

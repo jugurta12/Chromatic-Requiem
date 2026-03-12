@@ -634,9 +634,9 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_top = 388.0
+offset_top = 1.0
 offset_right = 640.0
-offset_bottom = 748.0
+offset_bottom = 361.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -714,7 +714,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.36111766
+frame_progress = 0.5938021
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -732,7 +732,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"run_left"
-frame_progress = 0.72052485
+frame_progress = 0.41870186
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -812,7 +812,7 @@ texture_filter = 1
 position = Vector2(-12, -61.999996)
 scale = Vector2(0.35500002, 0.375)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.7435407
+frame_progress = 0.9072413
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
