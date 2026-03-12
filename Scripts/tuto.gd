@@ -4,7 +4,19 @@ var menu_scene = preload("res://Scenes/player.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$AnimatedSprite2D.modulate = Color(0, 0, 0, 1)
+	$tutobaadie/AnimatedSprite2D.modulate = Color(0, 0, 0, 1)
+	$Sprite2D.modulate = Color(0, 0, 0, 1)
+	$Area2D/doorinteract.modulate = Color(0, 0, 0, 1)
+	var tween1 = create_tween()
+	var tween2 = create_tween()
+	var tween3 = create_tween()
+	var tween4 = create_tween()
+	
+	tween1.tween_property($AnimatedSprite2D, "modulate", Color(1, 1, 1, 1), 3.0)
+	tween2.tween_property($tutobaadie/AnimatedSprite2D, "modulate", Color(1, 1, 1, 1), 3.0)
+	tween3.tween_property($Sprite2D, "modulate", Color(1, 1, 1, 1), 3.0)
+	tween4.tween_property($Area2D/doorinteract, "modulate", Color(1, 1, 1, 1), 3.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

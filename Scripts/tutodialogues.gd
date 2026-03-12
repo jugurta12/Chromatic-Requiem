@@ -16,7 +16,7 @@ var is_typing = false
 
 func _ready():
 	visible = false
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	visible = true
 	timer.wait_time = 0.07
 	start_dialogue()
