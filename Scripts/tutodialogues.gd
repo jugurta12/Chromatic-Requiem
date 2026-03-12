@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var label = $RichTextLabel
 @onready var timer = $Timer
+
 signal end()
 signal end2()
 var un = 1
@@ -38,6 +39,7 @@ func _input(event):
 					end.emit()
 				if un == -1 :
 					end2.emit()
+					
 
 func start_dialogue():
 	label.text = dialogues[dialogue_index]

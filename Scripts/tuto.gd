@@ -1,9 +1,11 @@
 extends Node2D
 var menu_scene = preload("res://Scenes/player.tscn")
 @onready var elevatoranim1 = $AnimatableBody2D2/AnimationPlayer
+@onready var fleche = $AnimatedSprite2D2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	fleche.visible=false
 	$AnimatedSprite2D.modulate = Color(0, 0, 0, 1)
 	$tutobaadie/AnimatedSprite2D.modulate = Color(0, 0, 0, 1)
 	$Sprite2D.modulate = Color(0, 0, 0, 1)
@@ -50,3 +52,8 @@ func _on_area_2d_next() -> void:
 	# Attendre que l'animation se termine avant de changer de scène
 	await tween1.finished
 	get_tree().change_scene_to_file("res://Scenes/player.tscn")
+
+
+func _on_canvas_layer_end_2() -> void:
+	await get_tree().create_timer(1.0).timeout
+	fleche.visible=true
