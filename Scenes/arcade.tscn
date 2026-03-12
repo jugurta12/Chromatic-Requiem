@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b03s6rgm5pwnq"]
+[gd_scene load_steps=35 format=3 uid="uid://b03s6rgm5pwnq"]
 
 [ext_resource type="Texture2D" uid="uid://br5fs7sngipll" path="res://Assets/arcade.png" id="1_3ufcg"]
 [ext_resource type="Script" uid="uid://cado3t4xdwmag" path="res://Scripts/arcadee.gd" id="1_i82s6"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ca1qesdwv7fcj" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
 [ext_resource type="Texture2D" uid="uid://bvbn5g6erlme3" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
 [ext_resource type="Texture2D" uid="uid://d30r8v0b7nk7y" path="res://Assets/healthbar0%.png" id="9_4mld8"]
+[ext_resource type="Script" uid="uid://beynntucjt87p" path="res://scripts/arcadeplayer.gd" id="10_pd57b"]
 [ext_resource type="Texture2D" uid="uid://x8m2vo83d88s" path="res://Assets/healthbar100%.png" id="10_s0rvt"]
 [ext_resource type="PackedScene" uid="uid://c4rf4st16oach" path="res://Scenes/Baddie.tscn" id="11_j2rfc"]
 [ext_resource type="Texture2D" uid="uid://bigccntfy4jro" path="res://Assets/healthbar25%.png" id="11_tinc1"]
@@ -159,6 +160,11 @@ sprite_frames = SubResource("SpriteFrames_3h0sf")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_j2rfc")]
 position = Vector2(281, 183)
+script = ExtResource("10_pd57b")
+gravity = 700
+speed = 200
+acceleration = 0.2
+jump_force = 430
 
 [node name="ennemis" parent="." instance=ExtResource("22_pd57b")]
 position = Vector2(64, 320)
@@ -235,9 +241,6 @@ curve = SubResource("Curve2D_s0rvt")
 [node name="spawn" type="PathFollow2D" parent="mobpath"]
 position = Vector2(-56, 0)
 
-[connection signal="game_over" from="CharacterBody2D" to="pause" method="_on_character_body_2d_game_over"]
-[connection signal="game_over" from="CharacterBody2D" to="Control/ScoreLabel" method="_on_character_body_2d_game_over"]
-[connection signal="health_changed" from="CharacterBody2D" to="health" method="_on_character_body_2d_health_changed"]
 [connection signal="dmg" from="ennemis" to="CharacterBody2D" method="_on_ennemis_dmg"]
 [connection signal="kill" from="ennemis" to="Control/ScoreLabel" method="_on_ennemis_kill"]
 [connection signal="dmg" from="balise" to="CharacterBody2D" method="_on_balise_dmg"]

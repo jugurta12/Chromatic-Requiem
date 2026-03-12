@@ -1,5 +1,5 @@
 extends Node2D
-
+var menu_scene = preload("res://Scenes/tuto.tscn")
 @onready var sprite = $AnimatedSprite2D
 @onready var sprite2 = $AnimatedSprite2D2
 @onready var alarm = $AudioStreamPlayer2D
@@ -35,4 +35,4 @@ func _ready():
 	sprite2.play("skip3")
 	await get_tree().create_timer(5).timeout
 	
-	get_tree().change_scene_to_file("res://Scenes/begin.tscn")
+	get_tree().change_scene_to_packed(menu_scene)

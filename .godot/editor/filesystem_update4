@@ -7,3 +7,7 @@ res://Scenes/Baddie.tscn
 res://Scripts/player.gd
 res://scripts/door.gd
 res://Scenes/testbalise.tscn
+res://Scenes/intro.tscn
+res://Scripts/intro.gd
+res://Scenes/arcade.tscn
+res://scripts/arcadeplayer.gd

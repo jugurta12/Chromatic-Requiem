@@ -714,7 +714,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.5938021
+frame_progress = 0.034931663
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -732,7 +732,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"run_left"
-frame_progress = 0.41870186
+frame_progress = 0.74231917
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -812,7 +812,7 @@ texture_filter = 1
 position = Vector2(-12, -61.999996)
 scale = Vector2(0.35500002, 0.375)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.9072413
+frame_progress = 0.11337567
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
