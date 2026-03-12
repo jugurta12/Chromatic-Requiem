@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://conjm8qi1agyb"]
 
-[ext_resource type="Texture2D" uid="uid://ch5a857yv07c2" path="res://Assets/credits.png" id="1_i8h6y"]
+[ext_resource type="Texture2D" uid="uid://cmkmf856nrkh3" path="res://Assets/credits.png" id="1_i8h6y"]
 [ext_resource type="Script" uid="uid://qh43pbria0h4" path="res://Scripts/animation_player.gd" id="2_xbebw"]
-[ext_resource type="Texture2D" uid="uid://csc4p61uc2f3l" path="res://Assets/SplashScreen.png" id="3_7xmno"]
-[ext_resource type="AudioStream" uid="uid://bemy7hxh3r7gh" path="res://SFX/ELECBuzz_Neon-ou-transfo-1-_ID-2118__LS.mp3" id="3_f64u0"]
-[ext_resource type="AudioStream" uid="uid://cjqk25eynrsqg" path="res://SFX/clignotement.wav" id="4_iynit"]
-[ext_resource type="AudioStream" uid="uid://cqgpf3367prki" path="res://SFX/interupteur.wav" id="5_f64u0"]
+[ext_resource type="Texture2D" uid="uid://dwobuipv51mtd" path="res://Assets/SplashScreen.png" id="3_7xmno"]
+[ext_resource type="AudioStream" uid="uid://dt0lnwrtfi05g" path="res://SFX/ELECBuzz_Neon ou transfo 1 (ID 2118)_LaSonotheque.fr.wav" id="3_f64u0"]
+[ext_resource type="AudioStream" uid="uid://djosamt0udk53" path="res://SFX/clignotement.wav" id="4_iynit"]
+[ext_resource type="AudioStream" uid="uid://bqnv5j040xlie" path="res://SFX/interupteur.wav" id="5_f64u0"]
 
 [sub_resource type="Animation" id="Animation_7xmno"]
 length = 0.001

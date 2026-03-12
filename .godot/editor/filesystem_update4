@@ -11,3 +11,4 @@ res://Scenes/intro.tscn
 res://Scripts/intro.gd
 res://Scenes/arcade.tscn
 res://scripts/arcadeplayer.gd
+res://Scenes/Credits.tscn
