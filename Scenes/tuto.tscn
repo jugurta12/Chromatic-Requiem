@@ -9,9 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7k6do1n0gvsh" path="res://Assets/nrmlatkL.png" id="4_f3amd"]
 [ext_resource type="Texture2D" uid="uid://brgihj4ff7g1d" path="res://Assets/tutoelevator1.png" id="5_lecsq"]
 [ext_resource type="Texture2D" uid="uid://biornucfmayhw" path="res://Assets/nrmlatkR.png" id="5_wtqk5"]
-[ext_resource type="Texture2D" uid="uid://dnhgbdrhk1att" path="res://Assets/pet.png" id="6_cq3rk"]
 [ext_resource type="Texture2D" uid="uid://bx2rkmm6nyhn3" path="res://Assets/tutofleche.png" id="6_n8pwo"]
-[ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="7_bcll0"]
 [ext_resource type="Script" uid="uid://t0dr38tp0s0c" path="res://scripts/ascenseur.gd" id="8_bcll0"]
 [ext_resource type="Texture2D" uid="uid://d07lsq5h0vkjp" path="res://Assets/down1.png" id="8_kdkd6"]
 [ext_resource type="Texture2D" uid="uid://f27xacs5o3y6" path="res://Assets/tutotransfo.png" id="8_xe7e8"]
@@ -38,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://qj6gbci6jan3" path="res://Assets/scarecrowpunch2.png" id="27_7exro"]
 [ext_resource type="AudioStream" uid="uid://gb6n3vs82qwp" path="res://SFX/wefgf-radar-425737.mp3" id="28_6vkgx"]
 [ext_resource type="AudioStream" uid="uid://cxfedw4dst3pp" path="res://SFX/superpuyofans1234-video-game-power-up-404172.mp3" id="29_kqm8x"]
+[ext_resource type="Texture2D" uid="uid://djk6otq72qg7v" path="res://Assets/go1.png" id="34_kdkd6"]
+[ext_resource type="Texture2D" uid="uid://cbdmt025ta12o" path="res://Assets/go2.png" id="35_b6jlw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yax54"]
 animations = [{
@@ -562,14 +562,14 @@ size = Vector2(46, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_bcll0")
+"texture": ExtResource("34_kdkd6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_cq3rk")
+"texture": ExtResource("35_b6jlw")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yqfxy"]
@@ -791,7 +791,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virus"
-frame_progress = 0.024082022
+frame_progress = 0.58470386
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -839,7 +839,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 position = Vector2(3, 4)
 sprite_frames = SubResource("SpriteFrames_kdkd6")
-frame_progress = 0.28482428
+frame_progress = 0.009613418
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scarecrow"]
 position = Vector2(0, -0.5)
@@ -883,10 +883,10 @@ shape = SubResource("RectangleShape2D_6vkgx")
 
 [node name="doorinteract" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
-position = Vector2(-12, -61.999996)
-scale = Vector2(0.35500002, 0.375)
+position = Vector2(-20.999998, -67)
+scale = Vector2(0.40607145, 0.43750012)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.78185976
+frame_progress = 0.24385263
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
