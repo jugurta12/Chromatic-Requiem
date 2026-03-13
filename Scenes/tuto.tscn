@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=101 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://dqn4p25t22i43" path="res://scripts/tuto.gd" id="1_hisyk"]
@@ -13,7 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://bx2rkmm6nyhn3" path="res://Assets/tutofleche.png" id="6_n8pwo"]
 [ext_resource type="Texture2D" uid="uid://cwxsw5lrqyfw1" path="res://Assets/pet2.png" id="7_bcll0"]
 [ext_resource type="Script" uid="uid://t0dr38tp0s0c" path="res://scripts/ascenseur.gd" id="8_bcll0"]
+[ext_resource type="Texture2D" uid="uid://d07lsq5h0vkjp" path="res://Assets/down1.png" id="8_kdkd6"]
 [ext_resource type="Texture2D" uid="uid://f27xacs5o3y6" path="res://Assets/tutotransfo.png" id="8_xe7e8"]
+[ext_resource type="Texture2D" uid="uid://b14wo8u7kwosu" path="res://Assets/down2.png" id="9_b6jlw"]
+[ext_resource type="Texture2D" uid="uid://dlcv3u453laqc" path="res://Assets/up1.png" id="10_7exro"]
+[ext_resource type="Texture2D" uid="uid://bd7iu3yj7dx3x" path="res://Assets/up2.png" id="11_12llu"]
 [ext_resource type="Texture2D" uid="uid://dygfuwybom2n0" path="res://Assets/nrmlidleleft.png" id="13_6vkgx"]
 [ext_resource type="Texture2D" uid="uid://ds62nrwggkqp7" path="res://Assets/nrmlidleright.png" id="14_kqm8x"]
 [ext_resource type="Texture2D" uid="uid://cyfcnrm4sios5" path="res://Assets/nrmljumpleft.png" id="15_ex5qg"]
@@ -161,14 +165,25 @@ size = Vector2(20.000038, 20)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_cq3rk")
+"texture": ExtResource("8_kdkd6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_bcll0")
+"texture": ExtResource("9_b6jlw")
 }],
 "loop": true,
 "name": &"down",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7exro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_12llu")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoyr7"]
@@ -678,10 +693,10 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 21.0
-offset_top = 611.0
-offset_right = 661.0
-offset_bottom = 971.0
+offset_left = 57.0
+offset_top = 688.0
+offset_right = 697.0
+offset_bottom = 1048.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -758,8 +773,7 @@ texture_filter = 1
 position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
-animation = &"down"
-frame_progress = 0.1080189
+animation = &"up"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -777,7 +791,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virus"
-frame_progress = 0.55629796
+frame_progress = 0.15698229
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -825,7 +839,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 position = Vector2(3, 4)
 sprite_frames = SubResource("SpriteFrames_kdkd6")
-frame_progress = 0.99311
+frame_progress = 0.7432041
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scarecrow"]
 position = Vector2(0, -0.5)
@@ -872,7 +886,7 @@ texture_filter = 1
 position = Vector2(-12, -61.999996)
 scale = Vector2(0.35500002, 0.375)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.490152
+frame_progress = 0.24024555
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
