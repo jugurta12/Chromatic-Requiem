@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://8alusnovyess"]
+[gd_scene load_steps=97 format=3 uid="uid://8alusnovyess"]
 
 [ext_resource type="Texture2D" uid="uid://njr3llabippj" path="res://Assets/dialogues.png" id="1_1sx44"]
 [ext_resource type="Script" uid="uid://dqn4p25t22i43" path="res://scripts/tuto.gd" id="1_hisyk"]
@@ -26,7 +26,12 @@
 [ext_resource type="Texture2D" uid="uid://4vm4ihf1fyw6" path="res://Assets/nrmlright.png" id="20_7exro"]
 [ext_resource type="Texture2D" uid="uid://bilm1q0ehsf1e" path="res://Assets/tutoplanche.png" id="20_f3amd"]
 [ext_resource type="AudioStream" uid="uid://ce5lu5wqg2cwx" path="res://SFX/punch_nrmlatk.mp3" id="21_wtqk5"]
+[ext_resource type="Texture2D" uid="uid://cim6x1v508dle" path="res://Assets/scarecrow.png" id="24_j43k4"]
+[ext_resource type="Script" uid="uid://dwpw1lxve51i2" path="res://scripts/scarecrow.gd" id="24_oeo0c"]
+[ext_resource type="Texture2D" uid="uid://d0es48q5weu0t" path="res://Assets/scarecrowpunch.png" id="25_oeo0c"]
+[ext_resource type="Texture2D" uid="uid://bfcoobg6yecp8" path="res://Assets/scarecrow2.png" id="26_0u3d5"]
 [ext_resource type="Script" uid="uid://22g6rd2giwbj" path="res://scripts/door.gd" id="26_rr37k"]
+[ext_resource type="Texture2D" uid="uid://qj6gbci6jan3" path="res://Assets/scarecrowpunch2.png" id="27_7exro"]
 [ext_resource type="AudioStream" uid="uid://gb6n3vs82qwp" path="res://SFX/wefgf-radar-425737.mp3" id="28_6vkgx"]
 [ext_resource type="AudioStream" uid="uid://cxfedw4dst3pp" path="res://SFX/superpuyofans1234-video-game-power-up-404172.mp3" id="29_kqm8x"]
 
@@ -492,6 +497,43 @@ size = Vector2(18, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq3rk"]
 size = Vector2(54.5, 24)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdkd6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_j43k4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_oeo0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0u3d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7exro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0u3d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7exro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0u3d5")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeo0c"]
+size = Vector2(20, 53)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtqk5"]
 size = Vector2(81, 26.5)
 
@@ -636,9 +678,10 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_top = 1.0
-offset_right = 640.0
-offset_bottom = 361.0
+offset_left = 21.0
+offset_top = 611.0
+offset_right = 661.0
+offset_bottom = 971.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -716,7 +759,7 @@ position = Vector2(277.00003, -109.00003)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
 animation = &"down"
-frame_progress = 0.6783595
+frame_progress = 0.1080189
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -734,7 +777,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virus"
-frame_progress = 0.09658331
+frame_progress = 0.55629796
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -772,6 +815,21 @@ drag_top_margin = 0.35
 drag_right_margin = 0.6
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
+
+[node name="scarecrow" type="CharacterBody2D" parent="."]
+position = Vector2(381, 125)
+script = ExtResource("24_oeo0c")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="scarecrow"]
+texture_filter = 1
+position = Vector2(3, 4)
+sprite_frames = SubResource("SpriteFrames_kdkd6")
+frame_progress = 0.99311
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scarecrow"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_oeo0c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -814,7 +872,7 @@ texture_filter = 1
 position = Vector2(-12, -61.999996)
 scale = Vector2(0.35500002, 0.375)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.3330276
+frame_progress = 0.490152
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -837,4 +895,6 @@ stream = ExtResource("29_kqm8x")
 [connection signal="up" from="AnimatableBody2D2/Area2D" to="tutobaadie" method="_on_area_2d_up"]
 [connection signal="dial1" from="tutobaadie" to="CanvasLayer" method="_on_tutobaadie_dial_1"]
 [connection signal="dial1" from="tutobaadie" to="tutobaadie" method="_on_dial_1"]
+[connection signal="hitting" from="tutobaadie" to="scarecrow" method="_on_tutobaadie_hitting"]
+[connection signal="body_entered" from="tutobaadie/AttackArea" to="tutobaadie" method="_on_attack_area_body_entered"]
 [connection signal="next" from="Area2D" to="." method="_on_area_2d_next"]

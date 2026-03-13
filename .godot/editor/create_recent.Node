@@ -1,15 +1,14 @@
-AudioStreamPlayer2D
-AudioStreamPlayer2D      - Matches the "sound" keyword.
 AnimatedSprite2D
 CollisionShape2D
+CharacterBody2D
+AudioStreamPlayer2D
+AudioStreamPlayer2D      - Matches the "sound" keyword.
 Area2D
 AnimationPlayer
 Sprite2D
 AnimatableBody2D
-CharacterBody2D
 Label
 Timer
 RichTextLabel
 TextureRect
 CanvasLayer
-Control

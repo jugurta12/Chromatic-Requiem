@@ -3,12 +3,15 @@ extends CharacterBody2D
 const SPEED = 100.0
 const JUMP_VELOCITY = -200.0
 signal dial1()
+signal hitting()
 
 @onready var anime = $AnimatedSprite2D
+@onready var attack_area = $AttackArea
 @onready var signall = get_node("../AudioStreamPlayer2D")
 @onready var transfo = get_node("../AudioStreamPlayer2D2")
 var can_move = false 
 var done = false
+var is_attacking = false
 
 var facing_right = true # Par défaut, il regarde à droite
 
@@ -17,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	if can_move:
+	if can_move and is_attacking == false:
 		# 1. Saut
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
@@ -53,16 +56,33 @@ func _physics_process(delta: float) -> void:
 				anime.play("idle_right")
 			else:
 				anime.play("idle_left") 
+				
+		
 
-	elif done == true:
+	elif done == true and is_attacking == false:
 		
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if facing_right:
 			anime.play("idle_right")
 		else:
 			anime.play("idle_left")
-
 	move_and_slide()
+	
+	if can_move and is_attacking == false:
+		
+		if Input.is_action_just_pressed("atk") and is_on_floor():
+			is_attacking = true
+			velocity.x = 0 
+			attack_area.monitoring = true
+			if facing_right:
+				anime.play("atk1_right")
+			else :
+				anime.play("atk1_left")
+			await get_tree().create_timer(0.5).timeout
+			attack_area.monitoring = false
+			is_attacking = false
+
+
 
 func _ready() -> void:
 	anime.play("idle_rightA")
@@ -101,3 +121,7 @@ func _on_area_2d_up() -> void:
 
 func _on_dial_1() -> void:
 	done = true
+	
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.name == "scarecrow" and is_attacking == true:
+		hitting.emit()
