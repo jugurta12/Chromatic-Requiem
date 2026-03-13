@@ -19,7 +19,11 @@ func _on_body_entered(body):
 		await get_tree().create_timer(0.1).timeout
 		player_nearby = true
 		animated_sprite.visible = true
-		animated_sprite.play("down")  # Joue l'animation
+		if upp == false:
+			animated_sprite.play("down") 
+		else :
+			
+			animated_sprite.play("up") 
 
 func _on_body_exited(body):
 	if body.name == "tutobaadie":

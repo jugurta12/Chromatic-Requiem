@@ -183,7 +183,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"up",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoyr7"]
@@ -770,10 +770,10 @@ shape = SubResource("RectangleShape2D_rr37k")
 
 [node name="elevatorinteract" type="AnimatedSprite2D" parent="AnimatableBody2D2/Area2D"]
 texture_filter = 1
-position = Vector2(277.00003, -109.00003)
+position = Vector2(277.00003, -126.00001)
 scale = Vector2(0.37, 0.32812488)
 sprite_frames = SubResource("SpriteFrames_hisyk")
-animation = &"up"
+animation = &"down"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -791,7 +791,7 @@ position = Vector2(372.90933, -172.77625)
 scale = Vector2(0.9565214, 0.94061446)
 sprite_frames = SubResource("SpriteFrames_12llu")
 animation = &"virus"
-frame_progress = 0.15698229
+frame_progress = 0.024082022
 offset = Vector2(-387.769, 192.548)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutobaadie"]
@@ -839,7 +839,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 position = Vector2(3, 4)
 sprite_frames = SubResource("SpriteFrames_kdkd6")
-frame_progress = 0.7432041
+frame_progress = 0.28482428
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scarecrow"]
 position = Vector2(0, -0.5)
@@ -886,7 +886,7 @@ texture_filter = 1
 position = Vector2(-12, -61.999996)
 scale = Vector2(0.35500002, 0.375)
 sprite_frames = SubResource("SpriteFrames_kqm8x")
-frame_progress = 0.24024555
+frame_progress = 0.78185976
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
