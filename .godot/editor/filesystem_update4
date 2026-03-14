@@ -27,3 +27,8 @@ res://Scenes/testbalise.tscn
 res://Scenes/trampo.tscn
 res://default_bus_layout.tres
 res://scripts/tutobaadie.gd
+res://scripts/eye.gd
+res://Scripts/tuto.gd
+res://Scripts/scarecrow.gd
+res://Scripts/tutobaadie.gd
+res://Scripts/tutodialogues.gd

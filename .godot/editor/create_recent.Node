@@ -1,9 +1,9 @@
-AudioStreamPlayer2D      - Matches the "sound" keyword.
-AnimatedSprite2D
 CollisionShape2D
+AnimatedSprite2D
+Area2D
+AudioStreamPlayer2D      - Matches the "sound" keyword.
 CharacterBody2D
 AudioStreamPlayer2D
-Area2D
 AnimationPlayer
 Sprite2D
 AnimatableBody2D

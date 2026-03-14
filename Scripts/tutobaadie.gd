@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 const SPEED = 100.0
 const JUMP_VELOCITY = -200.0
 signal dial1()
@@ -12,19 +13,19 @@ var can_move = false
 var done = false
 var is_attacking = false
 
-var facing_right = true 
+var facing_right = true # Par défaut, il regarde à droite
 
 func _physics_process(delta: float) -> void:
-	
+	# Gravité
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	if can_move and is_attacking == false:
-		
+		# 1. Saut
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 
-		
+		# 2. Mouvement
 		var direction := Input.get_axis("ui_left", "ui_right")
 		
 		if direction != 0:
@@ -43,6 +44,7 @@ func _physics_process(delta: float) -> void:
 				anime.play("jump_left")
 				
 		elif direction != 0 and can_move==true:
+			# --- AU SOL ET MARCHE ---
 			if facing_right:
 				anime.play("run_right")
 			else:
@@ -123,3 +125,12 @@ func _on_dial_1() -> void:
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.name == "scarecrow" and is_attacking == true:
 		hitting.emit()
+
+
+func _on_area_2d_2_go() -> void:
+	can_move = false
+
+
+func _on_canvas_layer_end_3() -> void:
+	await get_tree().create_timer(1.9).timeout
+	can_move = true
