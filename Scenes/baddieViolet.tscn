@@ -237,7 +237,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="DemodeTimer" type="Timer" parent="."]
-wait_time = 1.9989999999999999
+wait_time = 1.999
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

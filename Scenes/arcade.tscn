@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ca1qesdwv7fcj" path="res://Assets/arcadeyellow.png" id="6_ytqvr"]
 [ext_resource type="Texture2D" uid="uid://bvbn5g6erlme3" path="res://Assets/arcadeyellow2.png" id="7_u6xae"]
 [ext_resource type="Texture2D" uid="uid://d30r8v0b7nk7y" path="res://Assets/healthbar0%.png" id="9_4mld8"]
-[ext_resource type="Script" uid="uid://beynntucjt87p" path="res://scripts/arcadeplayer.gd" id="10_pd57b"]
+[ext_resource type="Script" uid="uid://beynntucjt87p" path="res://Scripts/arcadeplayer.gd" id="10_pd57b"]
 [ext_resource type="Texture2D" uid="uid://x8m2vo83d88s" path="res://Assets/healthbar100%.png" id="10_s0rvt"]
 [ext_resource type="PackedScene" uid="uid://c4rf4st16oach" path="res://Scenes/Baddie.tscn" id="11_j2rfc"]
 [ext_resource type="Texture2D" uid="uid://bigccntfy4jro" path="res://Assets/healthbar25%.png" id="11_tinc1"]

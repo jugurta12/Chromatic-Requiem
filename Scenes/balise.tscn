@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://de52bcfgdv0ow" path="res://Assets/balise12.png" id="6_v6ryn"]
 [ext_resource type="Texture2D" uid="uid://dqwyvklwk6bka" path="res://Assets/balise6.png" id="6_ypiay"]
 [ext_resource type="Texture2D" uid="uid://bbxu3u0ykmjgg" path="res://Assets/balise13.png" id="7_m4cq3"]
-[ext_resource type="Script" uid="uid://c4pbps4aiu3b8" path="res://scripts/balide.gd" id="7_ypiay"]
+[ext_resource type="Script" uid="uid://c4pbps4aiu3b8" path="res://Scripts/balide.gd" id="7_ypiay"]
 [ext_resource type="Texture2D" uid="uid://biosi7p2x6tcn" path="res://Assets/balise14.png" id="8_ukdeu"]
 [ext_resource type="Texture2D" uid="uid://f2px35dwl3x6" path="res://Assets/balise15.png" id="9_dvmkf"]
 [ext_resource type="Texture2D" uid="uid://jkntllaoi6ju" path="res://Assets/balise16.png" id="10_t8uvc"]
