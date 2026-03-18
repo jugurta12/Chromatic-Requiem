@@ -962,7 +962,7 @@ shape = SubResource("RectangleShape2D_1b4xr")
 texture_filter = 1
 position = Vector2(-49, -39)
 sprite_frames = SubResource("SpriteFrames_lfydt")
-frame_progress = 0.1342996
+frame_progress = 0.63027155
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="." method="_on_canvas_layer_end_2"]

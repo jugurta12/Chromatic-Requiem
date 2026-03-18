@@ -17,7 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 		await get_tree().create_timer(0.3332).timeout
 		anime.play("stay")
 
-
+ 
 func _on_canvas_layer_end_3() -> void:
 	await get_tree().create_timer(0.3332).timeout
 	anime.play("bye")
