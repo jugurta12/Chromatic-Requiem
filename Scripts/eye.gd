@@ -11,7 +11,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "tutobaadie" :
 		go.emit()
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(3).timeout
 		anime.visible = true
 		anime.play("default")
 		await get_tree().create_timer(0.3332).timeout

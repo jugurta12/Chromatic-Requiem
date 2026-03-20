@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://djk6otq72qg7v" path="res://Assets/go1.png" id="34_kdkd6"]
 [ext_resource type="Texture2D" uid="uid://cbdmt025ta12o" path="res://Assets/go2.png" id="35_b6jlw"]
 [ext_resource type="Texture2D" uid="uid://dciuc5m5kl0be" path="res://Assets/voice1.png" id="40_cmoqb"]
-[ext_resource type="Script" uid="uid://cys6svd6t08w6" path="res://scripts/eye.gd" id="40_ya5w6"]
+[ext_resource type="Script" uid="uid://cys6svd6t08w6" path="res://Scripts/eye.gd" id="40_ya5w6"]
 [ext_resource type="Texture2D" uid="uid://i7lhox1p7bvx" path="res://Assets/voice2.png" id="41_ya5w6"]
 [ext_resource type="Texture2D" uid="uid://3sfjs8my6b8b" path="res://Assets/voice3.png" id="42_jy4qu"]
 
@@ -740,10 +740,10 @@ script = ExtResource("1_ikthk")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 57.0
-offset_top = 688.0
-offset_right = 697.0
-offset_bottom = 1048.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 642.0
+offset_bottom = 357.0
 texture = ExtResource("1_1sx44")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
@@ -960,9 +960,10 @@ shape = SubResource("RectangleShape2D_1b4xr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D2"]
 texture_filter = 1
-position = Vector2(-49, -39)
+position = Vector2(122, -92.000015)
+scale = Vector2(1.5357143, 1.578125)
 sprite_frames = SubResource("SpriteFrames_lfydt")
-frame_progress = 0.63027155
+animation = &"stay"
 
 [connection signal="end" from="CanvasLayer" to="tutobaadie" method="_on_canvas_layer_end"]
 [connection signal="end2" from="CanvasLayer" to="." method="_on_canvas_layer_end_2"]

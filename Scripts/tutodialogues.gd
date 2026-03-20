@@ -80,6 +80,7 @@ func _on_tutobaadie_dial_1() -> void:
 
 
 func _on_area_2d_2_go() -> void:
+	await get_tree().create_timer(4).timeout
 	dialogue_index = 0
 	dialogues = ["Unknown voice: Here, I give you my blessing.",
  	"Unknown voice: The world you once knew has withered into a shadow of its former self." ,
