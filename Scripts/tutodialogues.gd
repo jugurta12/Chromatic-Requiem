@@ -82,11 +82,9 @@ func _on_tutobaadie_dial_1() -> void:
 func _on_area_2d_2_go() -> void:
 	await get_tree().create_timer(4).timeout
 	dialogue_index = 0
-	dialogues = ["Unknown voice: Here, I give you my blessing.",
- 	"Unknown voice: The world you once knew has withered into a shadow of its former self." ,
-	"Unknown voice: Take heed, for the line between a gift and a burden is thin; what you embrace as a blessing,", 
-	"Unknown voice:  your heart may yet find to be a curse.",
-	"Unknown voice:  Now go, follow the path to seek the truth that has become blurred.",]
+	dialogues = ["Unknown voice: Take the door on the left,",
+ 	"Unknown voice: A vehicle will take you to a safe place." ,
+	"Unknown voice: Remember, don't trust anyone.", ]
 	await get_tree().create_timer(3.0).timeout
 	visible = true
 	start_dialogue()
